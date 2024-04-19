@@ -74,7 +74,10 @@ async function loadHandleBarTemplates()
     "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-details.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-characteristics.html",
-    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-skills.html"
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-skills.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-items.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-healingitem.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-weapon-armor-gear.html"
   ];
   
   return loadTemplates( templatePaths );

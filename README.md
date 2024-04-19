@@ -21,6 +21,8 @@ It changes the following :
 
 ### Items tab modifications
 
+* Fix translation for the title __equiped__ / __unequiped__. Translation exists but was not used in original file.
+* Change healingitem file to use the same HTML structure than other blocks.
 * TODO: Fix scroll problem.
 
 ### Talents tab modifications

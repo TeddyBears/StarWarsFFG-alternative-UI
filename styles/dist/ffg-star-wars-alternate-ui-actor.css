@@ -21,6 +21,7 @@
   /* Block title & header*/
   /* form fields */
   /* ffg-block */
+  /* items */
 }
 .starwarsffg.sheet.actor.ffg-alternative .window-content {
   background: none;
@@ -121,8 +122,20 @@
   box-shadow: 0 0 5px var(--color-fields-focused);
   background-color: var(--color-fields-focused);
 }
-.starwarsffg.sheet.actor.ffg-alternative .resource, .starwarsffg.sheet.actor.ffg-alternative .resource.split {
+.starwarsffg.sheet.actor.ffg-alternative button {
+  background: var(--color-fields-focused);
+  border: none;
+  width: 70%;
+}
+.starwarsffg.sheet.actor.ffg-alternative .resource,
+.starwarsffg.sheet.actor.ffg-alternative .resource.split {
   width: initial;
+}
+.starwarsffg.sheet.actor.ffg-alternative .items-list .item .toggle-equipped {
+  color: var(--color-fields-focused);
+}
+.starwarsffg.sheet.actor.ffg-alternative .items-list .item .toggle-equipped.active {
+  color: white;
 }
 
 /*

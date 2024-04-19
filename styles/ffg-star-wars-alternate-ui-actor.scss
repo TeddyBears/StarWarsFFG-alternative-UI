@@ -51,13 +51,13 @@
 
         &:after {
             position: absolute;
-        left: -10px;
-        right: -10px;
-        content: "";
-        height: 10px;
-        background-color: rgba(0, 252, 252, 0.5);
-        border-radius: 100%;
-        filter: blur(2.5px);
+            left: -10px;
+            right: -10px;
+            content: "";
+            height: 10px;
+            background-color: rgba(0, 252, 252, 0.5);
+            border-radius: 100%;
+            filter: blur(2.5px);
         }
 
         + .holo {
@@ -65,9 +65,8 @@
             animation-duration: 0.75s;
             opacity: 0.5;
         }
-
     }
-    
+
     @-webkit-keyframes holographic {
         from {
             will-change: box-shadow;
@@ -88,7 +87,7 @@
                 0 -65px 80px #00fcfc,
                 0 -75px 90px #00fcfc;
         }
-    
+
         to {
             will-change: unset;
             box-shadow:
@@ -109,7 +108,7 @@
                 0 -75px 50px #00fcfc;
         }
     }
-    
+
     @keyframes holographic {
         from {
             will-change: box-shadow;
@@ -130,7 +129,7 @@
                 0 -65px 80px #00fcfc,
                 0 -75px 90px #00fcfc;
         }
-    
+
         to {
             will-change: unset;
             box-shadow:
@@ -165,7 +164,7 @@
 
     /* skills list */
     .skillColumnGrid {
-        flex:48%;
+        flex: 48%;
         border: none;
         background: none;
 
@@ -176,11 +175,9 @@
             margin-left: 1%;
         }
         .skillsHeader div {
-            background-color:transparent;
+            background-color: transparent;
         }
     }
-   
-    
 
     /* Block title & header*/
     .header-title {
@@ -205,9 +202,28 @@
         }
     }
 
+    button {
+        background: var(--color-fields-focused);
+        border: none;
+        width: 70%;
+    }
+
     /* ffg-block */
-    .resource, .resource.split {
+    .resource,
+    .resource.split {
         width: initial;
+    }
+
+    /* items */
+    .items-list {
+        .item {
+            .toggle-equipped {
+                color: var(--color-fields-focused);
+                &.active {
+                    color: white;
+                }
+            }
+        }
     }
 }
 
@@ -233,7 +249,6 @@
 
 
 /* ffg-block */
-
 
 .starwarsffg.ffg-alternative .resource .attribute .block-title,
 .starwarsffg.ffg-alternative .tabs .item {
@@ -283,4 +298,3 @@
     display: block;
     line-height: 15px;
 }
-
