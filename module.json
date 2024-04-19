@@ -1,0 +1,82 @@
+{
+	"id": "ffg-star-wars-alternative-ui",
+	"title": "FFG Star Wars - Alternative UI",
+	"description": "Add new actor sheet and some macros and compendiums for Star wars FFG",
+	"version": "1.0.0",
+	"authors": [{
+		"name": "Balebos",
+		"discord": "Balébos#42",
+		"url": "",
+		"flags": {}
+	}],
+	"compatibility": {
+		"minimum": "11",
+		"verified": "11"
+	},
+	"relationships": {
+		"systems": [{
+			"id": "starwarsffg",
+			"manifest": "https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.json",
+			"type": "system",
+			"compatibility": {}
+		}]
+	},
+
+	"packs": [{
+			"name": "module-items",
+			"label": "Module Items",
+			"path": "packs/items",
+			"type": "Item",
+			"system": "starwarsffg",
+			"ownership": {
+				"PLAYER": "OBSERVER",
+				"ASSISTANT": "OWNER"
+			},
+			"flags": {}
+		},
+		{
+			"name": "module-macros",
+			"label": "Module Macros",
+			"path": "packs/macros",
+			"type": "Macro",
+			"ownership": {
+				"PLAYER": "OBSERVER",
+				"ASSISTANT": "OWNER"
+			},
+			"flags": {}
+		},
+		{
+			"name": "module-roll-tables",
+			"label": "Module Roll Tables",
+			"path": "packs/roll-tables",
+			"type": "RollTable",
+			"ownership": {
+				"PLAYER": "OBSERVER",
+				"ASSISTANT": "OWNER"
+			},
+			"flags": {}
+		}
+		
+	],
+	"styles": [
+		
+	],
+	"esmodules": [
+		"scripts/core.js"
+	],
+	"languages": [
+      {
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		},
+		{
+			"lang": "fr",
+			"name": "French (Français)",
+			"path": "lang/fr.json"
+		}
+	],
+
+	"manifest": "",
+	"download": ""
+}

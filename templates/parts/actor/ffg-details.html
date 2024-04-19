@@ -1,0 +1,65 @@
+<div class="profile-block">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
+    <div class="holo"></div>
+</div>
+<div class="container">
+    <div class="header-name header-description-block">
+        <div>
+            <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'SWFFG.Name'}}"
+                data-dtype="String" class="actor-name" />
+        </div>
+        <div class="character-specie">
+            {{localize "SWFFG.Species"}}: {{#each_when actor.items "type" "species"}}
+            <span class="species-pill item" data-item-id="{{item._id}}">{{item.name}} <i
+                    class="fas fa-times item-delete"></i></span>
+            {{else}}
+            <span class="drag-note">{{localize "SWFFG.DragNotes"}}</span>
+            {{/each_when}}
+        </div>
+        <div class="character-talents" style="{{#if limited}}display:none;{{/if}}">
+            <div class="talents-header header">
+                <span class="label career">{{localize "SWFFG.Career"}}</span>
+                <span class="label specializations">{{localize "SWFFG.Specializations"}}</span>
+                <span class="label forcepowers">{{#if (or (eq actor.flags.starwarsffg.config.enableForcePool undefined)
+                    (eq actor.flags.starwarsffg.config.enableForcePool true) )}}{{localize "SWFFG.ForcePowers"}}
+                    {{/if}}</span>
+                <span class="label signatureabilities">{{localize "SWFFG.SignatureAbilities"}}</span>
+            </div>
+            <div class="talents-list" style="{{#if limited}}display:none;{{/if}}">
+                {{#each_when actor.items "type" "career"}}
+                <span class="career-pill item" data-item-id="{{item._id}}">{{item.name}} <i
+                        class="fas fa-times item-delete"></i></span>
+                {{else}}
+                <span class="drag-note">{{localize "SWFFG.DragNotes"}} {{localize "SWFFG.Career"}}</span>
+                {{/each_when}}
+                /
+                {{#each_when actor.items "type" "specialization"}}
+                <span class="specialization-pill item" data-item-id="{{item._id}}">
+                    {{item.name}} <i class="fas fa-times item-delete"></i>
+                </span>
+                {{else}}
+                <span class="drag-note">{{localize "SWFFG.DragNotes"}} {{localize "SWFFG.Specializations"}} </span>
+                {{/each_when}}
+                /
+                {{#if (or (eq actor.flags.starwarsffg.config.enableForcePool undefined) (eq
+                actor.flags.starwarsffg.config.enableForcePool true) )}}
+                {{#each_when actor.items "type" "forcepower"}}
+                <span class="forcepower-pill item" data-item-id="{{item._id}}">
+                    {{item.name}} <i class="fas fa-times item-delete"></i>
+                </span>
+                {{else}}
+                <span class="drag-note">{{localize "SWFFG.DragNotes"}} {{localize "SWFFG.ForcePowers"}}</span>
+                {{/each_when}}
+                {{/if}}
+                /
+                {{#each_when actor.items "type" "signatureability"}}
+                <span class="signatureability-pill item" data-item-id="{{item._id}}">
+                    {{item.name}} <i class="fas fa-times item-delete"></i>
+                </span>
+                {{else}}
+                <span class="drag-note">{{localize "SWFFG.DragNotes"}} {{localize "SWFFG.SignatureAbilities"}}</span>
+                {{/each_when}}
+            </div>
+        </div>
+    </div>
+</div>
