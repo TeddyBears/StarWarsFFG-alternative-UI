@@ -27,7 +27,9 @@ It changes the following :
 
 ### Talents tab modifications
 
+* Change _special abilities_ and _force powers_ render
 * TODO: Fix scroll problem.
+* TODO: use the same partial for _special abilities_ and _force powers_.
 
 ### general tab modifications
 

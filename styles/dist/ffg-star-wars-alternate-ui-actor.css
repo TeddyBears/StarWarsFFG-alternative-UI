@@ -127,9 +127,18 @@
   border: none;
   width: 70%;
 }
-.starwarsffg.sheet.actor.ffg-alternative .resource,
+.starwarsffg.sheet.actor.ffg-alternative .resource {
+  width: initial;
+}
 .starwarsffg.sheet.actor.ffg-alternative .resource.split {
   width: initial;
+}
+.starwarsffg.sheet.actor.ffg-alternative .resource .block-attribute {
+  padding: 0 5px;
+}
+.starwarsffg.sheet.actor.ffg-alternative .resource .block-attribute .force-power {
+  padding: unset;
+  border: none;
 }
 .starwarsffg.sheet.actor.ffg-alternative .items-list .item .toggle-equipped {
   color: var(--color-fields-focused);

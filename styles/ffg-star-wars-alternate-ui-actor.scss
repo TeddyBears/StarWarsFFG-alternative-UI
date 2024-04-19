@@ -209,9 +209,19 @@
     }
 
     /* ffg-block */
-    .resource,
-    .resource.split {
+    .resource {
         width: initial;
+        &.split {
+            width: initial;
+        }
+        .block-attribute {
+            padding: 0 5px;
+
+            .force-power {
+                padding: unset;
+                border: none;
+            }
+        }
     }
 
     /* items */

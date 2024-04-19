@@ -77,7 +77,11 @@ async function loadHandleBarTemplates()
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-skills.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-items.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-healingitem.html",
-    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-weapon-armor-gear.html"
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-weapon-armor-gear.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-talents.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-abilities.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-forcepowers.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-signatureability.html",
   ];
   
   return loadTemplates( templatePaths );
@@ -92,7 +96,6 @@ async function loadHandleBarTemplates()
   const totalRows = numberSkills + Object.values(data.data.skilltypes).length;
 
   let colRowCount = Math.ceil(totalRows / 2.0);
-  console.log(colRowCount);
   const cols = [[], []];
 
   let currentColumn = 0;
@@ -114,7 +117,6 @@ async function loadHandleBarTemplates()
     const skills = Object.keys(data.data.skills)
       .filter((s) => data.data.skills[s].type === type.type)
       .sort(sortFunction);
-console.log(skills);
     // if the skill list is larger that the column row count then take into account the added header row.
     if (skills.length >= colRowCount) {
       if (skills.length - colRowCount > 2) {
