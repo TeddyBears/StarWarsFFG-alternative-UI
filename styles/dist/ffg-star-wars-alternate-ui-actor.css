@@ -132,10 +132,12 @@
   clip-path: none;
   -webkit-clip-path: none;
 }
-.starwarsffg.sheet.actor.ffg-alternative .character input {
+.starwarsffg.sheet.actor.ffg-alternative .character input,
+.starwarsffg.sheet.actor.ffg-alternative .character textarea {
   color: var(--color-text-light-primary);
 }
-.starwarsffg.sheet.actor.ffg-alternative .character input:focus {
+.starwarsffg.sheet.actor.ffg-alternative .character input:focus,
+.starwarsffg.sheet.actor.ffg-alternative .character textarea:focus {
   box-shadow: 0 0 5px var(--color-fields-focused);
   background-color: var(--color-fields-focused);
 }
@@ -172,21 +174,28 @@
   padding: unset;
   border: none;
 }
-.starwarsffg.sheet.actor.ffg-alternative .character .items-list .item {
+.starwarsffg.sheet.actor.ffg-alternative .character .items .items-list {
+  background-color: var(--color-fields-background);
+  padding: 0 0.2rem;
+}
+.starwarsffg.sheet.actor.ffg-alternative .character .items .items-list .item {
   border-color: var(--color-fields-focused);
 }
-.starwarsffg.sheet.actor.ffg-alternative .character .items-list .item .toggle-equipped {
+.starwarsffg.sheet.actor.ffg-alternative .character .items .items-list .item .toggle-equipped {
   color: var(--color-fields-focused);
 }
-.starwarsffg.sheet.actor.ffg-alternative .character .items-list .item .toggle-equipped.active {
+.starwarsffg.sheet.actor.ffg-alternative .character .items .items-list .item .toggle-equipped.active {
   color: white;
 }
-.starwarsffg.sheet.actor.ffg-alternative .character .item-pill {
+.starwarsffg.sheet.actor.ffg-alternative .character .items .item-pill {
   border-radius: 5px;
   background-color: var(--color-fields-focused);
 }
-.starwarsffg.sheet.actor.ffg-alternative .character .item-details {
+.starwarsffg.sheet.actor.ffg-alternative .character .items .item-details {
   background: rgba(255, 255, 255, 0.1);
+}
+.starwarsffg.sheet.actor.ffg-alternative .character .items.motivations .description {
+  grid-column: span 2/4;
 }
 
 /*
@@ -207,10 +216,7 @@
 .credits {
     font-family: AurekBesh;
 }
-
-
-
-/* ffg-block */
+*/
 .starwarsffg.sheet.actor.ffg-alternative .tabs .item {
   padding: 0 10px;
 }

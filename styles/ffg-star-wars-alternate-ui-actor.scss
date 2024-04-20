@@ -209,7 +209,8 @@
         }
 
         /* form fields */
-        input {
+        input,
+        textarea {
             color: var(--color-text-light-primary);
 
             &:focus {
@@ -269,27 +270,36 @@
                         border: none;
                     }
                 }
-            }            
+            }
         }
 
         /* items */
-        .items-list {
-            .item {
-                border-color: var(--color-fields-focused);
-                .toggle-equipped {
-                    color: var(--color-fields-focused);
-                    &.active {
-                        color: white;
+        .items {
+            .items-list {
+                background-color: var(--color-fields-background);
+                padding: 0 0.2rem;
+                .item {
+                    border-color: var(--color-fields-focused);
+                    .toggle-equipped {
+                        color: var(--color-fields-focused);
+                        &.active {
+                            color: white;
+                        }
                     }
                 }
             }
-        }
-        .item-pill {
-            border-radius: 5px;
-            background-color: var(--color-fields-focused);
-        }
-        .item-details {
-            background: rgba(255, 255, 255, 0.1);
+            .item-pill {
+                border-radius: 5px;
+                background-color: var(--color-fields-focused);
+            }
+            .item-details {
+                background: rgba(255, 255, 255, 0.1);
+            }
+            &.motivations {
+                .description {
+                    grid-column: span 2 / 4;
+                }
+            }
         }
     }
 }
@@ -312,10 +322,7 @@
 .credits {
     font-family: AurekBesh;
 }
-
-
-
-/* ffg-block */
+*/
 
 .starwarsffg.sheet.actor.ffg-alternative .tabs .item {
     padding: 0 10px;

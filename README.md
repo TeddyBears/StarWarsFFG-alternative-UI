@@ -34,9 +34,9 @@ It changes the following :
 
 ### General tab modifications
 
-* Moves _gender_, _eyes_, _height_, ... blocks to _description (Biography)_ tab
-* Moves _motivations_ block to _obligation_ tab.
-* Moves _critical injuries_ into this tab.
+* Move _gender_, _eyes_, _height_, ... blocks to _description (Biography)_ tab
+* Move _motivations_ block to _obligation_ tab.
+* Move _critical injuries_ into this tab.
 * The _general_ tab is hidden.
 * TODO: Fix scroll problem.
 
@@ -51,6 +51,7 @@ It changes the following :
 
 * _Motivations_ block are here now.
 * TODO: Fix scroll problem.
+* TODO: Remove draggable effect on _obligations_, _duties_ and _motivations_.
 
 ## Added compendiums
 
