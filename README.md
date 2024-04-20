@@ -13,6 +13,7 @@ It changes the following :
 
 * Carreer, specialisations, Force powers and special abilities are regrouping into the same element. This reduce the size of the header part of the sheet.
 * Move _Force pool_ block to the header part. It was into _talent_ tab.
+* Add link on _wounds box_ to _general_ tab.
 
 ### Characteristics tab modifications
 
@@ -31,17 +32,19 @@ It changes the following :
 * TODO: Fix scroll problem.
 * TODO: use the same partial for _special abilities_ and _force powers_.
 
-### general tab modifications
+### General tab modifications
 
 * Moves _gender_, _eyes_, _height_, ... blocks to _description (Biography)_ tab
 * Moves _motivations_ block to _obligation_ tab.
-* The _general_ tab is hidden and empty.
+* Use it for _critical injuries_.
+* The _general_ tab is hidden.
 * TODO: Fix scroll problem.
 
 ### Description tab modification
 
 * _gender_, _eyes_, _height_, ... blocks are now in this tab.
-* TODO : Where move critical injuries ?
+* Move _critical injuries_ to _general_ tab.
+* TODO : Where move XP ?
 * TODO: Fix scroll problem.
 
 ### Obligation tab modifications

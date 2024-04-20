@@ -230,6 +230,9 @@
             &.split {
                 width: initial;
             }
+            &.full {
+                width: 100%;
+            }
             .block-background {
                 padding: 0;
                 background: var(--color-fields-background);

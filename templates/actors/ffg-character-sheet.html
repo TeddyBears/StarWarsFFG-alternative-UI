@@ -12,7 +12,7 @@
       {{!-- Primary Stats Container --}}
       <div class="container stats-block" style="flex-wrap: nowrap;{{#if limited}}display:none;{{/if}}">
         <div class="container flex-group-center">
-          {{!-- Wounds Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="split" title="SWFFG.Wounds" fields=(array (object name="data.stats.wounds.max" value=data.stats.wounds.max type="Number" label="SWFFG.Threshold") (object name="data.stats.wounds.value" value=data.stats.wounds.value type="Number" label="SWFFG.Current") ))}}
+          {{!-- Wounds Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="split" title="SWFFG.Wounds" headerlink=true headerclass="alt-tab" headerattributes="data-tab='general'" fields=(array (object name="data.stats.wounds.max" value=data.stats.wounds.max type="Number" label="SWFFG.Threshold") (object name="data.stats.wounds.value" value=data.stats.wounds.value type="Number" label="SWFFG.Current") ))}}
           {{!-- Strain Box --}}  {{#if (or (eq actor.flags.starwarsffg.config.enableStrainThreshold undefined) (eq actor.flags.starwarsffg.config.enableStrainThreshold true) )}}
             {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="split" title="SWFFG.Strain" fields=(array (object name="data.stats.strain.max" value=data.stats.strain.max type="Number" label="SWFFG.Threshold") (object name="data.stats.strain.value" value=data.stats.strain.value type="Number" label="SWFFG.Current") ))}}
           {{/if}}
@@ -48,7 +48,6 @@
 
 
     {{!-- Talents Tab --}}
-
     <div class="tab talents items" data-group="primary" data-tab="talents">
       {{!-- Talents List --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-talents.html"}}
       {{!-- Abilities List --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-abilities.html"}}
@@ -58,25 +57,26 @@
 
     {{!-- Biography Tab --}}
     <div class="tab biography active" data-group="primary" data-tab="description">
-      {{> "systems/starwarsffg/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Gender" type="String" name="data.general.gender" value=data.general.gender)}}
-      {{> "systems/starwarsffg/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Age" type="String" name="data.general.age" value=data.general.age)}}
-      {{> "systems/starwarsffg/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Height" type="String" name="data.general.height" value=data.general.height)}}
-      {{> "systems/starwarsffg/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Build" type="String" name="data.general.build" value=data.general.build)}}
-      {{> "systems/starwarsffg/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Hair" type="String" name="data.general.hair" value=data.general.hair)}}
-      {{> "systems/starwarsffg/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Eyes" type="String" name="data.general.eyes" value=data.general.eyes)}}
-      {{!-- Experience Box --}} {{> "systems/starwarsffg/templates/parts/shared/ffg-block.html" (object blocktype="split" title="SWFFG.DescriptionXP" fields=(array (object name="data.experience.available" value=data.experience.available type="Number" label="SWFFG.DescriptionXPAvailable") (object name="data.experience.total" value=data.experience.total type="Number" label="SWFFG.DescriptionXPTotal") ))}}
-      {{> "systems/starwarsffg/templates/parts/shared/ffg-block.html" (object blocktype="double" title="SWFFG.NotableFeature" type="PopoutEditor" name="data.general.features" value=data.general.features)}}
-      {{> "systems/starwarsffg/templates/parts/shared/ffg-block.html" (object blocktype="double" title="SWFFG.Notes" type="PopoutEditor" name="data.general.notes" value=data.general.notes)}}
-      {{> "systems/starwarsffg/templates/parts/shared/ffg-block.html" (object blocktype="double" title="SWFFG.TabBiography" type="PopoutEditor" name="data.biography" value=data.biography)}}
-
-      <div class="container flex-group-center biography-values">
-        {{> "systems/starwarsffg/templates/parts/actor/ffg-criticalinjury.html" type="criticalinjury"}}
-
+      <div class="talent-list grid grid-3col">
+        {{!-- Gender Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Gender" type="String" name="data.general.gender" value=data.general.gender)}}
+        {{!-- Height Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Height" type="String" name="data.general.height" value=data.general.height)}}
+        {{!-- Hair Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Hair" type="String" name="data.general.hair" value=data.general.hair)}}
+        
+        {{!-- Age Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Age" type="String" name="data.general.age" value=data.general.age)}}
+        {{!-- Build Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Build" type="String" name="data.general.build" value=data.general.build)}}
+        {{!-- Eyes Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Eyes" type="String" name="data.general.eyes" value=data.general.eyes)}}
         
       </div>
-      <div class="grid bio-grid">
-        
-      </div>
+      <div class="talent-list grid grid-2col">
+        <div class="">
+          {{!-- TabBiography Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="double" title="SWFFG.TabBiography" type="PopoutEditor" name="data.biography" value=data.biography)}}      
+        </div>
+        <div class="grid-1col">
+          {{!-- NotableFeature Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="full" title="SWFFG.NotableFeature" type="PopoutEditor" name="data.general.features" value=data.general.features)}}
+          {{!-- Notes Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="full" title="SWFFG.Notes" type="PopoutEditor" name="data.general.notes" value=data.general.notes)}}            
+        </div>
+        </div>
+      {{!-- Experience Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="split" title="SWFFG.DescriptionXP" fields=(array (object name="data.experience.available" value=data.experience.available type="Number" label="SWFFG.DescriptionXPAvailable") (object name="data.experience.total" value=data.experience.total type="Number" label="SWFFG.DescriptionXPTotal") ))}}    
     </div>
 
     {{!-- Modifiers Tab --}}
@@ -85,7 +85,7 @@
     </div>
 
     <div class="tab general" data-group="primary" data-tab="general">
-            
+      {{> "systems/starwarsffg/templates/parts/actor/ffg-criticalinjury.html" type="criticalinjury"}}
     </div>
 
     <div class="tab obligation" data-group="primary" data-tab="obligation">

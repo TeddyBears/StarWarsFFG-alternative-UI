@@ -150,6 +150,9 @@
 .starwarsffg.sheet.actor.ffg-alternative .character .resource.split {
   width: initial;
 }
+.starwarsffg.sheet.actor.ffg-alternative .character .resource.full {
+  width: 100%;
+}
 .starwarsffg.sheet.actor.ffg-alternative .character .resource .block-background {
   padding: 0;
   background: var(--color-fields-background);

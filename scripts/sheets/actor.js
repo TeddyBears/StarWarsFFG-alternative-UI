@@ -20,7 +20,6 @@ export class FFGAlternateActorSheet extends ActorSheetFFG {
   _createSkillColumns(data){
     const numberSkills = Object.values(data.data.skills).length;
     const totalRows = numberSkills + Object.values(data.data.skilltypes).length;
-    console.log(totalRows);
     let colRowCount = Math.ceil(totalRows / 2.0);
   
     const cols = [[], []];
@@ -29,7 +28,6 @@ export class FFGAlternateActorSheet extends ActorSheetFFG {
     let rowsLeft = colRowCount;
   
     data.data.skilltypes.forEach((type,index) => {
-      console.log(index + "-" + type.label);
       if(index > 0) {
         currentColumn = 1;
       }
