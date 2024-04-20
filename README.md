@@ -30,13 +30,13 @@ It changes the following :
 
 * Change _special abilities_ and _force powers_ render
 * TODO: Fix scroll problem.
-* TODO: use the same partial for _special abilities_ and _force powers_.
+* TODO: use the same partial for _special abilities_ and _force powers_. See injuries as examples.
 
 ### General tab modifications
 
 * Moves _gender_, _eyes_, _height_, ... blocks to _description (Biography)_ tab
 * Moves _motivations_ block to _obligation_ tab.
-* Use it for _critical injuries_.
+* Moves _critical injuries_ into this tab.
 * The _general_ tab is hidden.
 * TODO: Fix scroll problem.
 

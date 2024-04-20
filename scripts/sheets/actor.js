@@ -80,6 +80,7 @@ async function loadHandleBarTemplates()
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-abilities.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-forcepowers.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-signatureability.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-criticalinjury.html",
   ];
   
   return loadTemplates( templatePaths );

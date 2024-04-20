@@ -1,0 +1,25 @@
+<div class="injuries">
+  <ul class="items">
+    <li class="items-header header-title flexrow">
+      <div class="header-name">{{#if (eq type "criticaldamage")}} {{localize "SWFFG.CriticalDamage"}} {{else}}
+        {{localize "SWFFG.CriticalInjuries"}} {{/if}}</div>
+      <div class="">{{localize "SWFFG.Result"}}</div>
+      <div class="">{{localize "SWFFG.Severity"}}</div>
+      <div></div>
+    </li>
+
+    <ul class="items-list">
+      {{#each items as |item id|}} {{#if (eq item.type ../type)}}
+      <li class="item injury-item flexrow" data-item-id="{{item._id}}">
+        <div class="item-name">{{item.name}}</div>
+        <div class="severity">{{renderMultiple item.system.severity '<img class="severity-img"
+            src="systems/starwarsffg/images/dice/starwars/purple.png" />'}}</div>
+        <div class="item-controls">
+          <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+          <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+      </li>
+      {{/if}} {{/each}}
+    </ul>
+  </ul>
+</div>
