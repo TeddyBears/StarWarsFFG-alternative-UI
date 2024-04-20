@@ -1,0 +1,129 @@
+<div class="tab obligation" data-group="primary" data-tab="obligation">
+    {{#if (or (eq actor.flags.starwarsffg.config.enableObligation undefined) (eq
+    actor.flags.starwarsffg.config.enableObligation true) )}}
+    <ul class="items">
+        <li class="items-header header-title flexrow">
+            <div class="header-name">{{localize "SWFFG.DescriptionObligation"}}</div>
+            <div class="">{{localize "SWFFG.Magnitude"}}</div>
+            <div><a class="add-obligation"><i class="far fa-plus-square"></i></a></div>
+        </li>
+
+        <ul class="items-list">
+            {{#each data.obligationlist as |obligation id|}}
+            <li class="item obligation-item flexrow">
+                <div class="item-type"><input type="text" name="data.obligationlist.{{id}}.type"
+                        value="{{obligation.type}}" data-dtype="String" /></div>
+                <div class="item-magnitude"><input type="text" name="data.obligationlist.{{id}}.magnitude"
+                        value="{{obligation.magnitude}}" data-dtype="Number" /></div>
+                <div><a class="remove-obligation" data-id="{{id}}"><i class="fas fa-trash"></i></a></div>
+            </li>
+            {{/each}}
+        </ul>
+    </ul>
+
+    {{/if}}
+    {{#if (or (eq actor.flags.starwarsffg.config.enableDuty undefined) (eq
+    actor.flags.starwarsffg.config.enableDuty true) )}}
+    <ul class="items">
+        <li class="items-header header-title flexrow">
+            <div class="header-name">{{localize "SWFFG.DescriptionDuty"}}</div>
+            <div class="">{{localize "SWFFG.Magnitude"}}</div>
+            <div><a class="add-duty"><i class="far fa-plus-square"></i></a></div>
+        </li>
+
+        <ul class="items-list">
+            {{#each data.dutylist as |duty id|}}
+            <li class="item duty-item flexrow">
+                <div class="item-type"><input type="text" name="data.dutylist.{{id}}.type" value="{{duty.type}}"
+                        data-dtype="String" /></div>
+                <div class="item-magnitude"><input type="text" name="data.dutylist.{{id}}.magnitude"
+                        value="{{duty.magnitude}}" data-dtype="Number" /></div>
+                <div><a class="remove-duty" data-id="{{id}}"><i class="fas fa-trash"></i></a></div>
+            </li>
+            {{/each}}
+        </ul>
+    </ul>
+    {{/if}}
+
+    {{#if (or (eq actor.flags.starwarsffg.config.enableMorality undefined) (eq
+    actor.flags.starwarsffg.config.enableMorality true) )}}
+    <div class="block-editor">
+        {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="full"
+        title="SWFFG.EmotionalStrength" type="PopoutEditor" name="data.morality.strength"
+        value=data.morality.strength)}}
+    </div>
+    <div class="block-editor">
+        {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="full"
+        title="SWFFG.EmotionalWeakness" type="PopoutEditor" name="data.morality.weakness"
+        value=data.morality.weakness)}}
+    </div>
+    {{/if}}
+    <div>
+        {{#if (eq this.FFG.theme "starwars")}}
+        <ul class="items motivations">
+            <li class="items-header header-title flexrow">
+                <div class="header-name">{{localize "SWFFG.Motivations"}}</div>
+                <div class="">{{localize "SWFFG.MotivationType"}}</div>
+                <div class="">{{localize "SWFFG.MotivationDescription"}}</div>
+                <div></div>
+            </li>
+
+            <div class="items-list">
+                <div class="item motivation-item grid grid-3col">
+                    <div class="item-attributes">
+                        <div class="item-category flexrow">
+                            <label for="data.general.motivation1.category">{{localize
+                                "SWFFG.MotivationCategory"}}</label>
+                            <input type="text" name="data.general.motivation1.category"
+                                value="{{data.general.motivation1.category}}" data-dtype="String" />
+                        </div>
+                        <div class="item-type flexrow">
+                            <label for="data.general.motivation1.type">{{localize "SWFFG.MotivationType"}}</label>
+                            <input type="text" name="data.general.motivation1.type" id="data.general.motivation1.type"
+                                value="{{data.general.motivation1.type}}" data-dtype="String" />
+                        </div>
+                    </div>
+                    <div class="description">
+                        <textarea
+                            name="data.general.motivation1.description">{{data.general.motivation1.description}}</textarea>
+                    </div>
+                </div>
+                <div class="item motivation-item grid grid-3col">
+                    <div class="attributes">
+                        <div class="item-category flexrow">
+                            <label for="data.general.motivation2.category">{{localize
+                                "SWFFG.MotivationCategory"}}</label>
+                            <input type="text" name="data.general.motivation2.category"
+                                value="{{data.general.motivation2.category}}" data-dtype="String" />
+                        </div>
+                        <div class="item-type flexrow">
+                            <label for="data.general.motivation2.type">{{localize "SWFFG.MotivationType"}}</label>
+                            <input type="text" name="data.general.motivation2.type" id="data.general.motivation2.type"
+                                value="{{data.general.motivation2.type}}" data-dtype="String" />
+                        </div>
+                    </div>
+                    <div class="description">
+                        <textarea
+                            name="data.general.motivation2.description">{{data.general.motivation2.description}}</textarea>
+                    </div>
+                </div>
+            </div>
+        </ul>
+        {{else}}
+
+        <div class="grid grid-2col genesys">
+            {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
+            title="SWFFG.Strength" type="PopoutEditor" name="data.motivation.strength" value=data.motivation.strength)}}
+            {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
+            title="SWFFG.Flaw" type="PopoutEditor" name="data.motivation.flaw" value=data.motivation.flaw)}} {{>
+            "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
+            title="SWFFG.Desire"
+            type="PopoutEditor" name="data.motivation.desire" value=data.motivation.desire)}} {{>
+            "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
+            title="SWFFG.Fear"
+            type="PopoutEditor" name="data.motivation.fear" value=data.motivation.fear)}}
+        </div>
+
+        {{/if}}
+    </div>
+</div>
