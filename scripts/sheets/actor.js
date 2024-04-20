@@ -71,9 +71,9 @@ async function loadHandleBarTemplates()
     "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-tabs.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-details.html",
-    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-characteristics.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-tab-characteristics.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-skills.html",
-    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-items.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-tab-items.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-healingitem.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-weapon-armor-gear.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-talents.html",
@@ -81,6 +81,7 @@ async function loadHandleBarTemplates()
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-forcepowers.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-signatureability.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-criticalinjury.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-tab-description.html",
   ];
   
   return loadTemplates( templatePaths );

@@ -41,10 +41,10 @@
   {{!-- Sheet Body --}}
   <section class="sheet-body" style="{{#if limited}}display:none;{{/if}}">
     {{!-- Characteristics Tab --}}
-    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-characteristics.html"}}
+    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-tab-characteristics.html"}}
 
     {{!-- Owned Items Tab --}}
-    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-items.html"}}
+    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-tab-items.html"}}
 
 
     {{!-- Talents Tab --}}
@@ -56,28 +56,7 @@
     </div>
 
     {{!-- Biography Tab --}}
-    <div class="tab biography active" data-group="primary" data-tab="description">
-      <div class="talent-list grid grid-3col">
-        {{!-- Gender Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Gender" type="String" name="data.general.gender" value=data.general.gender)}}
-        {{!-- Height Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Height" type="String" name="data.general.height" value=data.general.height)}}
-        {{!-- Hair Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Hair" type="String" name="data.general.hair" value=data.general.hair)}}
-        
-        {{!-- Age Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Age" type="String" name="data.general.age" value=data.general.age)}}
-        {{!-- Build Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Build" type="String" name="data.general.build" value=data.general.build)}}
-        {{!-- Eyes Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Eyes" type="String" name="data.general.eyes" value=data.general.eyes)}}
-        
-      </div>
-      <div class="talent-list grid grid-2col">
-        <div class="">
-          {{!-- TabBiography Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="double" title="SWFFG.TabBiography" type="PopoutEditor" name="data.biography" value=data.biography)}}      
-        </div>
-        <div class="grid-1col">
-          {{!-- NotableFeature Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="full" title="SWFFG.NotableFeature" type="PopoutEditor" name="data.general.features" value=data.general.features)}}
-          {{!-- Notes Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="full" title="SWFFG.Notes" type="PopoutEditor" name="data.general.notes" value=data.general.notes)}}            
-        </div>
-        </div>
-      {{!-- Experience Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="split" title="SWFFG.DescriptionXP" fields=(array (object name="data.experience.available" value=data.experience.available type="Number" label="SWFFG.DescriptionXPAvailable") (object name="data.experience.total" value=data.experience.total type="Number" label="SWFFG.DescriptionXPTotal") ))}}    
-    </div>
+    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-tab-description.html"}}
 
     {{!-- Modifiers Tab --}}
     <div class="tab attributes" data-group="primary" data-tab="attributes">
