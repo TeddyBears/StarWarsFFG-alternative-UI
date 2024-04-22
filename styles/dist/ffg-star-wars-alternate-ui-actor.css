@@ -17,6 +17,7 @@
       rgba(152, 4, 4, 0.5) 50%,
       rgba(0, 0, 0, 1) 100%
   );
+  --height-tab:2.5rem;
 }
 
 .starwarsffg.sheet.actor.ffg-alternative {
@@ -43,6 +44,7 @@
   /* form fields */
   /* ffg-block */
   /* items */
+  /* Nav */
 }
 .starwarsffg.sheet.actor.ffg-alternative .character .specialization-pill,
 .starwarsffg.sheet.actor.ffg-alternative .character .species-pill,
@@ -135,6 +137,7 @@
 .starwarsffg.sheet.actor.ffg-alternative .character input,
 .starwarsffg.sheet.actor.ffg-alternative .character textarea {
   color: var(--color-text-light-primary);
+  font-family: inherit;
 }
 .starwarsffg.sheet.actor.ffg-alternative .character input:focus,
 .starwarsffg.sheet.actor.ffg-alternative .character textarea:focus {
@@ -197,6 +200,23 @@
 .starwarsffg.sheet.actor.ffg-alternative .character .items.motivations .description {
   grid-column: span 2/4;
 }
+.starwarsffg.sheet.actor.ffg-alternative .character .tabs {
+  height: var(--height-tab);
+}
+.starwarsffg.sheet.actor.ffg-alternative .character .tabs .item {
+  padding: 0 10px;
+  text-overflow: ellipsis;
+  width: 19%;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: var(--height-tab);
+  border-radius: 5px;
+  box-shadow: 0 2px rgba(179, 130, 2, 0.5);
+  background: #011;
+}
+.starwarsffg.sheet.actor.ffg-alternative .character .tabs .item.active {
+  box-shadow: 0 2px rgba(152, 4, 4, 0.5);
+}
 
 /*
 .starwarsffg.sheet.actor.ffg-alternative .character .header-fields .career-pill {
@@ -217,6 +237,3 @@
     font-family: AurekBesh;
 }
 */
-.starwarsffg.sheet.actor.ffg-alternative .tabs .item {
-  padding: 0 10px;
-}
