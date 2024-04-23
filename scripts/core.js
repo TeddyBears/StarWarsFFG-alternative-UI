@@ -1,16 +1,20 @@
 const MODULE_PATH = "modules/ffg-star-wars-alternative-ui";
+const MODULE_ID = "ffg-star-wars-alternative-ui";
+const SYSTEM_ID = "starwarsffg";
 
+import { FFG } from "../../../../systems/starwarsffg/modules/swffg-config.js";
 import { FFGAlternateActorSheet } from './sheets/actor.js';
-//import { loadHandleBarTemplates } from './sheets/actor.js';
+import { loadHandleBarTemplates } from './sheets/actor.js';
 
 
-function rpgUIAddActorSheetAlt() {
-	$("head").append('<link href="modules/ffg-star-wars-alternative-ui/styles/dist/ffg-star-wars-alternate-ui-actor.min.css" rel="stylesheet" type="text/css" media="all">');
+function addStyleSheet(stylesheetname) {
+	$("head").append('<link href="' + MODULE_PATH + '/styles/dist/' + stylesheetname + '.min.css" rel="stylesheet" type="text/css" media="all">');
 }
 
-Hooks.on("init", () => {
+Hooks.once("init", () => {
 
-	game.settings.register('ffg-star-wars-alternative-ui', 'sheet-actor', {
+	// Add Game settings
+	game.settings.register(MODULE_ID, 'sheet-actor', {
 		name: game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.active"),
 		scope: "client",
 		type: Boolean,
@@ -21,8 +25,23 @@ Hooks.on("init", () => {
 		}
 	});
 
-	if (game.settings.get('ffg-star-wars-alternative-ui', 'sheet-actor')) {
-		rpgUIAddActorSheetAlt();
+	// Add actor sheet overrided elements
+	if (game.settings.get(MODULE_ID, 'sheet-actor')) {
+		const actorSheetAltLabel = game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.label");
+		DocumentSheetConfig.registerSheet(
+			Actor,
+			SYSTEM_ID,
+			FFGAlternateActorSheet,
+			{
+				types: ["character"],
+				label: actorSheetAltLabel,
+			}
+		);
+		loadHandleBarTemplates();
+		FFG.sheets.defaultWidth = {
+			character: 730, /*override the defaut width for actor sheet*/
+		};
+		addStyleSheet("ffg-star-wars-alternate-ui-actor");
 	}
 });
 

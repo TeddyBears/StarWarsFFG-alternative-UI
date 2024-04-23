@@ -35,6 +35,8 @@
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   color: var(--color-text-light-primary);
+  display: block;
+  overflow-y: auto;
 }
 .starwarsffg.sheet.actor.ffg-alternative .character {
   /* apply holgram effect on avatar */
