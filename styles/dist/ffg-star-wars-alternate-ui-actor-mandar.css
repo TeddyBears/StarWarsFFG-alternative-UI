@@ -243,3 +243,43 @@
     font-family: AurekBesh;
 }
 */
+:root {
+  --paddin-test: 15px;
+}
+
+.starwarsffg.sheet.actor.ffg-alternative .window-content form {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.starwarsffg.sheet.actor.ffg-alternative .window-content form.character {
+  overflow: auto;
+  height: inherit;
+}
+.starwarsffg.sheet.actor.ffg-alternative .window-content form.character .header-fields .header-description-block {
+  height: auto;
+}
+.starwarsffg.sheet.actor.ffg-alternative .window-content form.character .sheet-body {
+  background: none;
+  height: unset;
+}
+.starwarsffg.sheet.actor.ffg-alternative .window-content form.character .sheet-body .tab {
+  overflow: hidden;
+}
+.starwarsffg.sheet.actor.ffg-alternative .window-content form.character .sheet-body .tab .skillsTablesGrid {
+  overflow: hidden;
+}
+.starwarsffg.sheet.actor.ffg-alternative .window-content form.character .sheet-body .tab .characteristic-item {
+  background-color: var(--color-background-primary);
+}
+.starwarsffg.sheet.actor.ffg-alternative .window-content form.character .sheet-body .tab .characteristic-item .characteristic {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+.starwarsffg.sheet.actor.ffg-alternative .window-content form.character .resource {
+  flex-grow: 1;
+}
+.starwarsffg.sheet.actor.ffg-alternative .window-content form.character .resource.defence {
+  flex-grow: 2;
+}
+.starwarsffg.sheet.actor.ffg-alternative .window-content form.character .resource.defence .block-attribute {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}

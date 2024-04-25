@@ -25,6 +25,17 @@ Hooks.once("init", () => {
 		}
 	});
 
+	game.settings.register(MODULE_ID, 'mandar-theme', {
+		name: game.i18n.localize("ffg-star-wars-alternative-ui.mandar-theme"),
+		scope: "client",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
 	// Add actor sheet overrided elements
 	if (game.settings.get(MODULE_ID, 'sheet-actor')) {
 		const actorSheetAltLabel = game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.label");
@@ -38,10 +49,14 @@ Hooks.once("init", () => {
 			}
 		);
 		loadHandleBarTemplates();
-		FFG.sheets.defaultWidth = {
-			character: 730, /*override the defaut width for actor sheet*/
-		};
-		addStyleSheet("ffg-star-wars-alternate-ui-actor");
+		
+		FFG.sheets.defaultWidth.character = 730; /*override the defaut width for actor sheet*/
+		if (game.settings.get(SYSTEM_ID, 'ui-uitheme') === "mandar") {
+			addStyleSheet("ffg-star-wars-alternate-ui-actor-mandar");
+		}else{
+			addStyleSheet("ffg-star-wars-alternate-ui-actor");
+		}
+		
 	}
 });
 

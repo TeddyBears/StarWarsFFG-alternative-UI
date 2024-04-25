@@ -1,4 +1,5 @@
 {
     "ffg-star-wars-alternative-ui.sheet.actor.active": "Active la surcharge CSS pour la fiche d'Acteur alternative",
-    "ffg-star-wars-alternative-ui.sheet.actor.label": "Acteur - Fiche alternative"
+    "ffg-star-wars-alternative-ui.sheet.actor.label": "Acteur - Fiche alternative",
+    "ffg-star-wars-alternative-ui.mandar-theme": "Activer cette option si le thème Mandar est utilisé"
 }
