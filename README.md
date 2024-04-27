@@ -17,20 +17,16 @@ It changes the following :
 
 ### Characteristics tab modifications
 
-* override skill table generation. General skill are on the left col. Other skill are on the right cols.
-* TODO: Fix scroll problem.
+* override skill table generation. General skills are on the left col. Other skills are on the right cols.
 
 ### Items tab modifications
 
-* Fix translation for the title __equiped__ / __unequiped__. Translation exists but was not used in original file.
+* Fix translation for the title __equiped__ / __unequiped__. Translations exist but was not used in original file.
 * Change healingitem file to use the same HTML structure than other blocks.
-* TODO: Fix scroll problem.
 
 ### Talents tab modifications
 
-* Change _special abilities_ and _force powers_ render
-* TODO: Fix scroll problem.
-* TODO: use the same partial for _special abilities_ and _force powers_. See injuries as examples.
+* Change _special abilities_ and _force powers_ render like cards
 
 ### General tab modifications
 
@@ -38,20 +34,15 @@ It changes the following :
 * Move _motivations_ block to _obligation_ tab.
 * Move _critical injuries_ into this tab.
 * The _general_ tab is hidden.
-* TODO: Fix scroll problem.
 
 ### Description tab modification
 
 * _gender_, _eyes_, _height_, ... blocks are now in this tab.
 * Move _critical injuries_ to _general_ tab.
-* TODO : Where move XP ?
-* TODO: Fix scroll problem.
 
 ### Obligation tab modifications
 
 * _Motivations_ block are here now.
-* TODO: Fix scroll problem.
-* TODO: Remove draggable effect on _obligations_, _duties_ and _motivations_.
 
 ## Added compendiums
 
