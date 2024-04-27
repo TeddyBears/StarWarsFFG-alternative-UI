@@ -19,11 +19,11 @@
         <div class="character-talents" style="{{#if limited}}display:none;{{/if}}">
             <div class="talents-header header">
                 <span class="label career">{{localize "SWFFG.Career"}}</span>
-                <span class="label specializations">{{localize "SWFFG.Specializations"}}</span>
-                <span class="label forcepowers">{{#if (or (eq actor.flags.starwarsffg.config.enableForcePool undefined)
+                <span class="label specializations ffg-purchase" data-buy-action="specialization">{{localize "SWFFG.Specializations"}}</span>
+                <span class="label forcepowers ffg-purchase" data-buy-action="forcepower">{{#if (or (eq actor.flags.starwarsffg.config.enableForcePool undefined)
                     (eq actor.flags.starwarsffg.config.enableForcePool true) )}}{{localize "SWFFG.ForcePowers"}}
                     {{/if}}</span>
-                <span class="label signatureabilities">{{localize "SWFFG.SignatureAbilities"}}</span>
+                <span class="label signatureabilities ffg-purchase" data-buy-action="signatureability">{{localize "SWFFG.SignatureAbilities"}}</span>
             </div>
             <div class="talents-list" style="{{#if limited}}display:none;{{/if}}">
                 {{#each_when actor.items "type" "career"}}

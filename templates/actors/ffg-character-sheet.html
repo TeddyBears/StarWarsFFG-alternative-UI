@@ -36,7 +36,9 @@
     (object tab="talents" label="SWFFG.TabTalents" icon="fab fa-superpowers" cls=classType) 
     (object tab="general" label="SWFFG.TabGeneral" icon="fas fa-heartbeat" cls=classType isHidden=true) 
     (object tab="description" label="SWFFG.TabBiography" icon="fas fa-address-card" cls=classType) 
-    (object tab="obligation" label="SWFFG.TabObligationDutyMorality" icon="fas fa-balance-scale" cls=classType isHidden=false isHiddenV2=hideObligationDutyMoralityConflictTab) )}} 
+    (object tab="obligation" label="SWFFG.TabObligationDutyMorality" icon="fas fa-balance-scale" cls=classType isHidden=false isHiddenV2=hideObligationDutyMoralityConflictTab)
+    (object tab="xp" label="SWFFG.TabXpLog" icon="far fa-note" cls=classType isHidden=true)
+    )}}
                 
   {{!-- Sheet Body --}}
   <section class="sheet-body" style="{{#if limited}}display:none;{{/if}}">
@@ -70,5 +72,9 @@
 
     {{!-- Obligations Tab --}}
     {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-tab-obligations.html"}}
+
+    <div class="tab xp" data-group="primary" data-tab="xp">
+      {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single" title="SWFFG.Actors.Sheets.Purchase.LogTitle" type="PopoutEditor" value=xpLog)}}
+    </div>
   </section>
 </form>
