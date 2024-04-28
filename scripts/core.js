@@ -25,17 +25,6 @@ Hooks.once("init", () => {
 		}
 	});
 
-	game.settings.register(MODULE_ID, 'mandar-theme', {
-		name: game.i18n.localize("ffg-star-wars-alternative-ui.mandar-theme"),
-		scope: "client",
-		type: Boolean,
-		default: true,
-		config: true,
-		onChange: () => {
-			location.reload();
-		}
-	});
-
 	// Add actor sheet overrided elements
 	if (game.settings.get(MODULE_ID, 'sheet-actor')) {
 		const actorSheetAltLabel = game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.label");

@@ -1,4 +1,4 @@
 {
-    "ffg-star-wars-alternative-ui.css": "Allow overrided CSS for the Actor sheet alternative",
-    "ffg-star-wars-alternative-ui.sheet.actor.label": "Actor - Alternative Sheet",
+    "ffg-star-wars-alternative-ui.sheet.actor.active": "Add the Actor alternative sheet option",
+    "ffg-star-wars-alternative-ui.sheet.actor.label": "Actor - Alternative Sheet"
 }
