@@ -1,11 +1,11 @@
 {
 	"id": "ffg-star-wars-alternative-ui",
 	"title": "FFG Star Wars - Alternative UI",
-	"description": "Add new actor sheet and some macros and compendiums for Star wars FFG",
+	"description": "Add new actor sheet design",
 	"version": "11.1.809",
 	"authors": [{
 		"name": "Balebos",
-		"discord": "Balébos#42",
+		"discord": "",
 		"url": "",
 		"flags": {}
 	}],
@@ -21,43 +21,6 @@
 			"compatibility": {}
 		}]
 	},
-
-	"packs": [{
-			"name": "module-items",
-			"label": "Module Items",
-			"path": "packs/items",
-			"type": "Item",
-			"system": "starwarsffg",
-			"ownership": {
-				"PLAYER": "OBSERVER",
-				"ASSISTANT": "OWNER"
-			},
-			"flags": {}
-		},
-		{
-			"name": "module-macros",
-			"label": "Module Macros",
-			"path": "packs/macros",
-			"type": "Macro",
-			"ownership": {
-				"PLAYER": "OBSERVER",
-				"ASSISTANT": "OWNER"
-			},
-			"flags": {}
-		},
-		{
-			"name": "module-roll-tables",
-			"label": "Module Roll Tables",
-			"path": "packs/roll-tables",
-			"type": "RollTable",
-			"ownership": {
-				"PLAYER": "OBSERVER",
-				"ASSISTANT": "OWNER"
-			},
-			"flags": {}
-		}
-		
-	],
 	"styles": [
 		
 	],
