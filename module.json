@@ -29,22 +29,22 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json",
-      "flags": {}
+      "path": "lang/en.json"
     },
     {
       "lang": "fr",
       "name": "French (Français)",
-      "path": "lang/fr.json",
-      "flags": {}
+      "path": "lang/fr.json"
     }
   ],
-  "media": [{
-		"type": "setup",
-		"url": "modules/ffg-star-wars-alternative-ui/artwork/FFGSW_logo.webp",
-		"thumbnail": "modules/ffg-star-wars-alternative-ui/artwork/FFGSW_logo.webp"
-	}],
+  "media": [
+    {
+      "type": "setup",
+      "url": "modules/ffg-star-wars-alternative-ui/artwork/FFGSW_logo.webp",
+      "thumbnail": "modules/ffg-star-wars-alternative-ui/artwork/FFGSW_logo.webp"
+    }
+  ],
   "url": "https://github.com/TeddyBears/StarWarsFFG-alternative-UI",
   "manifest": "https://raw.githubusercontent.com/TeddyBears/StarWarsFFG-alternative-UI/main/module.json",
-  "download": "https://github.com/TeddyBears/StarWarsFFG-alternative-UI/archive/refs/tags/v12.0.0.1_903.zip"
+  "download": "https://github.com/TeddyBears/StarWarsFFG-alternative-UI/archive/refs/tags/12.0.0.1_903.zip"
 }
