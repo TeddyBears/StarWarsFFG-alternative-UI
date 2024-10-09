@@ -6,7 +6,7 @@ export class FFGAlternateActorSheet extends ActorSheetFFG {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["starwarsffg", "sheet", "actor", "ffg-alternative"],
+      classes: ["starwarsffg", "sheet", "actor", "ffg-alternative", "v2"],
       template: "modules/ffg-star-wars-alternative-ui/templates/actors/ffg-character-sheet.html",
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "characteristics" }],
       scrollY: [""],

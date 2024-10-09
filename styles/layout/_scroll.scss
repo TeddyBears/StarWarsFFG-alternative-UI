@@ -1,0 +1,22 @@
+// override the scroll to avoid problem in the bottom of sheets
+.starwarsffg.sheet.actor {
+
+    &.ffg-alternative {
+        .window-content {
+            form.editable {
+                overflow-y: auto;
+                overflow-x: hidden;
+                height: inherit;
+
+                .sheet-body {
+                    height: unset;
+
+                    .skillsTablesGrid {
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+    }
+}

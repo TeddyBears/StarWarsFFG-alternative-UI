@@ -1,0 +1,26 @@
+body {
+        // BEGIN - From foundry VTT default
+        --color-text-selection-bg: #781428;
+        --color-scrollbar: #782e22;
+        --color-scrollbar-track: transparent;
+        --color-scrollbar-border: #ff6400;
+        // END - From foundry VTT default
+
+        // BEGIN - From starwarsffg system
+        --color-light-1: ghostwhite;
+        // END - From starwarsffg system
+        --grid-gap: var(--font-size-10);
+        --holo-color: 120,150,170;
+        --color-text-1: var(--color-text-dark-primary);
+        --color-text-2: var(--color-text-light-0);
+        --color-background-1: #78142880;
+        --color-background-2: var(--color-light-3);
+        --color-gradient-linear: linear-gradient(90deg,
+                        rgba(0, 0, 0, 1) 0%,
+                        rgba(120, 20, 40, 0.5) 50%,
+                        rgba(0, 0, 0, 1) 100%);
+        --color-gradient-radial: radial-gradient(circle,
+                        rgba(0, 0, 0, 1) 0%,
+                        rgba(120, 20, 40, 0.5) 50%,
+                        rgba(0, 0, 0, 1) 100%);
+}

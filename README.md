@@ -2,22 +2,24 @@
 # Star Wars FFG Alternative UI
 
 This module add new sheet for some items.  
-Add also some _Macros_, _Items_ and _Roll tables_ as _compendiums_.
 
 ## Actor sheet
 
-Add a new alternative for the character actor sheet.
+Add a new alternative for the character, rival, nemesis and minion actor sheet.
 It changes the following :
+
+### General modifications
+The scroll is now for the entire sheet not only tab. This fix some problem to see last item in long list. Like in skills and equipment.
 
 ### Header part (image, name, species,...)
 
 * Carreer, specialisations, Force powers and special abilities are regrouping into the same element. This reduce the size of the header part of the sheet.
 * Move _Force pool_ block to the header part. It was into _talent_ tab.
-* Add link on _wounds box_ to _general_ tab.
+* Add link on _wounds box_ to _criticals_ tab.
 
 ### Characteristics tab modifications
 
-* override skill table generation. General skills are on the left col. Other skills are on the right cols.
+* override skill table generation. General skills are on the left col. Other skills are on the right cols. This to have a better render and avoid to start a new skill category with only one skill in the left col.
 
 ### Items tab modifications
 
@@ -26,28 +28,18 @@ It changes the following :
 
 ### Talents tab modifications
 
-* Change _special abilities_ and _force powers_ render like cards
+* Change _special abilities_ and _force powers_ render as cards
 
 ### General tab modifications
 
 * Move _gender_, _eyes_, _height_, ... blocks to _description (Biography)_ tab
 * Move _motivations_ block to _obligation_ tab.
-* Move _critical injuries_ into this tab.
 * The _general_ tab is hidden.
 
 ### Description tab modification
 
 * _gender_, _eyes_, _height_, ... blocks are now in this tab.
-* Move _critical injuries_ to _general_ tab.
 
 ### Obligation tab modifications
 
 * _Motivations_ block are here now.
-
-## Added compendiums
-
-### Items
-
-### Roll tables
-
-### Macros

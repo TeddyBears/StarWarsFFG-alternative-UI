@@ -1,45 +1,50 @@
 {
-	"id": "ffg-star-wars-alternative-ui",
-	"title": "FFG Star Wars - Alternative UI",
-	"description": "Add new actor sheet design",
-	"version": "11.1.809",
-	"authors": [{
-		"name": "Balebos",
-		"discord": "",
-		"url": "",
-		"flags": {}
-	}],
-	"compatibility": {
-		"minimum": "11",
-		"verified": "11"
-	},
-	"relationships": {
-		"systems": [{
-			"id": "starwarsffg",
-			"manifest": "https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.json",
-			"type": "system",
-			"compatibility": {}
-		}]
-	},
-	"styles": [
-		
-	],
-	"esmodules": [
-		"scripts/core.js"
-	],
-	"languages": [
+  "id": "ffg-star-wars-alternative-ui",
+  "title": "FFG Star Wars - Alternative UI",
+  "description": "Add new sheet design",
+  "version": "12.0.0.1_903",
+  "authors": [
+    {
+      "name": "Balebos"
+    }
+  ],
+  "compatibility": {
+    "minimum": "11",
+    "verified": "12"
+  },
+  "relationships": {
+    "systems": [
       {
-			"lang": "en",
-			"name": "English",
-			"path": "lang/en.json"
-		},
-		{
-			"lang": "fr",
-			"name": "French (Français)",
-			"path": "lang/fr.json"
-		}
-	],
-	"url": "https://github.com/TeddyBears/StarWarsFFG-alternative-UI",
-	"manifest": "https://raw.githubusercontent.com/TeddyBears/StarWarsFFG-alternative-UI/main/module.json",
-	"download": "https://github.com/TeddyBears/StarWarsFFG-alternative-UI/archive/refs/tags/v11.1.809.zip"
+        "id": "starwarsffg",
+        "manifest": "https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.json",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/core.js"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    },
+    {
+      "lang": "fr",
+      "name": "French (Français)",
+      "path": "lang/fr.json",
+      "flags": {}
+    }
+  ],
+  "media": [{
+		"type": "setup",
+		"url": "modules/ffg-star-wars-alternative-ui/artwork/FFGSW_logo.webp",
+		"thumbnail": "modules/ffg-star-wars-alternative-ui/artwork/FFGSW_logo.webp"
+	}],
+  "url": "https://github.com/TeddyBears/StarWarsFFG-alternative-UI",
+  "manifest": "https://raw.githubusercontent.com/TeddyBears/StarWarsFFG-alternative-UI/main/module.json",
+  "download": "https://github.com/TeddyBears/StarWarsFFG-alternative-UI/archive/refs/tags/v12.0.0.1_903.zip"
 }

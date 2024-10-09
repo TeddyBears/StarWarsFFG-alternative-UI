@@ -1,12 +1,12 @@
 {{#contains items "type" "forcepower"}}
 {{#if (or (eq actor.flags.starwarsffg.config.enableForcePool undefined) (eq actor.flags.starwarsffg.config.enableForcePool true) )}}
-<ul class="talent-list">
-  <li class="talents-header header-title flexrow">
+<ul class="forcepowers-list items gap">
+  <li class="header-title flexrow">
     <div class="header-name">{{localize "SWFFG.ForcePower"}}</div>
     <div></div>
   </li>
 
-  <div class="talent-list grid grid-2col">
+  <div class="forcepowers-item grid grid-2col">
     {{#each items as |item id|}} {{#iff item.type '==' 'forcepower'}}
     <div class="resource forcepower full item" data-item-id="{{item._id}}">
       <div class="attribute flex-group-center">

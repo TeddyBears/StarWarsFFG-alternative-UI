@@ -1,12 +1,12 @@
 {{#contains items "type" "signatureability"}}
-<ul class="talent-list">
-  <li class="talents-header header-title flexrow">
+<ul class="signatureabilities-list items gap">
+  <li class="header-title flexrow">
     <div class="header-name">{{localize "SWFFG.SignatureAbility"}}</div>
     <div></div>
   </li>
-  <div class="talent-list grid grid-2col">
+  <div class="signatureabilities-item grid grid-2col">
     {{#each items as |item id|}} {{#iff item.type '==' 'signatureability'}}
-    <div class="resource forcepower full item" data-item-id="{{item._id}}">
+    <div class="resource signatureability full item" data-item-id="{{item._id}}">
       <div class="attribute flex-group-center">
         <div class="block-background">
           <div class="block-title header-title item-name">
@@ -15,7 +15,7 @@
           <div class="block-attribute">
             <ul class="items-list">
               {{#each item.powerUpgrades as |upgrade name|}}
-              <li class="force-power flexrow" data-item-id="{{item._id}}" data-desc="{{upgrade.description}}"
+              <li class="signatureability flexrow" data-item-id="{{item._id}}" data-desc="{{upgrade.description}}"
                 data-upgrade-name="{{upgrade.name}}">
                 <div class="item-name">{{upgrade.name}}</div>
                 <div>{{upgrade.rank}}</div>

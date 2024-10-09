@@ -3,22 +3,29 @@
     {{#each data.skilllist as |skillcolumn|}}
     <div class="pure-u-12-24 skillTypeGrid skillColumnGrid">
       {{#each this as |skill|}} {{#if (eq skill.id "header")}}
-      <div class="skillTable skill-type" data-type="{{skill.type}}">
+      <div class="skillTable" data-type="{{skill.type}}">
         <div class="pure-g skillsHeader header-title">
           <div class="pure-u-12-24">{{skill.label}}</div>
           <div class="pure-u-3-24 hover">
-            {{localize "SWFFG.SkillsCS"}}
-            <div class="tooltip">{{localize "SWFFG.SkillsCareerSkill"}}</div>
+            {{#if (eq ../../this.document.type "minion")}}
+              <span data-tooltip="{{localize 'SWFFG.SkillsGroupSkill'}}" data-tooltip-direction="DOWN">
+                {{localize "SWFFG.SkillsGS"}}
+              </span>
+            {{else}}
+              <span data-tooltip="{{localize 'SWFFG.SkillsCareerSkill'}}" data-tooltip-direction="DOWN">
+                {{localize "SWFFG.SkillsCS"}}
+              </span>
+            {{/if}}
           </div>
           <div class="pure-u-3-24">{{localize "SWFFG.SkillsRank"}}</div>
           <div class="pure-u-6-24">{{localize "SWFFG.SkillsRoll"}}</div>
         </div>
       </div>
       {{else}}
-      <div class="skillTable skill-item" data-type="{{skill.type}}">
-        <div data-ability="{{skill.name}}" data-skilltype="{{skill.type}}" data-characteristic="{{skill.characteristic}}" class="pure-g skill" draggable="true">
+      <div class="skillTable" data-type="{{skill.type}}">
+        <div data-ability="{{skill.name}}" data-skilltype="{{skill.type}}" data-characteristic="{{skill.characteristic}}" class="pure-g skill" draggable="false">
           <div class="pure-u-12-24">
-            <div class="skill-name">
+            <div class="skill-name">            
               {{#if skill.useForInitiative}}*{{/if}}{{skill.label}} {{#with (lookup ../../this.FFG.characteristics [characteristic])~}}
               <div class="skill-characteristic" data-characteristic="{{skill.characteristic}}">({{localize abrev}})</div>
               {{/with}}

@@ -1,0 +1,64 @@
+@use "../abstracts" as *;
+
+.starwarsffg.sheet.actor {
+    &.ffg-alternative {
+        .resource {
+            width: initial;
+            margin: 0 0.15rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.split {
+                //width: initial;
+            }
+
+            &.full {
+                width: 100%;
+            }
+
+            .block-background {
+                padding: 0;
+                background: var(--color-background-2);
+                @include clip-border;
+
+                .block-title {
+                    &.grid-2col {
+                        grid-template-columns: auto 30px;
+                        margin: auto auto 0.25rem;
+                    }
+
+                    &.grid-3col {
+                        grid-template-columns: auto auto 30px;
+                        margin: auto auto 0.25rem;
+                    }
+                }
+
+                .block-attribute {
+                    padding: 0;
+
+                    .trash-enable {
+                        grid-template-columns: auto auto 30px;
+                    }
+
+                    .block-value label {
+                        font-size: var(--font-size-10);
+                        text-transform: uppercase;
+                        display: block;
+                        line-height: 15px;
+                    }
+
+                    .force-power {
+                        padding: unset;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

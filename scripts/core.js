@@ -8,17 +8,17 @@ import { loadHandleBarTemplates } from './sheets/actor.js';
 
 
 function addStyleSheet(stylesheetname) {
-	$("head").append('<link href="' + MODULE_PATH + '/styles/dist/' + stylesheetname + '.min.css" rel="stylesheet" type="text/css" media="all">');
+	$("head").append('<link href="' + MODULE_PATH + '/styles/dist/' + stylesheetname + '.css" rel="stylesheet" type="text/css" media="all">');
 }
 
 Hooks.once("init", () => {
 
 	// Add Game settings
 	game.settings.register(MODULE_ID, 'sheet-actor', {
-		name: game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.active"),
+		name: game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.alt"),
 		scope: "client",
 		type: Boolean,
-		default: true,
+		default: false,
 		config: true,
 		onChange: () => {
 			location.reload();
@@ -27,29 +27,22 @@ Hooks.once("init", () => {
 
 	// Add actor sheet overrided elements
 	if (game.settings.get(MODULE_ID, 'sheet-actor')) {
-		const actorSheetAltLabel = game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.label");
-		DocumentSheetConfig.registerSheet(
-			Actor,
-			SYSTEM_ID,
-			FFGAlternateActorSheet,
-			{
-				types: ["character"],
-				label: actorSheetAltLabel,
-			}
-		);
-		loadHandleBarTemplates();
-		
-		FFG.sheets.defaultWidth.character = 730; /*override the defaut width for actor sheet*/
 		if (game.settings.get(SYSTEM_ID, 'ui-uitheme') === "mandar") {
-			addStyleSheet("ffg-star-wars-alternate-ui-actor-mandar");
-		}else{
-			addStyleSheet("ffg-star-wars-alternate-ui-actor");
+			addStyleSheet("main");
+			const actorSheetAltLabel = game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.label");
+			DocumentSheetConfig.registerSheet(
+				Actor,
+				SYSTEM_ID,
+				FFGAlternateActorSheet,
+				{
+					types: ["character","rival", "nemesis","minion"],
+					label: actorSheetAltLabel,
+				}
+			);
+			loadHandleBarTemplates();
+			FFG.sheets.defaultWidth.character = 700; /*override the defaut width for actor sheet*/
+			FFG.sheets.defaultHeight.minion = 783; /*override the defaut heigth for minion sheet*/
 		}
-		
+
 	}
 });
-
-
-
-
-

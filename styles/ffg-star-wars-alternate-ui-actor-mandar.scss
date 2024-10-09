@@ -9,45 +9,51 @@
         form {
             overflow-y: auto;
             overflow-x: hidden;
-        &.character {
-            overflow: auto;
-            height: inherit;
 
-            .header-fields {
-                .header-description-block {
-                    height: auto;
-                }
-            }
+            &.character {
+                overflow: auto;
+                height: inherit;
 
-            .sheet-body {
-                background: none;
-                height: unset;
-
-                .tab {
-                    overflow: hidden;
-                    .skillsTablesGrid {
-                        overflow: hidden;
+                .header-fields {
+                    .header-description-block {
+                        height: auto;
                     }
-                    .characteristic-item {
-                        background-color: var(--color-background-primary);
-                        .characteristic {
-                            border: 2px solid rgba(0, 0, 0, 0.5);                
+                }
+
+                .sheet-body {
+                    background: none;
+                    height: unset;
+
+                    .tab {
+                        overflow: hidden;
+
+                        .skillsTablesGrid {
+                            overflow: hidden;
+                        }
+
+                        .characteristic-item {
+                            background-color: var(--color-background-primary);
+
+                            .characteristic {
+                                border: 2px solid rgba(0, 0, 0, 0.5);
+                            }
                         }
                     }
-                }
-                
-            }
 
-            .resource {
-                flex-grow: 1;
-                &.defence {
-                    flex-grow: 2;
-                    .block-attribute {
-                        grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
+
+                .resource {
+                    flex-grow: 1;
+
+                    &.defence {
+                        flex-grow: 2;
+
+                        .block-attribute {
+                            grid-template-columns: repeat(3, minmax(0, 1fr));
+                        }
                     }
                 }
             }
         }
     }
-}
 }

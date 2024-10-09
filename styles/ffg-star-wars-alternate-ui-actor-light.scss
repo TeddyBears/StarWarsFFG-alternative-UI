@@ -1,0 +1,277 @@
+@import "common/var.scss";
+@import "common/mixins.scss";
+
+.starwarsffg.sheet.actor {
+    --color-text-light-primary: #b38202;
+    --color-text-dark-primary: #b38202;
+    min-width: 620px;
+    min-height: 550px;
+
+    &.ffg-alternative {
+        // apply datapad background
+        @include background-datapad();
+
+        .window-header {
+            background-color: var(--color-dark-1);
+            ;
+        }
+
+        .window-content {
+            background: var(--color-light-1);
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            color: var(--color-text-light-primary);
+            display: block;
+            overflow-y: auto;
+
+
+
+            .character {
+                overflow: auto;
+                height: inherit;
+
+                .header-fields {
+                    .details-block {
+                        align-items: flex-end;
+
+                        .header-description-block {
+                            height: auto;
+                            min-height: 130px;
+
+                            .specialization-pill,
+                            .species-pill,
+                            .career-pill,
+                            .signatureability-pill,
+                            .forcepower-pill {
+                                display: inline-block;
+                                border-radius: 5px;
+                                background-color: var(--color-fields-focused);
+                            }
+                        }
+
+                        // BEGIN - apply holographic effect on avatar
+                        .profile-block {
+                            text-align: center;
+                        }
+
+                        .holo {
+                            @include effect-holographic (var(--holo-color));
+                        }
+
+                        @include keyframes-holographic (var(--holo-color));
+                        // END - apply holographic effect on avatar
+
+                        .stats-block {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+
+                .sheet-body {
+                    background: none;
+                    height: unset;
+
+                    .tab {
+                        overflow: hidden;
+
+                        .skillsTablesGrid {
+                            overflow: hidden;
+                        }
+                    }
+
+                }
+
+
+                .resource {
+                    flex-grow: 1;
+
+                    &.defence {
+                        flex-grow: 2;
+
+                        .block-attribute {
+                            grid-template-columns: repeat(3, minmax(0, 1fr));
+                        }
+                    }
+                }
+
+                /* characteristics */
+                .characteristic-item {
+                    .characteristic {
+                        border: 5px double var(--color-fields-background);
+                    }
+                }
+
+                /* skills list */
+                .skillColumnGrid {
+                    flex: 48%;
+                    border: none;
+                    background: none;
+
+                    &:first-child {
+                        margin-right: 1%;
+                    }
+
+                    &:last-child {
+                        margin-left: 1%;
+                    }
+
+                    .skillsHeader div {
+                        background-color: transparent;
+                    }
+                }
+
+                /* Block title & header*/
+                .header-title {
+                    background: rgb(0, 0, 0);
+                    background: var(--color-gradient-linear);
+                    clip-path: none;
+                    -webkit-clip-path: none;
+                }
+
+                /* form fields */
+                input,
+                textarea {
+                    color: var(--color-text-light-primary);
+                    font-family: inherit;
+
+                    &:focus {
+                        box-shadow: 0 0 5px var(--color-fields-focused);
+                        background-color: var(--color-fields-focused);
+                    }
+                }
+
+                button {
+                    background: var(--color-fields-focused);
+                    border: none;
+                    width: 70%;
+                }
+
+                /* ffg-block */
+                .resource {
+                    width: initial;
+
+                    &.split {
+                        width: initial;
+                    }
+
+                    &.full {
+                        width: 100%;
+                    }
+
+                    .block-background {
+                        padding: 0;
+                        background: var(--color-fields-background);
+                        -webkit-clip-path: polygon(0% 0%,
+                                var(--notchSize) 0%,
+                                calc(100% - var(--notchSize)) 0%,
+                                100% var(--notchSize),
+                                100% calc(100% - var(--notchSize)),
+                                calc(100% - var(--notchSize)) 100%,
+                                var(--notchSize) 100%,
+                                0% calc(100% - var(--notchSize)));
+                        clip-path: polygon(0% 0%,
+                                var(--notchSize) 0%,
+                                calc(100% - var(--notchSize)) 0%,
+                                100% var(--notchSize),
+                                100% calc(100% - var(--notchSize)),
+                                calc(100% - var(--notchSize)) 100%,
+                                var(--notchSize) 100%,
+                                0% calc(100% - var(--notchSize)));
+
+                        .block-attribute {
+                            padding: 0 5px;
+
+                            .block-value label {
+                                font-size: 9px;
+                                text-transform: uppercase;
+                                display: block;
+                                line-height: 15px;
+                            }
+
+                            .force-power {
+                                padding: unset;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+
+                /* items */
+                .items {
+                    .items-list {
+                        background-color: var(--color-fields-background);
+                        padding: 0 0.2rem;
+
+                        .item {
+                            border-color: var(--color-fields-focused);
+
+                            .toggle-equipped {
+                                color: var(--color-fields-focused);
+
+                                &.active {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                    .item-pill {
+                        border-radius: 5px;
+                        background-color: var(--color-fields-focused);
+                    }
+
+                    .item-details {
+                        background: rgba(255, 255, 255, 0.1);
+                    }
+
+                    &.motivations {
+                        .description {
+                            grid-column: span 2 / 4;
+                        }
+                    }
+                }
+
+                /* Nav */
+                .tabs {
+                    height: var(--height-tab);
+
+                    .item {
+                        padding: 0 10px;
+                        text-overflow: ellipsis;
+                        width: 19%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        line-height: var(--height-tab);
+                        border-radius: 5px;
+                        box-shadow: 0 2px rgba(#b38202, 0.5);
+                        background: #011;
+
+                        &.active {
+                            box-shadow: 0 2px rgba(152, 4, 4, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+.starwarsffg.sheet.actor.ffg-alternative .character .header-fields .career-pill {
+    background-color: var(--color-box-heading);
+}
+
+
+.system-starwarsffg
+    .journal-entry-page
+    .journal-page-content
+    blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote) {
+    background: url("../artwork/datapad-quote.webp") !important;
+    padding-left: 25px !important;
+    color: var(--color-text-light-primary);
+}
+
+.credits {
+    font-family: AurekBesh;
+}
+*/

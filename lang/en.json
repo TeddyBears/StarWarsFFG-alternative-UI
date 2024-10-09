@@ -1,4 +1,11 @@
 {
-    "ffg-star-wars-alternative-ui.sheet.actor.active": "Add the Actor alternative sheet option",
-    "ffg-star-wars-alternative-ui.sheet.actor.label": "Actor - Alternative Sheet"
+    "ffg-star-wars-alternative-ui": {
+        "sheet": {
+            "actor": {
+                "alt": "Add the Actor alternative sheet option",
+                "alt-light": "Add the Actor alternative light sheet option",
+                "label": "Actor - Alternative Sheet"
+            }
+        }
+    }
 }

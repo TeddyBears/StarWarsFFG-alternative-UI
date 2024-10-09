@@ -1,21 +1,18 @@
-<div class="tab characteristics active" data-group="primary" data-tab="characteristics">
-  {{!-- Characteristics Scores --}}
-
-  <div class="grid grid-6col">
-    {{#each data.characteristics as |characteristic id|}}
-    <div class="characteristic-item flex-group-center" data-ability="{{id}}">
-      <div class="characteristic">
-        <div class="characteristic-value">
-          <input type="text" name="data.characteristics.{{id}}.value" value="{{characteristic.value}}"
-            data-dtype="Number" maxlength="1" type="text" pattern="[0-7]" />
-        </div>
-      </div>
-      <div class="characteristic-label header-title">
-        {{characteristic.label}}
+{{!-- Characteristics Scores --}}
+<div class="grid grid-6col">
+  {{#each data.characteristics as |characteristic id|}}
+  <div class="characteristic-item flex-group-center" data-ability="{{id}}">
+    <div class="characteristic">
+      <div class="characteristic-value">
+        <input type="text" name="data.characteristics.{{id}}.value" value="{{characteristic.value}}" data-dtype="Number"
+          maxlength="1" type="text" pattern="[0-7]" />
       </div>
     </div>
-    {{/each}}
+    <div class="characteristic-label header-title ffg-purchase" data-buy-action="characteristic" data-buy-characteristic="{{ id }}">
+      {{characteristic.label}}
+    </div>
   </div>
-
-  {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-skills.html"}}
+  {{/each}}
 </div>
+
+{{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-skills.html"}}
