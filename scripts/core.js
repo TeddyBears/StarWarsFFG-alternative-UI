@@ -35,7 +35,7 @@ Hooks.once("init", () => {
 				SYSTEM_ID,
 				FFGAlternateActorSheet,
 				{
-					types: ["character","rival", "nemesis","minion"],
+					types: ["character", "rival", "nemesis", "minion", "vehicle"],
 					label: actorSheetAltLabel,
 				}
 			);

@@ -42,6 +42,7 @@
                             .header-description-block {
                                 height: auto;
                                 min-height: 130px;
+                                overflow: hidden;
 
                                 .specialization-pill,
                                 .species-pill,
@@ -172,6 +173,14 @@
                                             //color: white;
                                         }
                                     }
+
+                                    .skillsGrid {
+                                        &.crew {
+                                            img {
+                                                margin-right: 0;
+                                            }
+                                        }
+                                    }
                                 }
                             }
 
@@ -196,8 +205,9 @@
                                 }
                             }
                         }
-                        .injuries{
-                            width:inherit;
+
+                        .injuries {
+                            width: inherit;
                             overflow-y: hidden;
                             margin-left: 0;
                         }

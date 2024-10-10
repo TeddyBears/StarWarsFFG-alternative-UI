@@ -15,12 +15,7 @@
 
 </div>
 <div class="gap grid grid-2col">
-    <div class="">
-        {{!-- TabBiography Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
-        (object blocktype="double" title="SWFFG.TabBiography" type="PopoutEditor" name="data.biography"
-        value=data.biography)}}
-    </div>
-    <div class="">
+    
         {{!-- NotableFeature Box --}}
         <div class="block-editor">
             {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
@@ -28,10 +23,14 @@
             value=data.general.features)}}
         </div>
         {{!-- Notes Box --}}
-        <div class="block-editor gap">
+        <div class="block-editor">
             {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
             (object blocktype="full" title="SWFFG.Notes" type="PopoutEditor" name="data.general.notes"
             value=data.general.notes)}}
         </div>
-    </div>
+</div>
+<div class="gap">
+    {{!-- TabBiography Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
+    (object blocktype="double" title="SWFFG.TabBiography" type="PopoutEditor" name="data.biography"
+    value=data.biography)}}
 </div>
