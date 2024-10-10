@@ -43,3 +43,20 @@ The scroll is now for the entire sheet not only tab. This fix some problem to se
 ### Obligation tab modifications
 
 * _Motivations_ block are here now.
+
+## Vehicle sheet
+
+Some structural modifications to have the same logical than in the Actor sheet:
+* Only speed, Hull trauma and system strain are always displayed.
+* All items informations are in the same tab
+
+### Header part (image, name, defense)
+
+Move the type of sheet and the name in the top of the sheet. Like for characters.
+
+### Characteristics tab modifications
+
+Creation of a Characteristics tab as in character sheet.  It contains somes main characteristics and the crew.
+
+### Items tab modifications
+Add encumbrance and hard points infos and group weapons, attachement and cargo in this tab
