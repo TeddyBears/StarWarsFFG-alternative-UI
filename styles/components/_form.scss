@@ -1,13 +1,33 @@
 .starwarsffg.sheet.actor {
-    &.ffg-alternative{
+    &.ffg-alternative {
+
         input,
-        textarea {
+        textarea,
+        select {
             font-size: var(--font-size-12);
             font-family: var(--font-body);
 
             &:focus {
                 background-color: var(--color-text-selection-bg);
                 color: var(--color-text-selection);
+            }
+        }
+
+        option,
+        optgroup {
+            background: inherit;
+        }
+
+        .vehicle {
+            .defense-block {
+                .defense-value {
+                    input {
+                        &:focus {
+                            background-color: var(--color-text-selection-bg);
+                            color: var(--color-text-selection);
+                        }
+                    }
+                }
             }
         }
     }

@@ -69,6 +69,9 @@ export async function loadHandleBarTemplates() {
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-criticalinjury.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-tab-description.html",
     "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-tab-obligations.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-vehicle-crew.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-vehicle-weapon-attachments.html",
+    "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-vehicle-cargo.html",
   ];
 
   return loadTemplates(templatePaths);
