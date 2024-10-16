@@ -60,3 +60,6 @@ Creation of a Characteristics tab as in character sheet.  It contains somes main
 
 ### Items tab modifications
 Add encumbrance and hard points infos and group weapons, attachement and cargo in this tab
+
+# Changelog
+Changelog are available [here](https://github.com/TeddyBears/StarWarsFFG-alternative-UI/blob/main/CHANGELOG.md)
