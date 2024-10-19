@@ -61,5 +61,10 @@ Creation of a Characteristics tab as in character sheet.  It contains somes main
 ### Items tab modifications
 Add encumbrance and hard points infos and group weapons, attachement and cargo in this tab
 
+## Journal sheet
+Add background image and blockquote render effect. 
+
+Same effect with the module [Monk's Enhanced Journal](https://github.com/ironmonk88/monks-enhanced-journal)
+
 # Changelog
 Changelog are available [here](https://github.com/TeddyBears/StarWarsFFG-alternative-UI/blob/main/CHANGELOG.md)

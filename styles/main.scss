@@ -6,4 +6,7 @@
 @use "layout/scroll";
 
 //add actor character sheet
-@use "pages/actor"
+@use "pages/actor";
+
+//Add journal sheet
+@use "pages/journal";

@@ -74,18 +74,26 @@
     }
 }
 
-@mixin background-datapad ($top: 20px, $right: 30px, $bottom: 20px, $left: 30px, $image: "/modules/ffg-star-wars-alternative-ui/artwork/datapad-single-light3.webp") {
+@mixin background-datapad ($top: 20px, $right: 30px, $bottom: 20px, $left: 30px, $slice: 5% 5% 5% 5% fill, $outset: 3px 20px 20px 20px, $image: "/modules/ffg-star-wars-alternative-ui/artwork/datapad-single-light3.webp") {
     /* apply datapad background*/
     border-top: $top solid transparent;
     border-right: $right solid transparent;
     border-bottom: $bottom solid transparent;
     border-left: $left solid transparent;
     padding: 0px;
-    border-image: url($image);
+
+    @if $image =="none" {
+        border-image: none;
+    }
+
+    @else {
+        border-image: url($image);
+    }
+
     box-shadow: none;
     background: none;
-    border-image-slice: 5% 5% 5% 5% fill;
-    border-image-outset: 3px 20px 20px 20px 
+    border-image-slice: $slice;
+    border-image-outset: $outset;
 }
 
 @mixin clip-border {
