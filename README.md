@@ -5,10 +5,10 @@ This module add new sheet for some items.
 
 ## Actor sheet
 
-Add a new alternative for the character, rival, nemesis and minion actor sheet.
-It changes the following :
+Add a new alternative sheet option for the character, rival, nemesis and minion actor .
 
 ### General modifications
+
 The scroll is now for the entire sheet not only tab. This fix some problem to see last item in long list. Like in skills and equipment.
 
 ### Header part (image, name, species,...)
@@ -47,6 +47,7 @@ The scroll is now for the entire sheet not only tab. This fix some problem to se
 ## Vehicle sheet
 
 Some structural modifications to have the same logical than in the Actor sheet:
+
 * Only speed, Hull trauma and system strain are always displayed.
 * All items informations are in the same tab
 
@@ -54,17 +55,20 @@ Some structural modifications to have the same logical than in the Actor sheet:
 
 Move the type of sheet and the name in the top of the sheet. Like for characters.
 
-### Characteristics tab modifications
+### Vehicle characteristics tab modifications
 
 Creation of a Characteristics tab as in character sheet.  It contains somes main characteristics and the crew.
 
-### Items tab modifications
+### Vehicle items tab modifications
+
 Add encumbrance and hard points infos and group weapons, attachement and cargo in this tab
 
 ## Journal sheet
+
 Add background image and blockquote render effect. 
 
 Same effect with the module [Monk's Enhanced Journal](https://github.com/ironmonk88/monks-enhanced-journal)
 
 # Changelog
+
 Changelog are available [here](https://github.com/TeddyBears/StarWarsFFG-alternative-UI/blob/main/CHANGELOG.md)

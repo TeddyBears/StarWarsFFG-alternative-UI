@@ -13,36 +13,23 @@ function addStyleSheet(stylesheetname) {
 
 Hooks.once("init", () => {
 
-	// Add Game settings
-	game.settings.register(MODULE_ID, 'sheet-actor', {
-		name: game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.alt"),
-		scope: "client",
-		type: Boolean,
-		default: false,
-		config: true,
-		onChange: () => {
-			location.reload();
-		}
-	});
+	// Add new css
+	addStyleSheet("main");
 
-	// Add actor sheet overrided elements
-	if (game.settings.get(MODULE_ID, 'sheet-actor')) {
-		if (game.settings.get(SYSTEM_ID, 'ui-uitheme') === "mandar") {
-			addStyleSheet("main");
-			const actorSheetAltLabel = game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.label");
-			DocumentSheetConfig.registerSheet(
-				Actor,
-				SYSTEM_ID,
-				FFGAlternateActorSheet,
-				{
-					types: ["character", "rival", "nemesis", "minion", "vehicle"],
-					label: actorSheetAltLabel,
-				}
-			);
-			loadHandleBarTemplates();
-			FFG.sheets.defaultWidth.character = 700; /*override the defaut width for actor sheet*/
-			FFG.sheets.defaultHeight.minion = 783; /*override the defaut heigth for minion sheet*/
+	// Add te new actor alternative sheet
+	const actorSheetAltLabel = game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.label");
+	DocumentSheetConfig.registerSheet(
+		Actor,
+		SYSTEM_ID,
+		FFGAlternateActorSheet,
+		{
+			types: ["character", "rival", "nemesis", "minion", "vehicle"],
+			label: actorSheetAltLabel,
 		}
+	);
+	loadHandleBarTemplates();
 
-	}
+	// Override default size for sheets
+	FFG.sheets.defaultWidth.character = 700; /*override the defaut width for actor sheet*/
+	FFG.sheets.defaultHeight.minion = 783; /*override the defaut heigth for minion sheet*/
 });
