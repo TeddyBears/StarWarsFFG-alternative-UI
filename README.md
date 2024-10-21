@@ -65,9 +65,16 @@ Add encumbrance and hard points infos and group weapons, attachement and cargo i
 
 ## Journal sheet
 
-Add background image and blockquote render effect. 
+Add background image and blockquote render effect.
 
 Same effect with the module [Monk's Enhanced Journal](https://github.com/ironmonk88/monks-enhanced-journal)
+
+## Items
+
+Add background image.
+Characteristics render are like for Actor sheet
+
+### Weapons
 
 # Installation
 

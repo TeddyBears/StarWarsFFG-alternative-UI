@@ -6,6 +6,8 @@
   * Add background image for `Journal`
   * Add effect for blockquote in Journal entry
   * Remove the module setting to add the new sheet option for actor. Now the sheet option is always available. Still need to apply it to your actors
+  * Move the navigation / tabs menu on the top right region where is the type and the name
+  * Rework the item type weapon
   
 * Fixes:
   * 
