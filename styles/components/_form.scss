@@ -1,4 +1,4 @@
-.starwarsffg.sheet.actor {
+.starwarsffg.sheet {
     &.ffg-alternative {
 
         input,
@@ -6,6 +6,7 @@
         select {
             font-size: var(--font-size-12);
             font-family: var(--font-body);
+            border:none;
 
             &:focus {
                 background-color: var(--color-text-selection-bg);

@@ -6,10 +6,10 @@
 
 .journal-sheet,
 .monks-enhanced-journal {
-    @include background-datapad($image: "/modules/ffg-star-wars-alternative-ui/artwork/datapad-single.webp", $outset: 5px 5px 5px 75px);
+    @include background-datapad($image: "/modules/ffg-star-wars-alternative-ui/artwork/datapad-journal.webp", $outset: 5px 5px 5px 75px);
 
     blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote) {
-        background: url("/modules/ffg-star-wars-alternative-ui/artwork/datapad-quote.webp");
+        background: url("/modules/ffg-star-wars-alternative-ui/artwork/quote.webp");
         padding-left: 25px !important;
         color: var(--color-text-light-primary);
     }

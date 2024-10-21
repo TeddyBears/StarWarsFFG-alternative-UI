@@ -3,6 +3,8 @@
 @use "../components/ffg-block";
 @use "../components/navigation";
 @use "../components/form";
+@use "../components/title";
+@use "../components/characteristics";
 
 .starwarsffg.sheet.actor {
     min-width: 700px;
@@ -14,7 +16,7 @@
 
 
         .window-content {
-            background: var(--color-light-1);
+            background: var(---color-background-window-content);
             color: var(--color-text-1);
             display: block;
             overflow-y: auto;
@@ -22,6 +24,7 @@
             font-family: var(--font-body);
             padding: 0;
             border-radius: 0 0 10px 10px;
+            margin-bottom: 30px;
 
             .character {
                 overflow: auto;
@@ -42,8 +45,12 @@
 
                             .header-description-block {
                                 height: auto;
-                                min-height: 130px;
+                                min-height: 180px;
                                 overflow: hidden;
+
+                                div:not(.title-card, .name-card, [class*="defense-"]) {
+                                    padding-right: 3rem;
+                                }
 
                                 .specialization-pill,
                                 .species-pill,
@@ -98,27 +105,7 @@
                         margin-top: var(--font-size-14);
                         font-size: var(--font-size-14);
 
-                        &.characteristics {
 
-                            .grid {
-                                padding: 0;
-
-                                .characteristic-item {
-                                    background-color: var(--color-background-1);
-
-                                    .characteristic {
-                                        border: 2px solid var(--color-border-light-tertiary);
-
-                                        input {
-                                            font-size: var(--font-size-32);
-                                            border: 2px solid var(--color-border-light-tertiary);
-                                        }
-
-                                    }
-                                }
-                            }
-
-                        }
 
                         .talent-list {
                             margin: 0;
@@ -167,14 +154,6 @@
                                 padding: 0 0.2rem;
 
                                 .item {
-                                    .toggle-equipped {
-                                        //color: var(--color-fields-focused);
-
-                                        &.active {
-                                            //color: white;
-                                        }
-                                    }
-
                                     .skillsGrid {
                                         &.crew {
                                             img {
@@ -198,8 +177,6 @@
                                 border-radius: 5px;
                             }
 
-                            .item-details {}
-
                             &.motivations {
                                 .description {
                                     grid-column: span 2 / 4;
@@ -214,12 +191,6 @@
                         }
                     }
 
-                }
-
-                .header-title {
-                    background-color: var(--color-background-1);
-                    font-size: var(--font-size-12);
-                    color: var(--color-text-2);
                 }
 
                 div.container {
@@ -243,6 +214,25 @@
                 .gap {
                     margin-top: var(--grid-gap);
                 }
+            }
+
+            .vehicle {
+                .sheet-header {
+                    .header-fields {
+
+                        .details-block {
+
+                            .profile-block {
+                                .profile-img {
+                                    height: 240px;
+                                    width: unset;
+                                    max-width: 240px;
+                                }
+                            }
+                        }
+                    }
+                }
+
             }
         }
     }

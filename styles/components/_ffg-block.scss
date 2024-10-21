@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 
-.starwarsffg.sheet.actor {
+.starwarsffg.sheet {
     &.ffg-alternative {
         .resource {
             width: initial;
@@ -56,6 +56,10 @@
                     .force-power {
                         padding: unset;
                         border: none;
+                    }
+                    .popout-editor{
+                        height: 50px;
+                        width: 100%;
                     }
                 }
             }

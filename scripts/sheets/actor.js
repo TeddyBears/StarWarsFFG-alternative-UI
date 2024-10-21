@@ -1,8 +1,8 @@
-import { ActorSheetFFG } from "../../../../systems/starwarsffg/modules/actors/actor-sheet-ffg.js";
+import { ActorSheetFFGV2 } from "../../../../systems/starwarsffg/modules/actors/actor-sheet-ffg-v2.js";
 
 
 
-export class FFGAlternateActorSheet extends ActorSheetFFG {
+export class FFGAlternateActorSheet extends ActorSheetFFGV2 {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {

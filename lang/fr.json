@@ -2,9 +2,10 @@
     "ffg-star-wars-alternative-ui": {
         "sheet": {
             "actor": {
-                "alt": "Ajoute la fiche alternative dans les options de fiche des acteurs",
-                "alt-light": "Ajoute la fiche alternative version clair dans les options de fiche des acteurs",
                 "label": "Acteur - Fiche alternative"
+            },
+            "item": {
+                "label": "Item - Fiche alternative"
             }
         }
     },

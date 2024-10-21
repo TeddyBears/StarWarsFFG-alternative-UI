@@ -5,6 +5,8 @@ const SYSTEM_ID = "starwarsffg";
 import { FFG } from "../../../../systems/starwarsffg/modules/swffg-config.js";
 import { FFGAlternateActorSheet } from './sheets/actor.js';
 import { loadHandleBarTemplates } from './sheets/actor.js';
+import { FFGAlternateItemSheet } from './sheets/items.js';
+import { loadItemsHandleBarTemplates } from './sheets/items.js';
 
 
 function addStyleSheet(stylesheetname) {
@@ -28,6 +30,18 @@ Hooks.once("init", () => {
 		}
 	);
 	loadHandleBarTemplates();
+
+	const itemSheetAltLabel = game.i18n.localize("ffg-star-wars-alternative-ui.sheet.item.label");
+	DocumentSheetConfig.registerSheet(
+		Item,
+		SYSTEM_ID,
+		FFGAlternateItemSheet,
+		{
+			types: ["weapon", "items"],
+			label: itemSheetAltLabel,
+		}
+	);
+	loadItemsHandleBarTemplates();
 
 	// Override default size for sheets
 	FFG.sheets.defaultWidth.character = 700; /*override the defaut width for actor sheet*/

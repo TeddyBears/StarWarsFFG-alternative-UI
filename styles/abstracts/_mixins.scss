@@ -74,7 +74,7 @@
     }
 }
 
-@mixin background-datapad ($top: 20px, $right: 30px, $bottom: 20px, $left: 30px, $slice: 5% 5% 5% 5% fill, $outset: 3px 20px 20px 20px, $image: "/modules/ffg-star-wars-alternative-ui/artwork/datapad-single-light3.webp") {
+@mixin background-datapad ($top: 20px, $right: 30px, $bottom: 20px, $left: 30px, $slice: 5% 5% 5% 5% fill, $outset: 3px 20px 20px 20px, $image: "/modules/ffg-star-wars-alternative-ui/artwork/datapad-actors.webp") {
     /* apply datapad background*/
     border-top: $top solid transparent;
     border-right: $right solid transparent;
