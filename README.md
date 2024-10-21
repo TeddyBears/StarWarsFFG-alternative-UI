@@ -79,10 +79,11 @@ Characteristics render are like for Actor sheet
 # Installation
 
 ## Method
-1. On Foundry VTT's **Configuration and Setup** screen, go to **Add-on Modules**
-2. Click **Install Module**
+
+1. On Foundry VTT's __Configuration and Setup__ screen, go to __Add-on Modules__
+2. Click __Install Module__
 3. In the Manifest URL field, paste: `https://raw.githubusercontent.com/TeddyBears/StarWarsFFG-alternative-UI/main/module.json`
-4. Click **Install** next to the pasted Manifest URL
+4. Click __Install__ next to the pasted Manifest URL
 
 # Changelog
 
