@@ -3,15 +3,25 @@
 `12.2.1.1_903`
 
 * Features:
-  * Add background image for `Journal`
-  * Add effect for blockquote in Journal entry
+  * Rework the for `Journal`:
+    * Add background image
+    * Add effect for blockquote in Journal entry
   * Remove the module setting to add the new sheet option for actor. Now the sheet option is always available. Still need to apply it to your actors
   * Move the navigation / tabs menu on the top right region where is the type and the name
-  * Rework the item type weapon
+  * Rework the `item type weapon`:
+    * Add background image
+    * remove the configuration tab and move its fields in the main tab
+    * Items reworked are the following:
+      * Weapons
+      * Armors
+      * Gears
+      * Talent
+      * Species
+      * Career
   
 * Fixes:
-  * 
-  
+  * Defense starboard and port blocks stay with the defense schema when you enlarge the vehicle window
+  * Vehicle image dimensions don't increase when you enlarge the vehicle window
   
 `12.1.1.1_903`
 

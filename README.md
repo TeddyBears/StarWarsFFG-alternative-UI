@@ -74,7 +74,6 @@ Same effect with the module [Monk's Enhanced Journal](https://github.com/ironmon
 Add background image.
 Characteristics render are like for Actor sheet
 
-### Weapons
 
 # Installation
 

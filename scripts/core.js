@@ -37,7 +37,7 @@ Hooks.once("init", () => {
 		SYSTEM_ID,
 		FFGAlternateItemSheet,
 		{
-			types: ["weapon", "items"],
+			types: ["weapon", "armour", "gear","career","species","talent"],
 			label: itemSheetAltLabel,
 		}
 	);
