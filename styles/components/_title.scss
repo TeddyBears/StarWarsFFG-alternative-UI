@@ -1,0 +1,24 @@
+.starwarsffg.sheet {
+    &.ffg-alternative {
+
+        .window-content {
+
+            .header-fields {
+                .title-card {
+                    background-color: var(--color-background-1);
+                    color: var(--color-text-2);
+                }
+            }
+
+            .sheet-header,
+            .sheet-body {
+                .header-title {
+                    background-color: var(--color-background-1);
+                    font-size: var(--font-size-12);
+                    color: var(--color-text-2);
+                }
+            }
+
+        }
+    }
+}

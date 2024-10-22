@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="header-name header-description-block">
+        <div class="title-card">{{localize (localize 'TYPES.Item.{itemType}' itemType=item.type) }}</div>
+        <div>
+            <input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'SWFFG.Name'}}"
+                data-dtype="String" class="item-name" />
+        </div>
+        <div class="profile-block">
+            <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="100"
+                width="100" />
+            {{#if (eq item.type "species")}}
+            <div class="holo"></div>
+            {{/if}}
+        </div>
+    </div>
+</div>

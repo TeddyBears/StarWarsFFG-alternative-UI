@@ -12,6 +12,13 @@
                 background-color: var(--color-text-selection-bg);
                 color: var(--color-text-selection);
             }
+            + label {
+                font-size: var(--font-size-12);
+                font-family: var(--font-body);
+            }
+            &[type="checkbox"]{
+                height: 20px;
+            }
         }
 
         option,

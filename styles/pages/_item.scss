@@ -1,0 +1,130 @@
+@use "../abstracts" as *;
+
+@use "../components/ffg-block";
+@use "../components/navigation";
+@use "../components/form";
+@use "../components/title";
+@use "../components/characteristics";
+@use "../components/pill-items";
+
+.starwarsffg.sheet.item {
+    min-width: 450px;
+    min-height: 550px;
+
+    &.ffg-alternative {
+        @include background-datapad(30px, 25px, 40px, 25px, $image: "/modules/ffg-star-wars-alternative-ui/artwork/datapad-items.webp", $outset: 20px 0px 10px 0px);
+
+        .window-content {
+            background: var(--color-background-window-content);
+            color: var(--color-text-1);
+            display: block;
+            overflow-y: auto;
+            font-size: var(--font-size-16);
+            font-family: var(--font-body);
+            padding: 0;
+            border-radius: 0 0 10px 10px;
+
+            .sheet-header {
+
+                .header-fields {
+                    padding: 0;
+
+                    .details-block {
+                        align-items: flex-end;
+
+                        .item-name {
+                            font-size: var(--font-h4-size);
+                            text-align: center;
+                        }
+
+                        .header-description-block {
+                            height: auto;
+                            min-height: 180px;
+                            overflow: hidden;
+
+                            div:not(.title-card, .name-card) {
+                                padding-right: 3rem;
+                            }
+                        }
+
+                        .profile-block {
+                            max-width: 300px;
+                            margin: 0 auto;
+                            text-align: center;
+                        }
+
+                        .holo {
+                            @include effect-holographic (var(--holo-color));
+                        }
+
+                        @include keyframes-holographic (var(--holo-color));
+                    }
+
+                    .characteristics {
+                        height: unset;
+
+                        .grid {
+
+                            .characteristic-item {
+                                margin: 0.25rem;
+                                padding: 0.25rem;
+
+                                .characteristic {
+                                    border-radius: 50%
+                                }
+                            }
+                        }
+
+                    }
+
+                    .firing-arcs {
+                        div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            flex-direction: row;
+                        }
+                    }
+                }
+
+                .stats-block {
+                    margin-top: var(--font-size-14);
+
+                    .resource {
+                        flex-grow: 1;
+
+                        &.defence {
+                            flex-grow: 2;
+
+                            .block-attribute {
+                                grid-template-columns: repeat(3, minmax(0, 1fr));
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .sheet-body {
+                padding: 0;
+                margin: 0;
+                border-top: none;
+                background: none;
+
+                .tab {
+                    margin-top: var(--font-size-14);
+                    font-size: var(--font-size-14);
+                    overflow: hidden;
+
+                    .talent-list {
+                        margin: 0;
+
+                    }
+                }
+                .item.description{
+                    color: red;
+                }
+            }
+        }
+    }
+}

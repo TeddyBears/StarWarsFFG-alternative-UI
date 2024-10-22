@@ -1,0 +1,26 @@
+.starwarsffg.sheet {
+    &.ffg-alternative {
+
+        .characteristics {
+
+            .grid {
+                padding: 0;
+
+                .characteristic-item {
+                    background-color: var(--color-background-1);
+
+                    .characteristic {
+                        border: 2px solid var(--color-border-light-tertiary);
+
+                        input {
+                            font-size: var(--font-size-32);
+                            border: 2px solid var(--color-border-light-tertiary);
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -15,9 +15,13 @@
       * Weapons
       * Armors
       * Gears
-      * Talent
+      * Talents
       * Species
-      * Career
+      * Careers
+      * Ship weapons
+      * item Attachments
+      * Item modifiers
+      * Ship attachments
   
 * Fixes:
   * Defense starboard and port blocks stay with the defense schema when you enlarge the vehicle window

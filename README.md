@@ -73,7 +73,7 @@ Same effect with the module [Monk's Enhanced Journal](https://github.com/ironmon
 
 Add background image.
 Characteristics render are like for Actor sheet
-
+Remove the configuration tab. Fields moved to the main tab
 
 # Installation
 

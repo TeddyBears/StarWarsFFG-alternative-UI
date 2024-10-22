@@ -1,0 +1,26 @@
+.starwarsffg.sheet {
+    &.ffg-alternative {
+        .window-content {
+
+            .sheet-header,
+            .sheet-body {
+
+                .specialization-pill,
+                .species-pill,
+                .career-pill,
+                .signatureability-pill,
+                .forcepower-pill,
+                .item-pill {
+                    display: inline-block;
+                    border-radius: 5px;
+                    background-color: var(--color-light-3);
+                    padding: 0.1rem 0.5rem;
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    cursor: pointer;
+                    width: fit-content;
+                }
+            }
+        }
+
+    }
+}
