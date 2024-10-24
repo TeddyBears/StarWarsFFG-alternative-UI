@@ -8,7 +8,7 @@
     * Add effect for blockquote in Journal entry
   * Remove the module setting to add the new sheet option for actor. Now the sheet option is always available. Still need to apply it to your actors
   * Move the navigation / tabs menu to the top of the sheet
-  * Rework the `item type weapon`:
+  * Rework the `item` sheets:
     * Add background image
     * remove the configuration tab and move its fields in the main tab
     * Items reworked are the following:
@@ -22,6 +22,8 @@
       * item Attachments
       * Item modifiers
       * Ship attachments
+      * Critical hits
+      * Critical injuries
   
 * Fixes:
   * Defense starboard and port blocks stay with the defense schema when you enlarge the vehicle window

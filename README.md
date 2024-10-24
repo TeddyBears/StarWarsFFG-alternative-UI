@@ -1,11 +1,28 @@
 
 # Star Wars FFG Alternative UI
 
-This module add new sheet for some items.  
+This module add new sheet for some sheet.
+Sheets reworked are the following:
+
+    * Actors: Character, minion, rival, nemesis, vehicle
+    * Journal
+    * some items:
+        * Weapons
+        * Armors
+        * Gears
+        * Talents
+        * Species
+        * Careers
+        * Ship weapons
+        * item Attachments
+        * Item modifiers
+        * Ship attachments
+        * Critical hits
+        * Critical injuries
 
 ## Actor sheet
 
-Add a new alternative sheet option for the character, rival, nemesis and minion actor .
+Add a new alternative sheet option for the character, rival, nemesis, minion and vehicle actor .
 
 ### General modifications
 
@@ -65,9 +82,11 @@ Add encumbrance and hard points infos and group weapons, attachement and cargo i
 
 ## Journal sheet
 
-Add background image and blockquote render effect.
+Add background image and blockquote render effect. 
 
 Same effect with the module [Monk's Enhanced Journal](https://github.com/ironmonk88/monks-enhanced-journal)
+
+__/!\ Important: because it is only a modification of the background image there is no alternative sheet for journal. The modifications are apply automatically__
 
 ## Items
 
@@ -84,6 +103,14 @@ Remove the configuration tab. Fields moved to the main tab
 3. In the Manifest URL field, paste: `https://raw.githubusercontent.com/TeddyBears/StarWarsFFG-alternative-UI/main/module.json`
 4. Click __Install__ next to the pasted Manifest URL
 
+# Setup
+In the sheet options you can change the field `this sheet` to the alternative version.
+Or in the main settings you can set the alternative version in `Core - Configue default sheets`.
+
 # Changelog
 
 Changelog are available [here](https://github.com/TeddyBears/StarWarsFFG-alternative-UI/blob/main/CHANGELOG.md)
+
+# Wiki
+
+See the [wiki](https://github.com/TeddyBears/StarWarsFFG-alternative-UI/wiki/Home) page to have some screenshot
