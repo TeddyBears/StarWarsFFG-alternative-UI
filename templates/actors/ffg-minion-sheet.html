@@ -1,24 +1,21 @@
 <form class="{{cssClass}} character" autocomplete="off">
+  {{!-- Sheet Tab Navigation --}}
+  {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-tabs.html" displayLimited=true limited=limited
+  items=(array
+  (object tab="characteristics" label="SWFFG.TabCharacteristics" icon="fas fa-user-circle" cls=classType)
+  (object tab="items" label="SWFFG.TabGear" icon="fas fa-toolbox" cls=classType)
+  (object tab="talents" label="SWFFG.TabTalents" icon="fab fa-superpowers" cls=classType)
+  (object tab="description" label="SWFFG.TabBiography" icon="fas fa-address-card" cls=classType)
+  )}}
+  
   {{!-- Sheet Header --}}
   <header class="sheet-header">
     <div id="actor-id" data-actor="{{actor._id}}" style="display: none;"></div>
 
     <div class="header-fields">
-      <div class="container details-block" style="flex-wrap: nowrap;">
-        <div class="profile-block">
-          <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100"
-            width="100" />
-          <div class="holo"></div>
-        </div>
-        <div class="container">
-          <div class="header-name header-description-block">
-            <div class="title-card rival">{{ localize "TYPES.Actor.minion" }} </div>
-            <div>
-              <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'SWFFG.Name'}}"
-                data-dtype="String" class="actor-name" />
-            </div>
-          </div>
-        </div>
+      {{!-- Character Details Container --}}
+      <div class="details-block">
+        {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-details.html"}}
       </div>
       <div class="container stats-block" style="flex-wrap: nowrap;{{#if limited}}display:none;{{/if}}">
         <div class="container flex-group-center">
@@ -53,15 +50,6 @@
       </div>
     </div>
   </header>
-
-  {{!-- Sheet Tab Navigation --}}
-  {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-tabs.html" displayLimited=true limited=limited
-  items=(array
-  (object tab="characteristics" label="SWFFG.TabCharacteristics" icon="fas fa-user-circle" cls=classType)
-  (object tab="items" label="SWFFG.TabGear" icon="fas fa-toolbox" cls=classType)
-  (object tab="talents" label="SWFFG.TabTalents" icon="fab fa-superpowers" cls=classType)
-  (object tab="description" label="SWFFG.TabBiography" icon="fas fa-address-card" cls=classType)
-  )}}
 
   {{!-- Sheet Body --}}
   <section class="sheet-body" style="{{#if limited}}display:none;{{/if}}">

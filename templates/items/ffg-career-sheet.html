@@ -1,4 +1,10 @@
 <form class="{{cssClass}} item-sheet-career" autocomplete="off">
+  {{!-- Sheet Tab Navigation --}}
+  {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-tabs.html" displayLimited=true limited=limited
+  items=(array
+  (object tab="description" label="SWFFG.TabDescription" icon="far fa-file-alt" cls=classType)
+  (object tab="attributes" label="SWFFG.TabModifiers" icon="fas fa-cog" cls=classType)
+  (object tab="career" label="SWFFG.TabCareer" icon="fas fa-cog" cls=classType))}}
   <header class="sheet-header">
     <div class="header-fields">
       <div class="container details-block" style="flex-wrap: nowrap;">
@@ -6,13 +12,6 @@
       </div>
     </div>
   </header>
-
-  {{!-- Sheet Tab Navigation --}}
-  {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-tabs.html" displayLimited=true limited=limited
-  items=(array
-  (object tab="description" label="SWFFG.TabDescription" icon="far fa-file-alt" cls=classType)
-  (object tab="attributes" label="SWFFG.TabModifiers" icon="fas fa-cog" cls=classType)
-  (object tab="career" label="SWFFG.TabCareer" icon="fas fa-cog" cls=classType))}}
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">

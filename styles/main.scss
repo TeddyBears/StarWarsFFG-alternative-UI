@@ -5,6 +5,14 @@
 @use "layout/header";
 @use "layout/scroll";
 
+@use "components/ffg-block";
+@use "components/navigation";
+@use "components/form";
+@use "components/title";
+@use "components/characteristics";
+@use "components/pill-items";
+@use "components/content-link";
+
 //add actor character sheet
 @use "pages/actor";
 

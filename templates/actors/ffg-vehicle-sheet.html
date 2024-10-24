@@ -1,87 +1,92 @@
 <form class="{{cssClass}} character vehicle" autocomplete="off">
-  {{!-- Sheet Header --}}
-  <header class="sheet-header">
-    <div id="actor-id" data-actor="{{actor._id}}" style="display: none;"></div>
-    <div class="header-fields">
-      <div class="container details-block" style="flex-wrap: nowrap;">
-        <div class="block-background vehicle-img" style="min-height: 200px; min-width: 280px;">
-          <div class="profile-block">
-            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100"
-              width="100" />
-          </div>
-        </div>
-        <div class="container">
-          <div class="header-name header-description-block">
-            <div class="title-card">{{localize (localize 'TYPES.Actor.{actorType}' actorType=actor.type) }}</div>
-            <div class="name-card">
-              <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'SWFFG.VehicleName'}}"
-                data-dtype="String" class="actor-name" />
-            </div>
-            {{#if limited}}{{else}}
-            <div class="block-background defense-group">
-              <div class="defense-decoration">
-              </div>
-              <div class="defense-block-title">{{localize "SWFFG.Defense"}}</div>
-              <div class="defense-block">
-
-                <div class="defense-value fore">
-                  <input type="text" name="data.stats.shields.fore" value="{{data.stats.shields.fore}}"
-                    data-dtype="Number" />
-                  <div class="defense-value-label">{{localize "SWFFG.VehicleDefenseFore"}}</div>
-                </div>
-                <div class="defense-value aft">
-                  <input type="text" name="data.stats.shields.aft" value="{{data.stats.shields.aft}}"
-                    data-dtype="Number" />
-                  <div class="defense-value-label">{{localize "SWFFG.VehicleDefenseAft"}}</div>
-                </div>
-                <div class="defense-value port">
-                  <input type="text" name="data.stats.shields.port" value="{{data.stats.shields.port}}"
-                    data-dtype="Number" />
-                  <div class="defense-value-label">{{localize "SWFFG.VehicleDefensePort"}}</div>
-                </div>
-                <div class="defense-value starboard">
-                  <input type="text" name="data.stats.shields.starboard" value="{{data.stats.shields.starboard}}"
-                    data-dtype="Number" />
-                  <div class="defense-value-label">{{localize "SWFFG.VehicleDefenseStarboard"}}</div>
-                </div>
-                <img class="defense-img" src="{{ data.silhouetteImage }}" data-edit="system.silhouetteImage" />
-              </div>
-            </div>
-            {{/if}}
-          </div>
-
-
-        </div>
-      </div>
-      <div class="container stats-block">
-        <div class="container flex-group-center" style="flex-wrap: nowrap;{{#if limited}}display:none;{{/if}}">
-          {{!-- Speed Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object
-          blocktype="split" title="SWFFG.VehicleSpeed" fields=(array (object name="data.stats.speed.max"
-          value=data.stats.speed.max type="Number" label="SWFFG.Threshold") (object name="data.stats.speed.value"
-          value=data.stats.speed.value type="Number" label="SWFFG.Current") ))}}
-          {{!-- Hull Trauma Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
-          (object blocktype="split" title="SWFFG.VehicleHullTrauma" fields=(array (object
-          name="data.stats.hullTrauma.max" value=data.stats.hullTrauma.max type="Number" label="SWFFG.Threshold")
-          (object name="data.stats.hullTrauma.value" value=data.stats.hullTrauma.value type="Number"
-          label="SWFFG.Current") ))}}
-          {{!-- System Strain Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
-          (object blocktype="split" title="SWFFG.VehicleHullStrain" fields=(array (object
-          name="data.stats.systemStrain.max" value=data.stats.systemStrain.max type="Number" label="SWFFG.Threshold")
-          (object name="data.stats.systemStrain.value" value=data.stats.systemStrain.value type="Number"
-          label="SWFFG.Current") ))}}
-        </div>
-      </div>
-    </div>
-  </header>
   {{#if limited}}{{else}}
   {{!-- Sheet Tab Navigation --}}
   {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-tabs.html" displayLimited=true limited=limited
   items=(array
   (object tab="characteristics" label="SWFFG.TabCharacteristics" icon="fas fa-user-circle" cls=classType)
   (object tab="items" label="SWFFG.VehicleTabCargo" icon="fas fa-toolbox" cls=classType)
-  (object tab="description" label="SWFFG.VehicleTabDescription" icon="fas fa-address-card" cls=classType)
   (object tab="crits" label="SWFFG.CriticalDamage" icon="fas fa-heartbeat" cls=classType)
+  (object tab="description" label="SWFFG.VehicleTabDescription" icon="fas fa-address-card" cls=classType)
   )}}
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <div id="actor-id" data-actor="{{actor._id}}" style="display: none;"></div>
+    <div class="header-fields">
+      <div class="details-block">
+        <div>
+          <div class="title-card">{{localize (localize 'TYPES.Actor.{actorType}' actorType=actor.type) }}</div>
+          <div class="name-card">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'SWFFG.VehicleName'}}"
+              data-dtype="String" class="actor-name" />
+          </div>
+        </div>
+        <div class="container details-infos" style="flex-wrap: nowrap;">
+          <div class="profile-block">
+            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100"
+              width="100" />
+          </div>
+          <div class="container">
+            <div class="header-name header-description-block">
+              {{#if limited}}{{else}}
+              <div class="block-background defense-group">
+                <div class="defense-decoration">
+                </div>
+                <div class="defense-block-title">{{localize "SWFFG.Defense"}}</div>
+                <div class="defense-block">
+
+                  <div class="defense-value fore">
+                    <input type="text" name="data.stats.shields.fore" value="{{data.stats.shields.fore}}"
+                      data-dtype="Number" />
+                    <div class="defense-value-label">{{localize "SWFFG.VehicleDefenseFore"}}</div>
+                  </div>
+                  <div class="defense-value aft">
+                    <input type="text" name="data.stats.shields.aft" value="{{data.stats.shields.aft}}"
+                      data-dtype="Number" />
+                    <div class="defense-value-label">{{localize "SWFFG.VehicleDefenseAft"}}</div>
+                  </div>
+                  <div class="defense-value port">
+                    <input type="text" name="data.stats.shields.port" value="{{data.stats.shields.port}}"
+                      data-dtype="Number" />
+                    <div class="defense-value-label">{{localize "SWFFG.VehicleDefensePort"}}</div>
+                  </div>
+                  <div class="defense-value starboard">
+                    <input type="text" name="data.stats.shields.starboard" value="{{data.stats.shields.starboard}}"
+                      data-dtype="Number" />
+                    <div class="defense-value-label">{{localize "SWFFG.VehicleDefenseStarboard"}}</div>
+                  </div>
+                  <img class="defense-img" src="{{ data.silhouetteImage }}" data-edit="system.silhouetteImage" />
+                </div>
+              </div>
+              {{/if}}
+            </div>
+
+
+          </div>
+        </div>
+        <div class="container stats-block">
+          <div class="container flex-group-center" style="flex-wrap: nowrap;{{#if limited}}display:none;{{/if}}">
+            {{!-- Speed Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
+            (object
+            blocktype="split" title="SWFFG.VehicleSpeed" fields=(array (object name="data.stats.speed.max"
+            value=data.stats.speed.max type="Number" label="SWFFG.Threshold") (object name="data.stats.speed.value"
+            value=data.stats.speed.value type="Number" label="SWFFG.Current") ))}}
+            {{!-- Hull Trauma Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
+            (object blocktype="split" title="SWFFG.VehicleHullTrauma" fields=(array (object
+            name="data.stats.hullTrauma.max" value=data.stats.hullTrauma.max type="Number" label="SWFFG.Threshold")
+            (object name="data.stats.hullTrauma.value" value=data.stats.hullTrauma.value type="Number"
+            label="SWFFG.Current") ))}}
+            {{!-- System Strain Box --}} {{>
+            "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
+            (object blocktype="split" title="SWFFG.VehicleHullStrain" fields=(array (object
+            name="data.stats.systemStrain.max" value=data.stats.systemStrain.max type="Number" label="SWFFG.Threshold")
+            (object name="data.stats.systemStrain.value" value=data.stats.systemStrain.value type="Number"
+            label="SWFFG.Current") ))}}
+          </div>
+        </div>
+      </div>
+  </header>
+
   {{!-- Sheet Body --}}
   <section class="sheet-body vehicle">
 

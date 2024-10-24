@@ -1,6 +1,7 @@
 .ffg-alternative {
     .window-header {
-        background-color: var(--color-dark-1);
-        border-radius: 10px 10px 0 0;
+        background-color: none;
+        border-bottom: none;
+        color: var(--color-text-1);
     }
 }

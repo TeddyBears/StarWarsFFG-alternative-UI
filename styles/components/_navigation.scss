@@ -2,32 +2,41 @@
     &.ffg-alternative {
         nav.sheet-tabs {
             &.tabs {
-                top: 70px;
-                right: 10px;
+                top: 0;
+                right: 0;
                 display: flex;
-                align-items: flex-end;
-                justify-content: flex-end;
                 align-content: stretch;
+                width: 100%;
+                position: sticky;
                 flex-direction: row;
-                flex-wrap: wrap;
-                width: 4rem;
+                justify-content: center;
+                align-items: center;
+                z-index: var(--z-index-window);
+                margin-top: 0;
 
                 .item {
-                    clip-path: none;
                     padding: 0;
-                    font-size: 1.1rem;
-                    background: unset;
+                    background: rgba(255, 255, 245, 0.8);
                     color: var(--color-background-1);
-                    margin: 2px;
-                    flex: 0 0 1rem;                
                     height: 2rem;
-                    width: 2rem;
+                    // width: 1rem;
                     text-shadow: none;
-                    line-height: 1rem;
+                    border-radius: 6px;
+                    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+                    box-sizing: border-box;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-left: 16px;
+                    padding-right: 16px;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                    }
 
                     &.active {
-                        //text-shadow: var(--color-background-1) 1px 2px 0;
                         color: #781428;
+                        box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 3px 7px inset;
                     }
                 }
             }

@@ -1,0 +1,17 @@
+.journal-sheet,
+.starwarsffg.sheet {
+    a.content-link {
+        color: var(--color-text-hyperlink);
+        background: transparent;
+        padding: 0px;
+        border: 0px;
+
+        &.broken {
+            text-decoration: line-through;
+        }
+
+        i {
+            color: var(--color-text-hyperlink);
+        }
+    }
+}

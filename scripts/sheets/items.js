@@ -23,8 +23,8 @@ export async function loadItemsHandleBarTemplates() {
       "modules/ffg-star-wars-alternative-ui/templates/parts/item/ffg-characteristics.html",
       "modules/ffg-star-wars-alternative-ui/templates/items/ffg-weapon-sheet.html",
       "modules/ffg-star-wars-alternative-ui/templates/parts/item/ffg-description.html",
-      
-      
+      "modules/ffg-star-wars-alternative-ui/templates/items/ffg-criticaldamage-sheet.html",
+
     ];
   
     return loadTemplates(templatePaths);
