@@ -204,9 +204,9 @@
 
     {{!-- Bio Tab --}}
     <div class="tab biography active" data-group="primary" data-tab="description">
-      {{!-- TabBiography Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
-      (object blocktype="double" title="SWFFG.TabBiography" type="PopoutEditor" name="system.biography"
-      value=data.biography)}}
+      {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
+      (object blocktype="single" title="SWFFG.TabBiography" type="PopoutEditor" name="data.biography"
+      value=data.enrichedBio)}}
     </div>
 
     {{!-- Critical Damage Tab --}}

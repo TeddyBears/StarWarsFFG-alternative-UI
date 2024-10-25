@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .journal-sheet,
 .monks-enhanced-journal {
     @include background-datapad($image: "/modules/ffg-star-wars-alternative-ui/artwork/datapad-journal.webp", $outset: 5px 5px 5px 75px);

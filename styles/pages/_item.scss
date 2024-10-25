@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .starwarsffg.sheet.item {
     min-width: 450px;
     min-height: 550px;
@@ -119,6 +121,10 @@
 
                     }
                 }
+            }
+
+            .tox .tox-edit-area__iframe {
+                position: relative;
             }
         }
     }

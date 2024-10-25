@@ -7,7 +7,7 @@
   (object tab="talents" label="SWFFG.TabTalents" icon="fab fa-superpowers" cls=classType)
   (object tab="description" label="SWFFG.TabBiography" icon="fas fa-address-card" cls=classType)
   )}}
-  
+
   {{!-- Sheet Header --}}
   <header class="sheet-header">
     <div id="actor-id" data-actor="{{actor._id}}" style="display: none;"></div>
@@ -25,26 +25,26 @@
           value=data.quantity.max type="Number" label="SWFFG.MinionQuantityMax") (object name="data.quantity.value"
           value=data.quantity.value type="Number" label="SWFFG.MinionQuantityAlive" disabled=true) ))}}
           {{#if limited}}{{else}}
-            {{!-- Defence Box & Soak Box --}}
-            {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="split"
-            cssClass="defence" title="SWFFG.Defense" fields=(array
-            (object name="data.stats.defence.melee" value=data.stats.defence.melee type="Number"
-            label="SWFFG.DefenseMelee")
-            (object name="data.stats.defence.ranged" value=data.stats.defence.ranged type="Number"
-            label="SWFFG.DefenseRanged")
-            (object name="data.stats.soak.value" value=data.stats.soak.value type="Number" label="SWFFG.Soak"
-            disabled=this.settings.enableSoakCalculation)
-            ))}}
+          {{!-- Defence Box & Soak Box --}}
+          {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="split"
+          cssClass="defence" title="SWFFG.Defense" fields=(array
+          (object name="data.stats.defence.melee" value=data.stats.defence.melee type="Number"
+          label="SWFFG.DefenseMelee")
+          (object name="data.stats.defence.ranged" value=data.stats.defence.ranged type="Number"
+          label="SWFFG.DefenseRanged")
+          (object name="data.stats.soak.value" value=data.stats.soak.value type="Number" label="SWFFG.Soak"
+          disabled=this.settings.enableSoakCalculation)
+          ))}}
 
-            {{!-- Wounds Box --}}
-            {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object
-            blocktype="split" title="SWFFG.Wounds" fields=(array (object name="data.stats.wounds.max"
-            value=data.stats.wounds.max type="Number" label="SWFFG.Threshold") (object name="data.stats.wounds.value"
-            value=data.stats.wounds.value type="Number" label="SWFFG.Current") ))}}
-            {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object
-            blocktype="single"
-            title="SWFFG.MinionUnitWounds" type="Number" name="data.unit_wounds.value" value=data.unit_wounds.value
-            )}}
+          {{!-- Wounds Box --}}
+          {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object
+          blocktype="split" title="SWFFG.Wounds" fields=(array (object name="data.stats.wounds.max"
+          value=data.stats.wounds.max type="Number" label="SWFFG.Threshold") (object name="data.stats.wounds.value"
+          value=data.stats.wounds.value type="Number" label="SWFFG.Current") ))}}
+          {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object
+          blocktype="single"
+          title="SWFFG.MinionUnitWounds" type="Number" name="data.unit_wounds.value" value=data.unit_wounds.value
+          )}}
           {{/if}}
         </div>
       </div>
@@ -67,18 +67,21 @@
     <div class="tab talents items" data-group="primary" data-tab="talents">
       {{!-- Talents List --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-talents.html"}}
       {{!-- Abilities List --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-abilities.html"}}
-      {{!-- Force Powers List --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-forcepowers.html"}}
-      {{!-- Signature Abilities List --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-signatureability.html"}}
+      {{!-- Force Powers List --}} {{>
+      "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-forcepowers.html"}}
+      {{!-- Signature Abilities List --}} {{>
+      "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-signatureability.html"}}
     </div>
 
     {{!-- Biography Tab --}}
     <div class="tab biography" data-group="primary" data-tab="description">
       <div class="biography-editor">
-        {{editor data.biography target="system.biography" button=true owner=owner editable=editable}} {{!-- Footer info
-        --}}
+        {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
+        (object blocktype="single" title="SWFFG.TabBiography" type="PopoutEditor" name="data.biography"
+        value=data.biography)}}
       </div>
       {{#if this.settings.enableCriticalInjuries}}
-      <div class="container flex-group-center biography-values">
+      <div class="container flex-group-center">
         {{> "systems/starwarsffg/templates/parts/actor/ffg-criticalinjury.html" type="criticalinjury"}} {{!-- Experience
         Box --}}
       </div>
