@@ -4,21 +4,21 @@
 This module add new sheet for some sheet.
 Sheets reworked are the following:
 
-    * Actors: Character, minion, rival, nemesis, vehicle
-    * Journal
-    * some items:
-        * Weapons
-        * Armors
-        * Gears
-        * Talents
-        * Species
-        * Careers
-        * Ship weapons
-        * item Attachments
-        * Item modifiers
-        * Ship attachments
-        * Critical hits
-        * Critical injuries
+* Actors: Character, minion, rival, nemesis, vehicle
+* Journal
+* some items:
+  * Weapons
+  * Armors
+  * Gears
+  * Talents
+  * Species
+  * Careers
+  * Ship weapons
+  * item Attachments
+  * Item modifiers
+  * Ship attachments
+  * Critical hits
+  * Critical injuries
 
 ## Actor sheet
 
