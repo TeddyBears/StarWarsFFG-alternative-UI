@@ -104,6 +104,7 @@ Remove the configuration tab. Fields moved to the main tab
 4. Click __Install__ next to the pasted Manifest URL
 
 # Setup
+
 In the sheet options you can change the field `this sheet` to the alternative version.
 Or in the main settings you can set the alternative version in `Core - Configue default sheets`.
 
@@ -113,4 +114,4 @@ Changelog are available [here](https://github.com/TeddyBears/StarWarsFFG-alterna
 
 # Wiki
 
-See the [wiki](https://github.com/TeddyBears/StarWarsFFG-alternative-UI/wiki/Home) page to have some screenshot
+See the [wiki](https://github.com/TeddyBears/StarWarsFFG-alternative-UI/wiki/Home) to have some screenshots

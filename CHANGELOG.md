@@ -1,6 +1,6 @@
 # Changelog
 
-`12.2.1.1_903`
+`12.2.0.1_903`
 
 * Features:
   * Rework the for `Journal`:
