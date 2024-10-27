@@ -1,5 +1,10 @@
 # Changelog
 
+`12.2.1.1_903`
+
+* Fixes:
+  * Change paths for background image to relatif. This should fix the module fir the Forge
+
 `12.2.0.1_903`
 
 * Features:
