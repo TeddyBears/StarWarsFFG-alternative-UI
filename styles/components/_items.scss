@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.starwarsffg.sheet.actor {
+    &.ffg-alternative {
+        .items {
+
+            .forcepowers-item,
+            .signatureabilities-item {
+
+                .item:first-child,
+                .item:nth-child(2) {
+                    margin-top: var(--grid-gap);
+                }
+            }
+
+            .item-pill {
+                border-radius: 5px;
+            }
+
+            .item {
+                align-items: center;
+            }    
+        }
+
+        .injuries {
+            width: inherit;
+            overflow-y: hidden;
+            margin-left: 0;
+        }
+    }
+}

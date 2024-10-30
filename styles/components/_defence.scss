@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+.starwarsffg.sheet.actor {
+    &.ffg-alternative {
+        .vehicle {
+
+            .defense-block {
+                .defense-value.starboard {
+                    right: calc(50% - 120px);
+                }
+
+                .defense-value.port {
+                    left: calc(50% - 120px);
+                }
+            }
+        }
+    }
+}

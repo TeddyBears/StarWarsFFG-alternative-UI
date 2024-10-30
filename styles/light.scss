@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@use "layout/scroll";
+@use "layout/containers";
+@use "layout/tab";
+
+
+@use "components/pill-items";
+@use "components/content-link";
+@use "components/name";
+@use "components/picture";
+@use "components/defence";
+@use "components/crew";
+@use "components/dice-pool";
+@use "components/skills";
+@use "components/items";
+
+body {
+    --color-background-1: #490c0bd9;
+}
+
+.starwarsffg.sheet {
+    &.ffg-alternative {
+        .window-content {
+            overflow-y: auto;
+            font-size: var(--font-size-16);
+            font-family: var(--font-body);
+
+            .details-infos {
+                align-items: flex-end;
+            }
+
+            .resource {
+                flex-grow: 1;
+                margin: 0 0.15rem;
+
+                &.defence {
+                    flex-grow: 2;
+
+                    .block-attribute {
+                        grid-template-columns: repeat(3, minmax(0, 1fr));
+                    }
+                }
+
+                .block-background {
+
+                    .block-attribute {
+                        .block-value label {
+                            font-size: var(--font-size-12);
+                        }
+
+                        .popout-editor {
+                            min-height: 50px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

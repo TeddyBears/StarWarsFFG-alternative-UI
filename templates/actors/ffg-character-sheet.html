@@ -74,8 +74,10 @@
     <div class="tab talents items" data-group="primary" data-tab="talents">
       {{!-- Talents List --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-talents.html"}}
       {{!-- Abilities List --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-abilities.html"}}
-      {{!-- Force Powers List --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-forcepowers.html"}}
-      {{!-- Signature Abilities List --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-signatureability.html"}}
+      {{!-- Force Powers List --}} {{>
+      "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-forcepowers.html"}}
+      {{!-- Signature Abilities List --}} {{>
+      "modules/ffg-star-wars-alternative-ui/templates/parts/actor/ffg-signatureability.html"}}
     </div>
 
     {{!-- Biography Tab --}}
@@ -100,11 +102,15 @@
 
     <div class="tab xp" data-group="primary" data-tab="xp">
       {{!-- Experience Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object
-      blocktype="split" headerclass="alt-tab" title="SWFFG.DescriptionXP" fields=(array (object name="data.experience.available"
+      blocktype="split" headerclass="alt-tab" title="SWFFG.DescriptionXP" fields=(array (object
+      name="data.experience.available"
       value=data.experience.available type="Number" label="SWFFG.DescriptionXPAvailable") (object
       name="data.experience.total" value=data.experience.total type="Number" label="SWFFG.DescriptionXPTotal") ))}}
-      {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" 
-      (object blocktype="single" title="SWFFG.Actors.Sheets.Purchase.LogTitle" cssClass="gap" type="PopoutEditor" value=xpLog readonly=true)}}
+      <div class="gap">
+        {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html"
+        (object blocktype="single" title="SWFFG.Actors.Sheets.Purchase.LogTitle" cssClass="gap" type="PopoutEditor"
+        value=xpLog readonly=true)}}
+      </div>
     </div>
   </section>
 </form>

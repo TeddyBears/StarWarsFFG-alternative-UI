@@ -1,9 +1,10 @@
 # Changelog
 
-`12.2.1.1_903`
+`12.3.0.1_903`
 
 * Features:
   * Remove the link on XP block. Block and xp history are now on the same tab
+  * Add module setting to add datapad background. By default the module keeps the colors of the main theme (ie. Mandar) and applies the others modifications
 * Fixes:
   * The link to critical injuries tab on the wounds block
 

@@ -14,8 +14,8 @@ actor.flags.starwarsffg.config.enableObligation true) )}}
                     <div class="item-attributes">
                         <div class="item-category flexrow">
                             <label for="data.obligationlist.{{id}}.type">{{localize "SWFFG.Type"}}</label>
-                            <input type="text" name="data.obligationlist.{{id}}.type" id="data.obligationlist.{{id}}.type" value="{{obligation.type}}"
-                                data-dtype="String" />
+                            <input type="text" name="data.obligationlist.{{id}}.type"
+                                id="data.obligationlist.{{id}}.type" value="{{obligation.type}}" data-dtype="String" />
                         </div>
                         <div class="item-type flexrow">
                             <label for="data.obligationlist.{{id}}.magnitude">{{localize "SWFFG.Magnitude"}}</label>
@@ -37,25 +37,27 @@ actor.flags.starwarsffg.config.enableObligation true) )}}
 {{/if}}
 {{#if (or (eq actor.flags.starwarsffg.config.enableDuty undefined) (eq
 actor.flags.starwarsffg.config.enableDuty true) )}}
-<div class="resource full duties gap">
-    <div class="attribute flex-group-center">
-        <div class="block-background">
-            <div class="block-title header-title grid grid-3col">
-                <div class="header-name">{{localize "SWFFG.DescriptionDuty"}}</div>
-                <div class="">{{localize "SWFFG.Magnitude"}}</div>
-                <div><a class="add-duty"><i class="far fa-plus-square"></i></a></div>
-            </div>
-
-            <div class="block-attribute">
-                {{#each data.dutylist as |duty id|}}
-                <div class="duty-item trash-enable grid grid-3col">
-                    <div class="item-type"><input type="text" name="data.dutylist.{{id}}.type" value="{{duty.type}}"
-                            data-dtype="String" /></div>
-                    <div class="item-magnitude"><input type="text" name="data.dutylist.{{id}}.magnitude"
-                            value="{{duty.magnitude}}" data-dtype="Number" /></div>
-                    <div><a class="remove-duty" data-id="{{id}}"><i class="fas fa-trash"></i></a></div>
+<div class="gap">
+    <div class="resource full duties">
+        <div class="attribute flex-group-center">
+            <div class="block-background">
+                <div class="block-title header-title grid grid-3col">
+                    <div class="header-name">{{localize "SWFFG.DescriptionDuty"}}</div>
+                    <div class="">{{localize "SWFFG.Magnitude"}}</div>
+                    <div><a class="add-duty"><i class="far fa-plus-square"></i></a></div>
                 </div>
-                {{/each}}
+
+                <div class="block-attribute">
+                    {{#each data.dutylist as |duty id|}}
+                    <div class="duty-item trash-enable grid grid-3col">
+                        <div class="item-type"><input type="text" name="data.dutylist.{{id}}.type" value="{{duty.type}}"
+                                data-dtype="String" /></div>
+                        <div class="item-magnitude"><input type="text" name="data.dutylist.{{id}}.magnitude"
+                                value="{{duty.magnitude}}" data-dtype="Number" /></div>
+                        <div><a class="remove-duty" data-id="{{id}}"><i class="fas fa-trash"></i></a></div>
+                    </div>
+                    {{/each}}
+                </div>
             </div>
         </div>
     </div>
@@ -75,72 +77,79 @@ actor.flags.starwarsffg.config.enableMorality true) )}}
     value=data.morality.weakness)}}
 </div>
 {{/if}}
-<div class="resource full motivations gap">
-    {{#if (eq this.FFG.theme "starwars")}}
-    <div class="attribute flex-group-center">
-        <div class="block-background">
-            <div class="block-title header-title flexrow">
-                <div class="header-name">{{localize "SWFFG.Motivations"}}</div>
-                <div class="">{{localize "SWFFG.MotivationDescription"}}</div>
-            </div>
-
-            <div class="block-attribute">                
-                <div class="motivation-item trash-enable grid grid-3col">
-                    <div class="attributes">
-                        <div class="item-category flexrow">
-                            <label for="data.general.motivation1.category">{{localize
-                                "SWFFG.MotivationCategory"}}</label>
-                            <input type="text" name="data.general.motivation1.category" id="data.general.motivation1.category"
-                                value="{{data.general.motivation1.category}}" data-dtype="String" />
-                        </div>
-                        <div class="item-type flexrow">
-                            <label for="data.general.motivation1.type">{{localize "SWFFG.MotivationType"}}</label>
-                            <input type="text" name="data.general.motivation1.type" id="data.general.motivation1.type"
-                                value="{{data.general.motivation1.type}}" data-dtype="String" />
-                        </div>
-                    </div>
-                    <div class="description">
-                        <textarea
-                            name="data.general.motivation1.description">{{data.general.motivation1.description}}</textarea>
-                    </div>
-                    <div></div>
+<div class="gap">
+    <div class="resource full motivations gap">
+        {{#if (eq this.FFG.theme "starwars")}}
+        <div class="attribute flex-group-center">
+            <div class="block-background">
+                <div class="block-title header-title flexrow">
+                    <div class="header-name">{{localize "SWFFG.Motivations"}}</div>
+                    <div class="">{{localize "SWFFG.MotivationDescription"}}</div>
                 </div>
-                <div class="motivation-item trash-enable grid grid-3col">
-                    <div class="attributes">
-                        <div class="item-category flexrow">
-                            <label for="data.general.motivation2.category">{{localize
-                                "SWFFG.MotivationCategory"}}</label>
-                            <input type="text" name="data.general.motivation2.category" id="data.general.motivation2.category"
-                                value="{{data.general.motivation2.category}}" data-dtype="String" />
+
+                <div class="block-attribute">
+                    <div class="motivation-item trash-enable grid grid-3col">
+                        <div class="attributes">
+                            <div class="item-category flexrow">
+                                <label for="data.general.motivation1.category">{{localize
+                                    "SWFFG.MotivationCategory"}}</label>
+                                <input type="text" name="data.general.motivation1.category"
+                                    id="data.general.motivation1.category" value="{{data.general.motivation1.category}}"
+                                    data-dtype="String" />
+                            </div>
+                            <div class="item-type flexrow">
+                                <label for="data.general.motivation1.type">{{localize "SWFFG.MotivationType"}}</label>
+                                <input type="text" name="data.general.motivation1.type"
+                                    id="data.general.motivation1.type" value="{{data.general.motivation1.type}}"
+                                    data-dtype="String" />
+                            </div>
                         </div>
-                        <div class="item-type flexrow">
-                            <label for="data.general.motivation2.type">{{localize "SWFFG.MotivationType"}}</label>
-                            <input type="text" name="data.general.motivation2.type" id="data.general.motivation2.type"
-                                value="{{data.general.motivation2.type}}" data-dtype="String" />
+                        <div class="description">
+                            <textarea
+                                name="data.general.motivation1.description">{{data.general.motivation1.description}}</textarea>
                         </div>
+                        <div></div>
                     </div>
-                    <div class="description">
-                        <textarea
-                            name="data.general.motivation2.description">{{data.general.motivation2.description}}</textarea>
+                    <div class="motivation-item trash-enable grid grid-3col">
+                        <div class="attributes">
+                            <div class="item-category flexrow">
+                                <label for="data.general.motivation2.category">{{localize
+                                    "SWFFG.MotivationCategory"}}</label>
+                                <input type="text" name="data.general.motivation2.category"
+                                    id="data.general.motivation2.category" value="{{data.general.motivation2.category}}"
+                                    data-dtype="String" />
+                            </div>
+                            <div class="item-type flexrow">
+                                <label for="data.general.motivation2.type">{{localize "SWFFG.MotivationType"}}</label>
+                                <input type="text" name="data.general.motivation2.type"
+                                    id="data.general.motivation2.type" value="{{data.general.motivation2.type}}"
+                                    data-dtype="String" />
+                            </div>
+                        </div>
+                        <div class="description">
+                            <textarea
+                                name="data.general.motivation2.description">{{data.general.motivation2.description}}</textarea>
+                        </div>
+                        <div></div>
                     </div>
-                    <div></div>
-                </div>                
+                </div>
             </div>
         </div>
     </div>
     {{else}}
-
-    <div class="grid grid-2col genesys">
-        {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
-        title="SWFFG.Strength" type="PopoutEditor" name="data.motivation.strength" value=data.motivation.strength)}}
-        {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
-        title="SWFFG.Flaw" type="PopoutEditor" name="data.motivation.flaw" value=data.motivation.flaw)}} {{>
-        "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
-        title="SWFFG.Desire"
-        type="PopoutEditor" name="data.motivation.desire" value=data.motivation.desire)}} {{>
-        "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
-        title="SWFFG.Fear"
-        type="PopoutEditor" name="data.motivation.fear" value=data.motivation.fear)}}
+    <div class="gap">
+        <div class="grid grid-2col genesys">
+            {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
+            title="SWFFG.Strength" type="PopoutEditor" name="data.motivation.strength" value=data.motivation.strength)}}
+            {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
+            title="SWFFG.Flaw" type="PopoutEditor" name="data.motivation.flaw" value=data.motivation.flaw)}} {{>
+            "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
+            title="SWFFG.Desire"
+            type="PopoutEditor" name="data.motivation.desire" value=data.motivation.desire)}} {{>
+            "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
+            title="SWFFG.Fear"
+            type="PopoutEditor" name="data.motivation.fear" value=data.motivation.fear)}}
+        </div>
     </div>
 
     {{/if}}

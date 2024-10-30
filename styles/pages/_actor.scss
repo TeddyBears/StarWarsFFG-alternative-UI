@@ -13,14 +13,9 @@
             background: var(---color-background-window-content);
             color: var(--color-text-1);
             display: block;
-            overflow-y: auto;
-            font-size: var(--font-size-16);
-            font-family: var(--font-body);
             padding: 0;
             border-radius: 0 0 10px 10px;
             margin-bottom: 30px;
-
-
 
             nav.sheet-tabs {
                 &.tabs {
@@ -36,15 +31,7 @@
                     .details-block {
 
                         .header-description-block {
-                            height: auto;
-                            min-height: 130px;
-                            overflow: hidden;
                             background: rgba(0, 0, 0, 0.05);
-                        }
-
-                        // BEGIN - apply holographic effect on avatar
-                        .profile-block {
-                            text-align: center;
                         }
 
                         .holo {
@@ -59,170 +46,38 @@
 
                 .stats-block {
                     margin-top: var(--font-size-14);
-
-                    .resource {
-                        flex-grow: 1;
-
-                        &.defence {
-                            flex-grow: 2;
-
-                            .block-attribute {
-                                grid-template-columns: repeat(3, minmax(0, 1fr));
-                            }
-                        }
-                    }
                 }
 
             }
-
             .sheet-body {
                 padding: 0;
                 margin: 0;
                 border-top: none;
-                background: none;
-
                 .tab {
-                    margin-top: var(--font-size-14);
-                    font-size: var(--font-size-14);
-                    overflow: hidden;
-
                     .talent-list {
                         margin: 0;
 
                     }
-
-
-                    .skillsTablesGrid {
-                        margin-top: var(--font-size-14);
-                        padding: 0;
-
+                    .skillsTablesGrid {  
                         .skillColumnGrid {
-                            flex: 48%;
                             border: none;
                             background: none;
-
                             &:first-child {
-                                margin-right: 1%;
+                                margin-right: 0.5%;
                             }
-
                             &:last-child {
-                                margin-left: 1%;
+                                margin-left: 0.5%;
                             }
-
                             .skillsHeader div {
                                 background-color: unset;
                                 color: var(--color-text-2);
 
-                            }
-
-                            div.skill {
-                                align-items: center;
-                                font-size: var(--font-size-14);
-
-                                .skill-name {
-                                    font-size: var(--font-size-14);
-                                }
-
-                            }
+                            }                         
                         }
-                    }
-
-
-                    .items {
-                        .items-list {
-                            padding: 0 0.2rem;
-
-                            .item {
-                                .skillsGrid {
-                                    &.crew {
-                                        img {
-                                            margin-right: 0;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .forcepowers-item,
-                        .signatureabilities-item {
-
-                            .item:first-child,
-                            .item:nth-child(2) {
-                                margin-top: var(--grid-gap);
-                            }
-                        }
-
-                        .item-pill {
-                            border-radius: 5px;
-                        }
-
-                        &.motivations {
-                            .description {
-                                grid-column: span 2 / 4;
-                            }
-                        }
-                    }
-
-                    .injuries {
-                        width: inherit;
-                        overflow-y: hidden;
-                        margin-left: 0;
-                    }
+                    } 
                 }
 
-            }
-
-            div.container {
-                font-size: var(--font-size-16);
-                font-family: var(--font-body);
-            }
-
-            .pure-g {
-                font-family: var(--font-body);
-
-                [class*=pure-u] {
-                    font-size: var(--font-size-12);
-                    font-family: var(--font-body);
-                }
-            }
-
-            .grid {
-                gap: var(--grid-gap);
-            }
-
-            .gap {
-                margin-top: var(--grid-gap);
-            }
-
-
-            .vehicle {
-                .sheet-header {
-                    .header-fields {
-
-                        .details-block {
-
-                            .profile-block {
-                                .profile-img {
-                                    height: 230px;
-                                    width: unset;
-                                    max-width: 240px;
-                                }
-                            }
-                        }
-
-                        .defense-block {
-                            .defense-value.starboard {
-                                right: calc(50% - 120px);
-                            }
-
-                            .defense-value.port {
-                                left: calc(50% - 120px);
-                            }
-                        }
-                    }
-                }
-
-            }
+            }        
         }
     }
 }

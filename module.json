@@ -2,7 +2,7 @@
   "id": "ffg-star-wars-alternative-ui",
   "title": "FFG Star Wars - Alternative UI",
   "description": "Add new sheet design",
-  "version": "12.2.1.1_903",
+  "version": "12.3.0.1_903",
   "authors": [
     {
       "name": "Balebos"
@@ -51,5 +51,5 @@
   "changelog":"https://github.com/TeddyBears/StarWarsFFG-alternative-UI/blob/main/CHANGELOG.md",
   "readme":"https://github.com/TeddyBears/StarWarsFFG-alternative-UI/blob/main/README.md",
   "manifest": "https://raw.githubusercontent.com/TeddyBears/StarWarsFFG-alternative-UI/main/module.json",
-  "download": "https://github.com/TeddyBears/StarWarsFFG-alternative-UI/archive/refs/tags/12.2.1.1_903.zip"
+  "download": "https://github.com/TeddyBears/StarWarsFFG-alternative-UI/archive/refs/tags/12.3.0.1_903.zip"
 }

@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+.starwarsffg.sheet {
+    &.ffg-alternative {
+        .window-content {
+            overflow-y: auto;
+            font-size: var(--font-size-16);
+            font-family: var(--font-body);
+        }
+
+        div.container {
+            font-size: var(--font-size-16);
+            font-family: var(--font-body);
+        }
+
+        .grid {
+            gap: var(--grid-gap);
+        }
+
+        .gap,
+        .stats-block {
+            margin-top: var(--grid-gap);
+        }
+    }
+}

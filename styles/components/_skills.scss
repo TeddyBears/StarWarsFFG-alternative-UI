@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.starwarsffg.sheet.actor {
+    &.ffg-alternative {
+
+        .skillsTablesGrid {
+            margin-top: var(--font-size-14);
+            padding: 0;
+
+            .skillColumnGrid {
+                flex: 48%;
+
+                div.skill {
+                    align-items: center;
+                    //font-size: var(--font-size-12);
+
+                }
+                .pure-g {
+                    font-family: var(--font-body);
+    
+                    [class*=pure-u] {
+                        //font-size: var(--font-size-12);
+                        font-family: var(--font-body);
+                    }
+                }
+            }
+        }
+    }
+}

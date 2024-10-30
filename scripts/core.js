@@ -14,10 +14,24 @@ function addStyleSheet(stylesheetname) {
 }
 
 Hooks.once("init", () => {
-
+// Add Game settings
+game.settings.register(MODULE_ID, 'sheet-datapad', {
+	name: game.i18n.localize("ffg-star-wars-alternative-ui.sheet.datapad"),
+	scope: "client",
+	type: Boolean,
+	default: false,
+	config: true,
+	onChange: () => {
+		location.reload();
+	}
+});
 	// Add new css
-	//addStyleSheet("main");
-	addStyleSheet("light");
+	if (game.settings.get(MODULE_ID, 'sheet-datapad')) {
+		addStyleSheet("main");
+	}else{
+		addStyleSheet("light");
+	}
+	
 
 	// Add te new actor alternative sheet
 	const actorSheetAltLabel = game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.label");

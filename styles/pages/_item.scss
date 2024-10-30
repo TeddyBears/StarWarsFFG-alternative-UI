@@ -11,9 +11,6 @@
             background: var(--color-background-window-content);
             color: var(--color-text-1);
             display: block;
-            overflow-y: auto;
-            font-size: var(--font-size-16);
-            font-family: var(--font-body);
             padding: 0;
             border-radius: 0 0 10px 10px;
 
@@ -30,35 +27,20 @@
                     padding: 0;
 
                     .details-block {
-                       
-                        .header-description-block {
-                            height: auto;
-                            min-height: 130px;
-                            overflow: hidden;
-                        }
 
                         .profile-block {
-                            max-width: 300px;
                             margin: 0 auto;
-                            text-align: center;
                         }
-
-                        .holo {
-                            @include effect-holographic (var(--holo-color));
-                        }
-
-                        @include keyframes-holographic (var(--holo-color));
                     }
 
                     .characteristics {
                         height: unset;
+                        margin-top: var(--grid-gap);
 
                         .grid {
 
                             .characteristic-item {
-                                margin: 0.25rem;
-                                padding: 0.25rem;
-
+                                margin: unset;                                
                                 .characteristic {
                                     border-radius: 50%
                                 }
@@ -75,24 +57,7 @@
                             flex-direction: row;
                         }
                     }
-                }
-
-                .stats-block {
-                    margin-top: var(--font-size-14);
-
-                    .resource {
-                        flex-grow: 1;
-
-                        &.defence {
-                            flex-grow: 2;
-
-                            .block-attribute {
-                                grid-template-columns: repeat(3, minmax(0, 1fr));
-                            }
-                        }
-                    }
-                }
-
+                }                
             }
 
             .sheet-body {
@@ -100,17 +65,6 @@
                 margin: 0;
                 border-top: none;
                 background: none;
-
-                .tab {
-                    margin-top: var(--font-size-14);
-                    font-size: var(--font-size-14);
-                    overflow: hidden;
-
-                    .talent-list {
-                        margin: 0;
-
-                    }
-                }
             }
 
             .tox .tox-edit-area__iframe {

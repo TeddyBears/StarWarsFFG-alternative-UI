@@ -1,4 +1,4 @@
-<ul class="items">
+<ul class="items crew">
   <li class="items-header header-title flexrow gap">
     <div class="header-name">{{localize "SWFFG.VehicleTabShipCrew"}}</div>
     <div>{{localize "SWFFG.VehicleCrewRole"}}</div>
@@ -26,11 +26,10 @@
       <div>
         {{#if (eq item.role "(none)")}}
         {{else}}
-          <div class="crew skillsGrid">
             <div class="crew dice-pool">
               {{{ item.roll }}}
             </div>
-          </div>
+
         {{/if}}
       </div>
       <div class="item-controls">

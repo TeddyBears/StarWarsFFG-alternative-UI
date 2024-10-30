@@ -4,6 +4,8 @@
 
 @use "layout/header";
 @use "layout/scroll";
+@use "layout/containers";
+@use "layout/tab";
 
 @use "components/ffg-block";
 @use "components/navigation";
@@ -15,6 +17,10 @@
 @use "components/name";
 @use "components/picture";
 @use "components/defence";
+@use "components/crew";
+@use "components/dice-pool";
+@use "components/skills";
+@use "components/items";
 
 //add actor character sheet
 @use "pages/actor";

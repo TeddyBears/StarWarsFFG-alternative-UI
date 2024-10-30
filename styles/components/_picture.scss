@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+.starwarsffg.sheet.actor,
+.starwarsffg.sheet.item {
+    &.ffg-alternative {
+        .window-content {
+            .header-description-block {
+                height: auto;
+                min-height: 130px;
+                overflow: hidden;
+            }
+            .profile-block {
+                max-width: 100%;
+                text-align: center;
+                width: unset;
+            }
+
+            .vehicle {
+                .profile-block {
+                    max-width: 240px;
+                }
+            }
+        }
+    }
+}

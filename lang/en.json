@@ -6,7 +6,8 @@
             },
             "item": {
                 "label": "Item - Alternative Sheet"
-            }
+            },
+            "datapad": "Version with datapads background"
         }
     }
 }

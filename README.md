@@ -22,7 +22,7 @@ Sheets reworked are the following:
 
 ## Actor sheet
 
-Add a new alternative sheet option for the character, rival, nemesis, minion and vehicle actor .
+Add a datapad background image. __only if the module setting to display datapad background is checked__
 
 ### General modifications
 
@@ -82,7 +82,7 @@ Add encumbrance and hard points infos and group weapons, attachement and cargo i
 
 ## Journal sheet
 
-Add background image and blockquote render effect. 
+Add datapad background image and blockquote render effect. __only if the module setting to display datapad background is checked__
 
 Same effect with the module [Monk's Enhanced Journal](https://github.com/ironmonk88/monks-enhanced-journal)
 
@@ -90,7 +90,7 @@ __/!\ Important: because it is only a modification of the background image there
 
 ## Items
 
-Add background image.
+Add a datapad background image. __only if the module setting to display datapad background is checked__
 Characteristics render are like for Actor sheet
 Remove the configuration tab. Fields moved to the main tab
 
