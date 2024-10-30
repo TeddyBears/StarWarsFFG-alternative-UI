@@ -16,7 +16,8 @@ function addStyleSheet(stylesheetname) {
 Hooks.once("init", () => {
 
 	// Add new css
-	addStyleSheet("main");
+	//addStyleSheet("main");
+	addStyleSheet("light");
 
 	// Add te new actor alternative sheet
 	const actorSheetAltLabel = game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.label");

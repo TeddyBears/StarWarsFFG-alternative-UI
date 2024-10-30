@@ -25,7 +25,7 @@
         <div class="container flex-group-center">
           {{!-- Wounds Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object
           blocktype="split" cssClass="wounds" title="SWFFG.Wounds" headerlink=true headerclass="alt-tab" icon="fas
-          fa-heartbeat fa-xs" headerattributes="data-tab='general'" fields=(array (object name="data.stats.wounds.max"
+          fa-heartbeat fa-xs" headerattributes="data-tab='crits'" fields=(array (object name="data.stats.wounds.max"
           value=data.stats.wounds.max type="Number" label="SWFFG.Threshold") (object name="data.stats.wounds.value"
           value=data.stats.wounds.value type="Number" label="SWFFG.Current") ))}}
           {{!-- Strain Box --}} {{#if (or (eq actor.flags.starwarsffg.config.enableStrainThreshold undefined) (eq
@@ -100,8 +100,7 @@
 
     <div class="tab xp" data-group="primary" data-tab="xp">
       {{!-- Experience Box --}} {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object
-      blocktype="split" icon="fas fa-award" headerlink=true headerclass="alt-tab" headerattributes="data-tab='xp'"
-      title="SWFFG.DescriptionXP" fields=(array (object name="data.experience.available"
+      blocktype="split" headerclass="alt-tab" title="SWFFG.DescriptionXP" fields=(array (object name="data.experience.available"
       value=data.experience.available type="Number" label="SWFFG.DescriptionXPAvailable") (object
       name="data.experience.total" value=data.experience.total type="Number" label="SWFFG.DescriptionXPTotal") ))}}
       {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" 

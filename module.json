@@ -9,17 +9,19 @@
     }
   ],
   "compatibility": {
-    "minimum": "11",
+    "minimum": "12",
     "verified": "12"
   },
-  "system": "starwarsffg",
   "relationships": {
     "systems": [
       {
         "id": "starwarsffg",
         "manifest": "https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.json",
         "type": "system",
-        "compatibility": {}
+        "compatibility": {
+          "minimum": "1.901",
+          "verified": "1.903"
+        }
       }
     ]
   },

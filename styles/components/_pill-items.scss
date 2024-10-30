@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .starwarsffg.sheet {
     &.ffg-alternative {
         .window-content {
@@ -13,7 +15,7 @@
                 .item-pill {
                     display: inline-block;
                     border-radius: 5px;
-                    background-color: var(--color-light-3);
+                    //background-color: rgba(255, 255, 255, 0.25);
                     padding: 0.1rem 0.5rem;
                     border: 1px solid rgba(255, 255, 255, 0.5);
                     cursor: pointer;

@@ -2,8 +2,15 @@
 
 `12.2.1.1_903`
 
+* Features:
+  * Remove the link on XP block. Block and xp history are now on the same tab
 * Fixes:
-  * Change paths for background image to relatif. This should fix the module fir the Forge
+  * The link to critical injuries tab on the wounds block
+
+`12.2.1.1_903`
+
+* Fixes:
+  * Change paths for background image to relatif. This should fix the module for the Forge
 
 `12.2.0.1_903`
 
