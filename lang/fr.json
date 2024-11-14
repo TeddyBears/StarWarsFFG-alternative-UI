@@ -8,6 +8,65 @@
                 "label": "Item - Fiche alternative"
             },
             "datapad": "Version avec les datapads en image de fond"
+        },
+        "theme": {
+            "label": "Theme",
+            "light": "Léger : Change l'organisation des blocks et des listes",
+            "main": "Principal : Toutes les fiches utilisent la même palette de couleur",
+            "datapad": "Datapad : Ajoute un Datapad comme image autour des fiches"
+        },
+        "ui-colors": {
+            "name": "Option pour les couleurs",
+            "hint": "Les couleurs ne sont appliquées que pour le thème Principal et le thème Datapad",
+            "label": "Ouvrir la configuration",
+            "color-text-1": {
+                "name": "Texte principal",
+                "hint": "Pour le texte principal et les champs de formulaire"
+            },
+            "color-text-2": {
+                "name": "Entête : Text",
+                "hint": "Pour les blocs, les listes, les caractéristique "
+            },
+            "color-text-3": {
+                "name": "Nom des acteurs et des objets",
+                "hint": ""
+            },
+            "color-background-1": {
+                "name": "Entête : couleur de fond",
+                "hint": "Pour les blocs, les listes, les caractéristique, les icones du menu et la barre de défilement"
+            },
+            "color-background-2": {
+                "name": "Blocs : couleur de fond",
+                "hint": "Pour les blocs de type blessures, obligations, stress, ..."
+            },
+            "color-hardpoint-text": {
+                "name": "Emplacement en cours : texte",
+                "hint": "La valeur courante affiché en haut à droite de la caractéristique"
+            },
+            "color-hardpoint-background-1": {
+                "name": "Emplacement : couleur de fond négative",
+                "hint": "Utilisé quand la valeur d'emplacement en cours est négative"
+            },
+            "color-hardpoint-background-2": {
+                "name": "Emplacement : couleur de fond positive",
+                "hint": "Utilisé quand la valeur d'emplacement en cours est positive"
+            },
+            "color-hyperlink": {
+                "name": "Liens : texte",
+                "hint": "Les liens vers les objets ou les journaux"
+            },
+            "color-characteristic-border": {
+                "name": "Caractéristique : couleur de la bordure",
+                "hint": ""
+            },
+            "color-form-background-focus": {
+                "name": "Champ de formulaire sélectionné : couleur de fond",
+                "hint": "Use for fields when it is focused"
+            },
+            "color-form-text-focus": {
+                "name": "Champ de formulaire sélectionné : texte",
+                "hint": "Use for fields when it is focused"
+            }
         }
     },
     "SWFFG": {

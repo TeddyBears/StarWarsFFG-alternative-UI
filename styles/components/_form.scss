@@ -8,10 +8,11 @@
             font-family: var(--font-body);
             border: none;
             margin-bottom: 2px;
+            color: var(--color-text-1);
 
             &:focus {
-                background-color: var(--color-text-selection-bg);
-                color: var(--color-text-selection);
+                background-color: var(--color-form-background-focus);
+                color: var(--color-form-text-focus);
             }
 
             +label {
@@ -37,8 +38,7 @@
             .characteristic-item .characteristic .characteristic-value {
                 input {
                     &:focus {
-                        background-color: var(--color-text-selection-bg);
-                        //color: var(--color-text-selection);
+                        background-color: var(--color-form-background-focus);
                     }
                 }
 
@@ -47,12 +47,21 @@
 
 
         .vehicle {
+            .characteristic-item .characteristic .characteristic-value {
+                input {
+                    &:focus {
+                        border-radius: 50%;
+                    }
+                    
+                }
+
+            }
             .defense-block {
                 .defense-value {
                     input {
                         &:focus {
-                            background-color: var(--color-text-selection-bg);
-                            color: var(--color-text-selection);
+                            background-color: var(--color-form-background-focus);
+                            color: var(--color-form-text-focus);
                         }
                     }
                 }

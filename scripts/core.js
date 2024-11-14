@@ -1,8 +1,6 @@
-const MODULE_PATH = "modules/ffg-star-wars-alternative-ui";
-const MODULE_ID = "ffg-star-wars-alternative-ui";
-const SYSTEM_ID = "starwarsffg";
-
-import { FFG } from "../../../../systems/starwarsffg/modules/swffg-config.js";
+import { MODULE_PATH, MODULE_ID, SYSTEM_ID } from "./constant.js"
+import { init as settingInit } from './settings.js';
+import { FFG } from "../../../systems/starwarsffg/modules/swffg-config.js";
 import { FFGAlternateActorSheet } from './sheets/actor.js';
 import { loadHandleBarTemplates } from './sheets/actor.js';
 import { FFGAlternateItemSheet } from './sheets/items.js';
@@ -14,24 +12,10 @@ function addStyleSheet(stylesheetname) {
 }
 
 Hooks.once("init", () => {
-// Add Game settings
-game.settings.register(MODULE_ID, 'sheet-datapad', {
-	name: game.i18n.localize("ffg-star-wars-alternative-ui.sheet.datapad"),
-	scope: "client",
-	type: Boolean,
-	default: false,
-	config: true,
-	onChange: () => {
-		location.reload();
-	}
-});
+	// Add Game settings
+	settingInit();
 	// Add new css
-	if (game.settings.get(MODULE_ID, 'sheet-datapad')) {
-		addStyleSheet("main");
-	}else{
-		addStyleSheet("light");
-	}
-	
+	addStyleSheet(game.settings.get(MODULE_ID, 'theme'));
 
 	// Add te new actor alternative sheet
 	const actorSheetAltLabel = game.i18n.localize("ffg-star-wars-alternative-ui.sheet.actor.label");
@@ -60,5 +44,8 @@ game.settings.register(MODULE_ID, 'sheet-datapad', {
 
 	// Override default size for sheets
 	FFG.sheets.defaultWidth.character = 700; /*override the defaut width for actor sheet*/
+	FFG.sheets.defaultWidth.rival = 700; /*override the defaut width for actor sheet*/
+	FFG.sheets.defaultWidth.nemesis = 700; /*override the defaut width for actor sheet*/
+	FFG.sheets.defaultWidth.minion = 700; /*override the defaut width for actor sheet*/
 	FFG.sheets.defaultHeight.minion = 783; /*override the defaut heigth for minion sheet*/
 });

@@ -5,26 +5,19 @@
     min-height: 550px;
 
     &.ffg-alternative {
-        @include background-datapad(30px, 25px, 40px, 25px, $image: "../../artwork/datapad-items.webp", $outset: 20px 0px 10px 0px);
-
         .window-content {
-            background: var(--color-background-window-content);
             color: var(--color-text-1);
             display: block;
             padding: 0;
-            border-radius: 0 0 10px 10px;
-
-            nav.sheet-tabs {
-                &.tabs {
-                    background-image: url("../../artwork/nav-items.webp");
-                    background-size: cover;
-                }
-            }
 
             .sheet-header {
 
                 .header-fields {
                     padding: 0;
+
+                    .header-description-block {
+                        padding: 0;
+                    }
 
                     .details-block {
 
@@ -40,10 +33,7 @@
                         .grid {
 
                             .characteristic-item {
-                                margin: unset;                                
-                                .characteristic {
-                                    border-radius: 50%
-                                }
+                                margin: unset;
                             }
                         }
 
@@ -57,7 +47,7 @@
                             flex-direction: row;
                         }
                     }
-                }                
+                }
             }
 
             .sheet-body {

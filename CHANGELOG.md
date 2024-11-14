@@ -1,5 +1,22 @@
 # Changelog
 
+`12.4.0.1_903`
+
+* Features:
+  * Add theme in module settings : 
+    * `Light` : Keep the colors of the systeme for sheets
+    * `Main` : All sheets use the same colors
+    * `Datapad` : Actor, Item and Journal sheets use a datapad background
+  * Display the hardpoint current value for armor like than weapon (text and background color)
+  * Characteristic blocks for all Items and actor have the same render (size, border, spaces)
+  * Add color settings to change the default color for `Main` and `Datapad` themes
+  * Change some default color values
+  * Change all characteristic fields to have the same sizes, border and form (circle)
+
+* Fixes:
+  * Default width for actor sheets to 700px
+  * Display hardpoints current value for weapons, armor and ship weapon
+
 `12.3.0.1_903`
 
 * Features:

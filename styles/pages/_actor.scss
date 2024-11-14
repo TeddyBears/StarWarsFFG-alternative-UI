@@ -5,23 +5,10 @@
     min-height: 550px;
 
     &.ffg-alternative {
-        // apply datapad background
-        @include background-datapad();
-
-
         .window-content {
-            background: var(---color-background-window-content);
             color: var(--color-text-1);
             display: block;
             padding: 0;
-            border-radius: 0 0 10px 10px;
-            margin-bottom: 30px;
-
-            nav.sheet-tabs {
-                &.tabs {
-                    background-color: ghostwhite;
-                }
-            }
 
             .sheet-header {
 
@@ -29,18 +16,13 @@
                     padding: 0;
 
                     .details-block {
+                        .holo {
+                            width: 120px;
+                        }
 
                         .header-description-block {
                             background: rgba(0, 0, 0, 0.05);
                         }
-
-                        .holo {
-                            @include effect-holographic (var(--holo-color));
-                        }
-
-                        @include keyframes-holographic (var(--holo-color));
-                        // END - apply holographic effect on avatar
-
                     }
                 }
 
@@ -49,35 +31,40 @@
                 }
 
             }
+
             .sheet-body {
                 padding: 0;
                 margin: 0;
                 border-top: none;
+
                 .tab {
                     .talent-list {
                         margin: 0;
 
                     }
-                    .skillsTablesGrid {  
+
+                    .skillsTablesGrid {
                         .skillColumnGrid {
                             border: none;
                             background: none;
+
                             &:first-child {
                                 margin-right: 0.5%;
                             }
+
                             &:last-child {
                                 margin-left: 0.5%;
                             }
+
                             .skillsHeader div {
                                 background-color: unset;
                                 color: var(--color-text-2);
 
-                            }                         
+                            }
                         }
-                    } 
+                    }
                 }
-
-            }        
+            }
         }
     }
 }

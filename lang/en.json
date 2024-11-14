@@ -6,8 +6,66 @@
             },
             "item": {
                 "label": "Item - Alternative Sheet"
+            }
+        },
+        "theme": {
+            "label": "Theme",
+            "light": "Light : Change dispatch for blocks and lists",
+            "main": "Main : All sheets use the same palette of color",
+            "datapad": "Datapad : Sheets use a datapad background"
+        },
+        "ui-colors": {
+            "name": "Color settings",
+            "hint": "Only apply with the Main theme and Datapad theme",
+            "label": "Open configuration",
+            "color-text-1": {
+                "name": "Main text",
+                "hint": "Used for main text and field texts"
             },
-            "datapad": "Version with datapads background"
+            "color-text-2": {
+                "name": "Header: text",
+                "hint": "For Block title, List title, Characteristics title"
+            },
+            "color-text-3": {
+                "name": "Actor and Item name",
+                "hint": ""
+            },
+            "color-background-1": {
+                "name": "Header: background",
+                "hint": "Used for header part (Block title, List title, Characteristics title), menu icons and scrollbar"
+            },
+            "color-background-2": {
+                "name": "Blocks: background",
+                "hint": "Used for blocks (Wounds, Obligation, Characteristics, ...)"
+            },
+            "color-hardpoint-text": {
+                "name": "Current hardpoint: text",
+                "hint": "Display in the top right of the characteristics harpoint for weapon and armor"
+            },
+            "color-hardpoint-background-1": {
+                "name": "Current hardpoint: negative background",
+                "hint": "Used when the current hardpoint is negative"
+            },
+            "color-hardpoint-background-2": {
+                "name": "Current hardpoint: Positive background",
+                "hint": "Used when the current hardpoint is positive"
+            },
+            "color-hyperlink": {
+                "name": "Link text",
+                "hint": "Used for links in description, journal and for actor links in the vehicle crew"
+            },
+            "color-characteristic-border": {
+                "name": "Characteristics: border",
+                "hint": ""
+            },
+            "color-form-background-focus": {
+                "name": "Focused field: background",
+                "hint": ""
+            },
+            "color-form-text-focus": {
+                "name": "Focused field: text",
+                "hint": "Use for fields when it is focused"
+            }
         }
     }
 }

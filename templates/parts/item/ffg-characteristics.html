@@ -4,20 +4,29 @@
       <div class="characteristic">
         <div class="characteristic-value {{#if isRestricted }}restricted{{/if}}">
           {{#if (eq item.type "damage")}}
-          <input type="text" name="[{{name}}]" value="{{#if (and (or (contains skill " Brawl")
-            (contains skill "Melee" ) (contains skill "Lightsaber" )) (eq
-            useBrawn true))}}0{{else}}{{value}}{{/if}}" data-dtype="Number" {{#if (and (or
-            (contains skill "Brawl" ) (contains skill "Melee" ) (contains
-            skill "Lightsaber" )) (eq useBrawn true))}}disabled{{/if}} />
-          {{#if (ne item.data.damage.adjusted item.data.damage.value)}}
-          <div class="adjustedvalues-left {{#if (gt adjusted value)}}positive{{/if}}">Z{{adjusted}}</div>
-          {{/if}}
+            <input type="text" name="[{{name}}]" value="{{#if (and (or 
+              (contains skill " Brawl")
+              (contains skill "Melee" ) 
+              (contains skill "Lightsaber" )) 
+              (eq useBrawn true))}}0{{else}}{{value}}{{/if}}" data-dtype="Number" {{#if (and (or
+              (contains skill "Brawl" ) 
+              (contains skill "Melee" ) 
+              (contains skill "Lightsaber" )) 
+              (eq useBrawn true))}}disabled{{/if}} />
+            {{#if (ne item.data.damage.adjusted item.data.damage.value)}}
+              <div class="adjustedvalues-left {{#if (gt adjusted value)}}positive{{/if}}">{{adjusted}}</div>
+            {{/if}}
+          {{else}} {{#if (eq item.type "hardpoints")}}
+            <input type="text" name="{{name}}" value="{{value}}" data-dtype="Number" />
+            {{#if (ne current value)}}
+              <div class="adjustedvalues-left {{#if (gte current 0)}}positive{{/if}}">{{current}}</div>
+            {{/if}}
           {{else}}
             <input type="text" name="{{name}}" value="{{value}}" data-dtype="Number" />
             {{#if (ne adjusted value)}}
               <div class="adjustedvalues-left {{#if (lt adjusted value)}}positive{{/if}}">{{adjusted}}</div>
             {{/if}}
-          {{/if}}
+          {{/if}}{{/if}}
         </div>
       </div>
       <div class="characteristic-label header-title">

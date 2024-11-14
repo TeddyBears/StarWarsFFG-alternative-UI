@@ -17,11 +17,9 @@
           {{> "modules/ffg-star-wars-alternative-ui/templates/parts/item/ffg-characteristics.html"
           items=(array
           (object type="hardpoints" label="SWFFG.ItemWeaponHardPoints" value=data.hardpoints.value
-          adjusted=data.hardpoints.adjusted
-          name="data.hardpoints.value" isDisplayed=true)
+          current=data.hardpoints.current name="data.hardpoints.value" isDisplayed=true)
           (object type="rarity" label="SWFFG.ItemWeaponRarity" value=data.rarity.value adjusted=data.rarity.adjusted
-          name="data.rarity.value" isDisplayed=item.flags.starwarsffg.config.enableRarity
-          isRestricted=data.rarity.isrestricted)
+          name="data.rarity.value" isDisplayed=item.flags.starwarsffg.config.enableRarity isRestricted=data.rarity.isrestricted)
           )}}
         </div>
       </div>

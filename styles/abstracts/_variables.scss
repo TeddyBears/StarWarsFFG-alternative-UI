@@ -1,22 +1,33 @@
-body {
-        // BEGIN - From foundry VTT default
-        --color-text-selection-bg: #781428;
-        --color-scrollbar: #782e22;
-        --color-scrollbar-track: transparent;
-        --color-scrollbar-border: #ff6400;
-        // END - From foundry VTT default
+@function toRGB ($color-name) {
+        // return #{var(--variablename)}
+        //@return var(--#{$color-name});
+        @return red(#{$color-name})+", "+green(#{$color-name})+", "+blue(#{$color-name});
+}
 
-
-
+:root {
         // BEGIN - From starwarsffg system
-        --color-light-1: ghostwhite;
+        --color-light-1: var(--color-window-content-background);
         // END - From starwarsffg system
 
-        --color-background-window-content: transparent;
-        --grid-gap: var(--font-size-10);
-        --holo-color: 120, 150, 170;
+
         --color-text-1: #191813;
-        --color-text-2: #fff;
-        --color-background-1: rgba(120, 20, 40, 0.5);
-        --color-background-2: #e7d1b1;
+        --color-text-2: #ffffff;
+        --color-text-3: #781428;
+        --color-background-1: #415064FF;
+        --color-background-2: #EEEEEEFF;
+        --holo-color: 120, 150, 170;
+        --color-hardpoint-text: #ffffff;
+        --color-hardpoint-background-1: #ff6347;
+        --color-hardpoint-background-2: #6495ed;
+        --color-hyperlink: #ff6400;
+        --color-characteristic-border: #7a7971;
+        --color-form-background-focus: #7da9c2;
+        --color-form-text-focus: #191813;
+        --color-window-content-background: #f8f8ff;
+
+}
+
+body {
+        --holo-color: 120, 150, 170;
+        --grid-gap: var(--font-size-10);
 }

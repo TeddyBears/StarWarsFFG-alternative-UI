@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
-@use "abstracts";
+@use "abstracts" as *;
 
-@use "layout/header";
 @use "layout/scroll";
 @use "layout/containers";
 @use "layout/tab";
@@ -30,3 +29,56 @@
 
 //Add item sheet
 @use "pages/item";
+
+//Add settings form
+@use "pages/settings";
+
+.starwarsffg.sheet.actor {
+    &.ffg-alternative {
+
+        .window-content {
+            --window-padding: 0 5px;
+
+            nav.sheet-tabs {
+                &.tabs {
+                    background: #d8cbc0 url(../../../../systems/starwarsffg/images/bgSheet.jpg) no-repeat;
+                }
+            }
+
+            .header-fields>div {
+                padding: var(--window-padding);
+            }
+
+            .sheet-body {
+                .tab {
+                    padding: var(--window-padding);
+                }
+            }
+        }
+    }
+}
+
+.starwarsffg.sheet.item {
+    &.ffg-alternative {
+
+        .window-content {
+            --window-padding: 0 5px;
+
+            nav.sheet-tabs {
+                &.tabs {
+                    background: #d8cbc0 url(../../../../systems/starwarsffg/images/bgWindow.jpg) no-repeat;
+                }
+            }
+
+            .header-fields>div {
+                padding: var(--window-padding);
+            }
+
+            .sheet-body {
+                .tab {
+                    padding: var(--window-padding);
+                }
+            }
+        }
+    }
+}

@@ -2,22 +2,54 @@
     &.ffg-alternative {
 
         .characteristics {
+            height: unset;
 
             .grid {
                 padding: 0;
 
                 .characteristic-item {
-                    background-color: var(--color-background-1);
+                    background-color: var(--color-background-2);
+                    margin: unset;
+
 
                     .characteristic {
-                        border: 2px solid var(--color-border-light-tertiary);
+                        border: 2px solid var(--color-characteristic-border);
+                        border-radius: 50%;
+                        width: 45px;
+                        height: 45px;
 
-                        input {
-                            font-size: var(--font-size-32);
-                            border: 2px solid var(--color-border-light-tertiary);
+                        .characteristic-value {
+                            height: unset;
+
+                            input {
+                                font-size: var(--font-size-32);
+                                border: 2px solid var(--color-characteristic-border);
+                                height: 39px;
+                            }
+
+                            .adjustedvalues-left {
+                                background: var(--color-hardpoint-background-1);
+                                color: var(--color-hardpoint-text);
+                                width: 1rem;
+                                border-radius: 0 0.5rem;
+                                border: 1px solid transparent;
+
+                                &.positive {
+                                    background: var(--color-hardpoint-background-2);
+                                }
+                            }
                         }
 
                     }
+                }
+            }
+
+        }
+
+        .item-sheet-itemattachment {
+            .characteristics {
+                .adjustedvalues-left {
+                    display: none;
                 }
             }
 
