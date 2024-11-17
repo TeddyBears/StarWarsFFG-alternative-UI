@@ -4,9 +4,9 @@
 
 * Features:
   * Add alternative sheet for:
-    * Specialization
-    * Force power
-    * Siganture abilitiy
+    * Specializations
+    * Force powers
+    * Signature abilities
 
 `12.4.0.1_903`
 
