@@ -1,26 +1,16 @@
 <form class="{{cssClass}} item-sheet-specialization" autocomplete="off">
   <header class="sheet-header">
     <div class="header-fields">
-      <div class="talent-background talent-block">
-        <div class="talent-header">
-          <div></div>
-          <div class="talent-name"><input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'SWFFG.Specialization'}}" /></div>
-        </div>
-        <div class="talent-body">
-          <div class="popout-editor" data-target="data.description" data-label="{{item.name}}">
-            <div class="popout-editor-button"><i class="fas fa-edit"></i></div>
-            {{{ data.enrichedDescription }}}
-          </div>
-        </div>
-        <div class="talent-actions {{#if isReadOnly}}talent-hidden{{/if}}">
-          <a class="talent-action hover" data-itemid="{{item._id}}"
-            ><i class="fas fa-cog"></i>
-            <div class="tooltip">Modifiers</div>
-          </a>
-          <a class="talent-action" data-action="edit"><i class="fas fa-edit"></i></a>
-          <input class="talent-hidden" name="data.isEditing" type="text" value="{{data.isEditing}}" data-dtype="Boolean" />
-          <a class="talent-action" data-action="img"><i class="fas fa-image"></i></a>
-        </div>
+      <div class="container details-block" style="flex-wrap: nowrap;">
+        {{> "modules/ffg-star-wars-alternative-ui/templates/parts/item/ffg-details.html"}}
+      </div>
+      <div class="talent-actions {{#if isReadOnly}}talent-hidden{{/if}}">
+        <a class="talent-action hover" data-itemid="{{item._id}}"><i class="fas fa-cog"></i>
+          <div class="tooltip">Modifiers</div>
+        </a>
+        <a class="talent-action" data-action="edit"><i class="fas fa-edit"></i></a>
+        <input class="talent-hidden" name="data.isEditing" type="text" value="{{data.isEditing}}" data-dtype="Boolean" />
+        <a class="talent-action" data-action="img"><i class="fas fa-image"></i></a>
       </div>
     </div>
   </header>
@@ -41,22 +31,25 @@
 
           <div class="talent-block talent-upgrade talent-single specialization-talent" id="{{key}}" data-itemid="{{talent.itemId}}" data-cost="{{calculateSpecializationTalentCost key}}" data-base-item-name="{{../item.name}}">
             <div class="talent-background {{#iff talent.activationLabel 'contains' 'Passive'}}talent-passive{{else}}talent-active{{/iff}}">
-              <div class="talent-header">
+              <div class="talent-header flex-group-center header-title">
                 <div>
                   {{#if talent.isForceTalent}}
                   <div class="burst-8"></div>
-                  {{/if}} <input type="checkbox" class="{{#if talent.isConflictTalent}}conflict{{/if}}" name="data.talents.{{key}}.islearned" data-dtype="Boolean" {{#if talent.islearned }}checked{{else}} {{/if}}> {{#if talent.isConflictTalent}}
+                  {{/if}} 
+                  <input type="checkbox" class="{{#if talent.isConflictTalent}}conflict{{/if}}" name="data.talents.{{key}}.islearned" data-dtype="Boolean" {{#if talent.islearned }}checked{{else}} {{/if}}> 
+                  {{#if talent.isConflictTalent}}
                   <div class="conflict"></div>
                   {{/if}}
                 </div>
                 <div class="talent-name {{#if (ne talent.name '')}}talent-modifiers{{/if}}" data-name="{{talent.name}}">
-                  {{{talent.name}}}
-                  <a class="talent-action" data-itemid="{{key}}">
-                    {{#if ../item.isOwned }}
-                    <i class="fas fa-dollar ffg-purchase" data-buy-action="specialization-upgrade" data-cost="{{talent.cost}}" data-base-item-name="{{../item.name}}" data-upgrade-name="{{ talent.name }}" data-upgrade-id="{{ key }}"></i>
-                    {{/if}}
-                  </a>
+                  {{{talent.name}}}              
                 </div>
+                <div class="talent-modifiers">
+                  <a class="talent-action" data-itemid="{{key}}">
+                  {{#if ../item.isOwned }}
+                  <i class="fas fa-dollar ffg-purchase" data-buy-action="specialization-upgrade" data-cost="{{talent.cost}}" data-base-item-name="{{../item.name}}" data-upgrade-name="{{ talent.name }}" data-upgrade-id="{{ key }}"></i>
+                  {{/if}}
+                </a></div>
               </div>
               <div class="talent-body">
                 <input type="text" value="{{localize talent.activationLabel}}" disabled />

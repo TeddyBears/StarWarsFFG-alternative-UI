@@ -19,6 +19,9 @@ Sheets reworked are the following:
   * Ship attachments
   * Critical hits
   * Critical injuries
+  * Specializations
+  * Force powers
+  * Signature abilities
 
 ## Themes
 
@@ -57,6 +60,10 @@ In the module option you can change some colors for the Main and Datapad theme:
 
 In the sheet options you can change the field `this sheet` to the alternative version.
 Or in the main settings you can set the alternative version in `Core - Configue default sheets`.
+
+# Recommended Modules
+
+This module uses the [Color Picker](https://foundryvtt.com/packages/color-picker) library module for its color picker settings.
 
 # Changelog
 

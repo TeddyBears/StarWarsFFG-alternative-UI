@@ -1,5 +1,13 @@
 # Changelog
 
+`12.5.0.1_903`
+
+* Features:
+  * Add alternative sheet for:
+    * Specialization
+    * Force power
+    * Siganture abilitiy
+
 `12.4.0.1_903`
 
 * Features:

@@ -15,6 +15,20 @@ export class FFGAlternateItemSheet extends ItemSheetFFGV2 {
     const path = "modules/ffg-star-wars-alternative-ui/templates/items";
     return `${path}/ffg-${this.item.type}-sheet.html`;
   }
+
+
+  /** @override */
+  activateListeners(html) {
+    super.activateListeners(html);
+    html.find(".talent-name span.input").focusout(async (ev) => {
+      const item = $(ev.currentTarget);
+      let name = item.data("name");
+      let value = item[0].innerText;
+      const input = $(".talent-name input[name='" + name + "']")
+      input.val(value)
+    });
+
+  }
 }
 
 export async function loadItemsHandleBarTemplates() {

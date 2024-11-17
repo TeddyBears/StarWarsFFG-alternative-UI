@@ -111,6 +111,98 @@ body {
                 }
 
             }
+
+            .item-sheet-specialization,
+            .item-sheet-forcepower,
+            .item-sheet-signatureability {
+
+                overflow-y: auto;
+                overflow-x: hidden;
+                height: inherit;
+                scrollbar-color: var(--color-background-1) var(--color-scrollbar-track);
+                min-width: 705px;
+
+                .sheet-header {
+                    .header-fields {
+                        .talent-actions {
+                            top: 10px;
+                            right: 15px;
+                        }
+
+                        .talent-required {
+                            bottom: 0;
+                            right: 0;
+                            position: absolute;
+                            z-index: 10;
+                            width: auto;
+                            --notchSize: 0.5rem;
+                            clip-path: polygon(0% var(--notchSize),
+                                    var(--notchSize) 0%,
+                                    100% 0%,
+                                    100% 0%,
+                                    100% 100%,
+                                    100% 100%,
+                                    var(--notchSize) 100%,
+                                    0% var(--notchSize));
+
+                            input {
+                                width: 1rem;
+                                height: 0.75rem;
+                                border: 0;
+                            }
+                        }
+                    }
+                }
+
+                .sheet-body {
+                    .talent-block {
+                        .talent-background {
+
+                            .talent-header {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+
+                                .talent-name {
+                                    height: 2rem;
+                                    position: relative;
+                                    top: unset;
+                                    right: unset;
+                                    text-align: left;
+                                    margin-left: 5px;
+
+                                    span.input {
+                                        position: unset;
+                                        font-size: var(--font-size-12);
+                                        display: inline-block;
+
+                                    }
+                                }
+
+                                .talent-modifiers {
+                                    bottom: unset;
+                                    color: white;
+                                    max-width: calc(100% - 25px);
+                                    font-size: var(--font-size-12);
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .talent-cost,
+                .talent-required {
+                    font-size: var(--font-size-12);
+                    height: var(--font-size-12);
+                    padding: 0 0.5rem;
+                    background: #ddd;
+
+                    input {
+                        background: rgba(0, 0, 0, 0.05);
+                    }
+                }
+            }
         }
     }
 }

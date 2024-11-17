@@ -11,7 +11,6 @@
             padding: 0;
 
             .sheet-header {
-
                 .header-fields {
                     padding: 0;
 
@@ -59,6 +58,127 @@
 
             .tox .tox-edit-area__iframe {
                 position: relative;
+            }
+
+            .item-sheet-specialization,
+            .item-sheet-forcepower,
+            .item-sheet-signatureability {
+
+                overflow-y: auto;
+                overflow-x: hidden;
+                height: inherit;
+                scrollbar-color: var(--color-background-1) var(--color-scrollbar-track);
+                min-width: 705px;
+
+                .sheet-header {
+                    .header-fields {
+                        .talent-actions {
+                            top: 3px
+                        }
+
+                        .talent-required {
+                            bottom: 0;
+                            right: 0;
+                            position: absolute;
+                            z-index: 10;
+                            width: auto;
+                            --notchSize: 0.5rem;
+                            clip-path: polygon(0% var(--notchSize),
+                                    var(--notchSize) 0%,
+                                    100% 0%,
+                                    100% 0%,
+                                    100% 100%,
+                                    100% 100%,
+                                    var(--notchSize) 100%,
+                                    0% var(--notchSize));
+                        }
+                    }
+                }
+
+                .sheet-body {
+                    height: unset;
+                    overflow: hidden;
+
+                    .talent-block {
+                        font-size: var(--font-size-12);
+                        background: transparent;
+                        box-shadow: unset;
+
+                        .talent-background {
+                            background: var(--color-background-2);
+
+                            &.talent-active {
+                                .talent-header {
+                                    mix-blend-mode: darken;
+                                    background: var(--color-text-2);
+
+                                    .burst-8 {
+                                        background: rgba(70, 70, 70, 0.8);
+
+                                        &::before {
+                                            background: rgba(70, 70, 70, 0.8);
+                                        }
+                                    }
+
+                                    .talent-name,
+                                    .talent-modifiers {
+                                        color: var(--color-background-1);
+                                    }
+                                }
+                            }
+
+                            .talent-header {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+
+
+                                .talent-name {
+                                    height: 2rem;
+                                    position: relative;
+                                    color: var(--color-text-2);
+                                    top: unset;
+                                    right: unset;
+                                    text-align: left;
+                                    margin-left: 5px;
+
+                                    span.input {
+                                        position: unset;
+                                        font-size: var(--font-size-12);
+                                        display: inline-block;
+                                        max-width: calc(100% - 25px);
+                                    }
+                                }
+
+                                .talent-modifiers {
+                                    bottom: unset;
+                                    color: unset;
+                                }
+                            }
+
+                            .talent-body {
+                                height: 120px;
+
+                                .popout-editor {
+                                    scrollbar-color: var(--color-background-1) var(--color-scrollbar-track);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .talent-cost,
+                .talent-required {
+                    background: var(--color-background-2);
+                    color: var(--color-text-1);
+                    font-size: var(--font-size-12);
+                    height: var(--font-size-12);
+                    padding: 0 0.5rem;
+
+                    input {
+                        background: rgba(0, 0, 0, 0.05);
+                    }
+                }
             }
         }
     }
