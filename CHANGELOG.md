@@ -1,5 +1,10 @@
 # Changelog
 
+`12.5.1.1_903`
+
+* Fixes:
+  * Fix scroll for 'talent' descriptions in specialization, force power and signaure ability sheets
+
 `12.5.0.1_903`
 
 * Features:
