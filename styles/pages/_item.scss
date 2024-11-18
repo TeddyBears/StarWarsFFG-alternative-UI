@@ -159,8 +159,19 @@
                             .talent-body {
                                 height: 120px;
 
+                                .talent-cost {
+                                    height: 1.1rem;
+                                    width: calc(100% - 2px);
+                                    position: relative;
+                                    bottom: unset;
+                                    margin-bottom: 5px;
+                                    clip-path: unset;
+                                    background-color: rgba(0, 0, 0, 0.125);
+                                }
+
                                 .popout-editor {
                                     scrollbar-color: var(--color-background-1) var(--color-scrollbar-track);
+                                    height: 100px;
                                 }
                             }
                         }
