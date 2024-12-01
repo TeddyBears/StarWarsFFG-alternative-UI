@@ -4,13 +4,48 @@
         .characteristics {
             height: unset;
 
-            .grid {
+            .characteristics-block {
                 padding: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+
+                &.container-6col {
+                    .characteristic-item {
+                        width: calc(100% / 6)
+                    }
+                }
+
+                &.container-5col {
+                    .characteristic-item {
+                        width: calc(100% / 5)
+                    }
+                }
+
+                &.container-3col {
+                    .characteristic-item {
+                        width: calc(100% / 3)
+                    }
+                }
+
+                &.container-2col {
+                    .characteristic-item {
+                        width: calc(100% / 2)
+                    }
+                }
 
                 .characteristic-item {
                     background-color: var(--color-background-2);
-                    margin: unset;
+                    margin: 0 .15rem;
 
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
 
                     .characteristic {
                         border: 2px solid var(--color-characteristic-border);
@@ -46,7 +81,8 @@
 
         }
 
-        .item-sheet-itemattachment {
+        .item-sheet-itemattachment,
+        .item-sheet-vehicle-attachment {
             .characteristics {
                 .adjustedvalues-left {
                     display: none;

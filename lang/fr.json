@@ -6,8 +6,7 @@
             },
             "item": {
                 "label": "Item - Fiche alternative"
-            },
-            "datapad": "Version avec les datapads en image de fond"
+            }
         },
         "theme": {
             "label": "Theme",
@@ -66,6 +65,13 @@
             "color-form-text-focus": {
                 "name": "Champ de formulaire sélectionné : texte",
                 "hint": "Use for fields when it is focused"
+            }
+        },
+        "skill-description": {
+            "name": "Ajouter un lien vers la description de la compétence",
+            "hint": "Dans la fiche d'un acteur, ajoute un lien vers le compendium si il existe",
+            "journal": {
+                "open": "Description de la compétence"
             }
         }
     },

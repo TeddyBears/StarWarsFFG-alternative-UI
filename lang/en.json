@@ -66,6 +66,13 @@
                 "name": "Focused field: text",
                 "hint": "Use for fields when it is focused"
             }
+        },
+        "skill-description": {
+            "name": "Add link to skill description",
+            "hint": "In actor sheet add a link to the compendium skill if it exists",
+            "journal": {
+                "open": "Skill description"
+            }
         }
     }
 }

@@ -12,12 +12,34 @@
 
                 div.skill {
                     align-items: center;
-                    //font-size: var(--font-size-12);
+
+                    .skill-name {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding-right: unset;
+
+                        .skill-options {
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: baseline;
+
+                            div {
+                                margin-left: 3px;
+                                position: unset;
+
+                                &.skill-option-description {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
 
                 }
+
                 .pure-g {
                     font-family: var(--font-body);
-    
+
                     [class*=pure-u] {
                         //font-size: var(--font-size-12);
                         font-family: var(--font-body);

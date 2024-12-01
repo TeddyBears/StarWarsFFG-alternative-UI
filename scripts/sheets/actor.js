@@ -1,7 +1,5 @@
 import { ActorSheetFFGV2 } from "../../../../systems/starwarsffg/modules/actors/actor-sheet-ffg-v2.js";
-
-
-
+import { MODULE_PATH, MODULE_ID, SYSTEM_ID } from "../constant.js"
 export class FFGAlternateActorSheet extends ActorSheetFFGV2 {
   /** @override */
   static get defaultOptions() {
@@ -20,7 +18,7 @@ export class FFGAlternateActorSheet extends ActorSheetFFGV2 {
   _createSkillColumns(data) {
     const cols = [[], []];
     let currentColumn = 0;
-  
+
     data.data.skilltypes.forEach((type, index) => {
       if (index > 0) {
         currentColumn = 1;
@@ -49,6 +47,38 @@ export class FFGAlternateActorSheet extends ActorSheetFFGV2 {
 
     return cols;
   }
+
+  /** @override */
+  async activateListeners(html) {
+    super.activateListeners(html);
+
+    if (game.settings.get(MODULE_ID, 'skill-description')) {
+      const skillDescriptionList = await game.packs.get("starwarsffg.oggdudeskilldescriptions")
+
+      html.find(".skill .skill-name .skill-options").each(async (_, elem) => {
+        const skillOriginalName = elem.parentNode.parentNode.parentNode.dataset["ability"]
+        const skillDesc = await skillDescriptionList.getDocuments({ name: skillOriginalName });
+
+        if (skillDesc) {
+          //console.log(skillDesc[0].uuid)
+          const container = document.createElement("div");
+          container.classList.add("skill-option-description", "fas", "fa-book-open");
+          container.dataset.id = skillDesc[0].id;
+          container.title = game.i18n.localize(MODULE_ID + '.skill-description.journal.open');
+          container.addEventListener('click', async function handleClick(event) {
+            const uuid = event.currentTarget.dataset["id"];
+            const journal = await game.packs.get("starwarsffg.oggdudeskilldescriptions").getDocument(uuid)
+            const journalsheet = journal.sheet
+            journalsheet._render(true)
+          });
+          elem.appendChild(container)
+        }
+      });
+    }
+
+  }
+
+
 }
 
 export async function loadHandleBarTemplates() {

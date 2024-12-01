@@ -63,40 +63,77 @@ body {
             .characteristics {
                 height: unset;
 
-                .grid {
-
+                .characteristics-block {
+                    padding: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: nowrap;
+    
+                    &.container-6col {
+                        .characteristic-item {
+                            width: calc(100% / 6)
+                        }
+                    }
+    
+                    &.container-5col {
+                        .characteristic-item {
+                            width: calc(100% / 5)
+                        }
+                    }
+    
+                    &.container-3col {
+                        .characteristic-item {
+                            width: calc(100% / 3)
+                        }
+                    }
+    
+                    &.container-2col {
+                        .characteristic-item {
+                            width: calc(100% / 2)
+                        }
+                    }
+    
                     .characteristic-item {
-                        margin: unset;
-
+                        background-color: var(--color-background-2);
+                        margin: 0 .15rem;
+    
+                        &:first-child {
+                            margin-left: 0;
+                        }
+    
+                        &:last-child {
+                            margin-right: 0;
+                        }
+    
                         .characteristic {
+                            border: 2px solid var(--color-characteristic-border);
                             border-radius: 50%;
-                            border: 2px solid rgba(0, 0, 0, 0.5);
                             width: 45px;
                             height: 45px;
-
+    
                             .characteristic-value {
                                 height: unset;
-
+    
                                 input {
+                                    font-size: var(--font-size-32);
                                     border: 2px solid var(--color-characteristic-border);
                                     height: 39px;
                                 }
-
+    
                                 .adjustedvalues-left {
-                                    background: red;
-                                    color: white;
+                                    background: var(--color-hardpoint-background-1);
+                                    color: var(--color-hardpoint-text);
                                     width: 1rem;
                                     border-radius: 0 0.5rem;
                                     border: 1px solid transparent;
-
+    
                                     &.positive {
-                                        background: green;
+                                        background: var(--color-hardpoint-background-2);
                                     }
                                 }
                             }
-
-
-
+    
                         }
                     }
                 }

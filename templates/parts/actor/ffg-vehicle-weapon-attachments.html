@@ -36,6 +36,9 @@
 <ul class="items">
   <li class="items-header header-title flexrow">
     <div class="header-name">{{localize "SWFFG.VehicleTabShipAttachments"}}</div>
+    <div></div>
+    <div></div>
+    <div></div>
     <div>{{localize "SWFFG.VehicleTabHardPoints"}}</div>
     <div class="item-add shipattachment"><i class="far fa-plus-square"></i></div>
   </li>
@@ -44,6 +47,9 @@
     {{#each items as |item id|}} {{#iff item.type '==' 'shipattachment'}}
     <li class="item flexrow" data-item-id="{{item._id}}">
       <div class="item-name">{{item.name}}</div>
+      <div></div>
+      <div></div>
+      <div></div>
       <div>{{item.system.hardpoints.value}}</div>
       <div class="item-controls">
         <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>

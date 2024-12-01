@@ -93,40 +93,38 @@
     {{!-- characteristics Tab --}}
     <div class="tab characteristics" data-group="primary" data-tab="characteristics">
       {{#if limited}}{{else}}
-      <div class="container characteristics flex-group-center">
-        <div class="grid grid-3col">
-          <div class="characteristic-item flex-group-center">
-            <div class="characteristic">
-              <div class="characteristic-value">
-                <input type="text" name="data.stats.armour.value" value="{{data.stats.armour.value}}"
-                  data-dtype="Number"" type=" text" />
-              </div>
-            </div>
-            <div class="characteristic-label header-title">
-              {{localize "SWFFG.VehicleArmor"}}
+      <div class="characteristics-block container-3col">
+        <div class="characteristic-item flex-group-center">
+          <div class="characteristic">
+            <div class="characteristic-value">
+              <input type="text" name="data.stats.armour.value" value="{{data.stats.armour.value}}"
+                data-dtype="Number"" type=" text" />
             </div>
           </div>
-          <div class="characteristic-item flex-group-center">
-            <div class="characteristic">
-              <div class="characteristic-value">
-                <input type="text" name="data.stats.silhouette.value" value="{{data.stats.silhouette.value}}"
-                  data-dtype="Number" type="text" />
-              </div>
-            </div>
-            <div class="characteristic-label header-title">
-              {{localize "SWFFG.VehicleSilhouette"}}
+          <div class="characteristic-label header-title">
+            {{localize "SWFFG.VehicleArmor"}}
+          </div>
+        </div>
+        <div class="characteristic-item flex-group-center">
+          <div class="characteristic">
+            <div class="characteristic-value">
+              <input type="text" name="data.stats.silhouette.value" value="{{data.stats.silhouette.value}}"
+                data-dtype="Number" type="text" />
             </div>
           </div>
-          <div class="characteristic-item flex-group-center">
-            <div class="characteristic">
-              <div class="characteristic-value">
-                <input type="text" name="data.stats.handling.value" value="{{data.stats.handling.value}}"
-                  data-dtype="Number" type="text" />
-              </div>
+          <div class="characteristic-label header-title">
+            {{localize "SWFFG.VehicleSilhouette"}}
+          </div>
+        </div>
+        <div class="characteristic-item flex-group-center">
+          <div class="characteristic">
+            <div class="characteristic-value">
+              <input type="text" name="data.stats.handling.value" value="{{data.stats.handling.value}}"
+                data-dtype="Number" type="text" />
             </div>
-            <div class="characteristic-label header-title">
-              {{localize "SWFFG.VehicleHandling"}}
-            </div>
+          </div>
+          <div class="characteristic-label header-title">
+            {{localize "SWFFG.VehicleHandling"}}
           </div>
         </div>
       </div>

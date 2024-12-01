@@ -134,6 +134,24 @@ export function init() {
         config: false,
     });
 
+    game.settings.register(MODULE_ID, 'skill-description', {
+        name: game.i18n.localize(MODULE_ID + ".skill-description.name"),
+        hint: game.i18n.localize(MODULE_ID + ".skill-description.hint"),
+        scope: "client",
+        type: Boolean,
+        default: false,
+        config: true,
+    });
+
+    game.settings.register(MODULE_ID, 'skill-description-compendium', {
+        name: game.i18n.localize(MODULE_ID + ".skill-description.compendium.name"),
+        hint: game.i18n.localize(MODULE_ID + ".skill-description.compendium.hint"),
+        scope: "World",
+        type: String,
+        default: "starwarsffg.oggdudeskilldescriptions",
+        config: true,
+    });
+
 
     setStyle();
 }
@@ -150,6 +168,7 @@ export function setStyle() {
         }
     }
 }
+
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 export class CustomStyleForm extends HandlebarsApplicationMixin(ApplicationV2) {
     constructor(...args) {
@@ -256,4 +275,10 @@ export class CustomStyleForm extends HandlebarsApplicationMixin(ApplicationV2) {
             }
         }
     }
+}
+
+function createCompendiumChoices(){
+    const compendiums = game.packs
+    console.log(game.packs)
+
 }

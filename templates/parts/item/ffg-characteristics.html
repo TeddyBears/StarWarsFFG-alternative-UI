@@ -13,7 +13,7 @@
               (contains skill "Melee" ) 
               (contains skill "Lightsaber" )) 
               (eq useBrawn true))}}disabled{{/if}} />
-            {{#if (ne item.data.damage.adjusted item.data.damage.value)}}
+            {{#if (ne adjusted value)}}
               <div class="adjustedvalues-left {{#if (gt adjusted value)}}positive{{/if}}">{{adjusted}}</div>
             {{/if}}
           {{else}} {{#if (eq item.type "hardpoints")}}

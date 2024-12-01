@@ -13,15 +13,14 @@
         {{> "modules/ffg-star-wars-alternative-ui/templates/parts/item/ffg-details.html"}}
       </div>
       <div class="characteristics">
-        <div class="grid grid-2col">
+        <div class="characteristics-block container-2col">
           {{> "modules/ffg-star-wars-alternative-ui/templates/parts/item/ffg-characteristics.html"
           items=(array
           (object type="encumbrance" label="SWFFG.ItemWeaponEncumbrance" value=data.encumbrance.value
           adjusted=data.encumbrance.adjusted
           name="data.encumbrance.value" isDisplayed=true)
           (object type="rarity" label="SWFFG.ItemWeaponRarity" value=data.rarity.value adjusted=data.rarity.adjusted
-          name="data.rarity.value" isDisplayed=item.flags.starwarsffg.config.enableRarity
-          isRestricted=data.rarity.isrestricted)
+          name="data.rarity.value" isDisplayed=item.flags.starwarsffg.config.enableRarity isRestricted=data.rarity.isrestricted)
           )}}
         </div>
       </div>

@@ -1,5 +1,17 @@
 # Changelog
 
+`12.6.0.1_903`
+
+* Features:
+  * Display encumbrance value for gear items in the material tab
+  * Add the icon to purchase skill next the skill name
+  * Add settings to add an icon to display the skill description from compendium next the skill name
+* Fixes:
+  * Award icon next to skill name can be use to increase the skill rank
+  * Display adjusted and value damage for weapons
+  * Width and spaces for characteritic blocks
+  * Remove journal datapad background for the Main theme
+
 `12.5.1.1_903`
 
 * Fixes:
