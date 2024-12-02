@@ -8,7 +8,7 @@
   * Add settings to add an icon next the skill name to open the skill description from compendium
   * Add setting to select the compendium where find skills description
 * Fixes:
-  * Award icon next to skill name can be use to increase the skill rank
+  * Purchase skill icon can be use to increase the skill rank
   * Display adjusted and value damage for weapons
   * Width and spaces for characteritic blocks
   * Remove journal datapad background for the Main theme
