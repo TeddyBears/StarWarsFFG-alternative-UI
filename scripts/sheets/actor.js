@@ -53,21 +53,19 @@ export class FFGAlternateActorSheet extends ActorSheetFFGV2 {
     super.activateListeners(html);
 
     if (game.settings.get(MODULE_ID, 'skill-description')) {
-      const skillDescriptionList = await game.packs.get("starwarsffg.oggdudeskilldescriptions")
+      const skillDescriptionList = await game.packs.get(game.settings.get(MODULE_ID, 'skill-description-compendium'))
 
       html.find(".skill .skill-name .skill-options").each(async (_, elem) => {
         const skillOriginalName = elem.parentNode.parentNode.parentNode.dataset["ability"]
         const skillDesc = await skillDescriptionList.getDocuments({ name: skillOriginalName });
-
-        if (skillDesc) {
-          //console.log(skillDesc[0].uuid)
+        if (skillDesc.length != 0) {
           const container = document.createElement("div");
           container.classList.add("skill-option-description", "fas", "fa-book-open");
           container.dataset.id = skillDesc[0].id;
           container.title = game.i18n.localize(MODULE_ID + '.skill-description.journal.open');
           container.addEventListener('click', async function handleClick(event) {
             const uuid = event.currentTarget.dataset["id"];
-            const journal = await game.packs.get("starwarsffg.oggdudeskilldescriptions").getDocument(uuid)
+            const journal = await game.packs.get(game.settings.get(MODULE_ID, 'skill-description-compendium')).getDocument(uuid)
             const journalsheet = journal.sheet
             journalsheet._render(true)
           });

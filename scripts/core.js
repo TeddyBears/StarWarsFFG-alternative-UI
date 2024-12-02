@@ -11,9 +11,10 @@ function addStyleSheet(stylesheetname) {
 	$("head").append('<link href="' + MODULE_PATH + '/styles/dist/' + stylesheetname + '.css" rel="stylesheet" type="text/css" media="all">');
 }
 
-Hooks.once("init", () => {
+Hooks.once("ready", () => {
 	// Add Game settings
 	settingInit();
+	
 	// Add new css
 	addStyleSheet(game.settings.get(MODULE_ID, 'theme'));
 

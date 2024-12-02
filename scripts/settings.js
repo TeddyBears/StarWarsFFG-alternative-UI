@@ -1,6 +1,6 @@
 import { MODULE_PATH, MODULE_ID, SYSTEM_ID } from "./constant.js"
 
-export function init() {
+export async function init() {
     game.settings.register(MODULE_ID, 'theme', {
         name: game.i18n.localize("ffg-star-wars-alternative-ui.sheet.datapad"),
         scope: "client",
@@ -14,7 +14,7 @@ export function init() {
             light: game.i18n.localize("ffg-star-wars-alternative-ui.theme.light"),
             main: game.i18n.localize("ffg-star-wars-alternative-ui.theme.main"),
             datapad: game.i18n.localize("ffg-star-wars-alternative-ui.theme.datapad"),
-          },
+        },
     });
 
     game.settings.registerMenu(MODULE_ID, "ui-colors", {
@@ -143,15 +143,16 @@ export function init() {
         config: true,
     });
 
-    game.settings.register(MODULE_ID, 'skill-description-compendium', {
-        name: game.i18n.localize(MODULE_ID + ".skill-description.compendium.name"),
-        hint: game.i18n.localize(MODULE_ID + ".skill-description.compendium.hint"),
-        scope: "World",
-        type: String,
-        default: "starwarsffg.oggdudeskilldescriptions",
-        config: true,
-    });
-
+    //Get translated compendium name if Babele module is loaded
+    if (typeof Babele !== 'undefined') {
+        Hooks.once('babele.ready', async () => {
+            const compendiumChoices = await createCompendiumChoices()
+            addCompendiumSetting(compendiumChoices)
+        });
+    } else {
+        const compendiumChoices = await createCompendiumChoices()
+        addCompendiumSetting(compendiumChoices)
+    }
 
     setStyle();
 }
@@ -163,7 +164,7 @@ export function setStyle() {
                 if (!setting.key.includes("ui-colors-")) continue;
                 document.querySelector(":root").style.setProperty(setting.key.replace("ui-colors-", "--"), game.settings.get(MODULE_ID, setting.key));
             } catch (error) {
-                console.error(error)
+                CONFIG.logger.warn(error)
             }
         }
     }
@@ -233,7 +234,7 @@ export class CustomStyleForm extends HandlebarsApplicationMixin(ApplicationV2) {
                 return null
             }
         }
-        console.log(this.context)
+
         return {
             data: this.context,
         };
@@ -252,11 +253,10 @@ export class CustomStyleForm extends HandlebarsApplicationMixin(ApplicationV2) {
         for (let setting of game.settings.settings.values()) {
             try {
                 if (!setting.key.includes("ui-colors-")) continue;
-                console.log(setting)
                 await game.settings.set(MODULE_ID, setting.key, setting.default);
                 document.querySelector(":root").style.setProperty(setting.key.replace("ui-colors-", "--"), setting.default);
             } catch (error) {
-                console.error(error)
+                CONFIG.logger.warn(error)
                 return null
             }
         }
@@ -277,8 +277,25 @@ export class CustomStyleForm extends HandlebarsApplicationMixin(ApplicationV2) {
     }
 }
 
-function createCompendiumChoices(){
-    const compendiums = game.packs
-    console.log(game.packs)
+async function createCompendiumChoices() {
+    const choices = {}
 
+    for (const [id, values] of Object.entries(game.packs.contents)) {
+        choices[values.metadata.id] = values.metadata.packageName + " - " + values.metadata.label
+    }
+
+    return choices
+}
+
+async function addCompendiumSetting(choices) {
+    game.settings.register(MODULE_ID, 'skill-description-compendium', {
+        name: game.i18n.localize(MODULE_ID + ".skill-description.compendium.name"),
+        hint: game.i18n.localize(MODULE_ID + ".skill-description.compendium.hint"),
+        scope: "World",
+        default: "starwarsffg.oggdudeskilldescriptions",
+        config: true,
+        type: String,
+        requiresReload: true,
+        choices: choices
+    });
 }

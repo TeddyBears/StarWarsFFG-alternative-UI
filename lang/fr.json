@@ -72,6 +72,10 @@
             "hint": "Dans la fiche d'un acteur, ajoute un lien vers le compendium si il existe",
             "journal": {
                 "open": "Description de la compétence"
+            },
+            "compendium": {
+                "name": "Compendium des compétences",
+                "hint": "Sélectionnez le compendium avec la description des compétences"
             }
         }
     },

@@ -72,6 +72,10 @@
             "hint": "In actor sheet add a link to the compendium skill if it exists",
             "journal": {
                 "open": "Skill description"
+            },
+            "compendium": {
+                "name": "Skill description compendium",
+                "hint": "Select the compendium with the skills description"
             }
         }
     }
