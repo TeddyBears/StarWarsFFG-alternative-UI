@@ -5,12 +5,13 @@
   "version": "12.6.0.1_903",
   "authors": [
     {
-      "name": "Balté"
+      "name": "Balté",
+      "flags": {}
     }
   ],
   "compatibility": {
     "minimum": "12",
-    "verified": "12"
+    "verified": "12.331"
   },
   "relationships": {
     "systems": [
@@ -32,19 +33,23 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "lang/en.json",
+      "flags": {}
     },
     {
       "lang": "fr",
       "name": "French (Français)",
-      "path": "lang/fr.json"
+      "path": "lang/fr.json",
+      "flags": {}
     }
   ],
   "media": [
     {
       "type": "setup",
       "url": "modules/ffg-star-wars-alternative-ui/artwork/FFGSW_logo.webp",
-      "thumbnail": "modules/ffg-star-wars-alternative-ui/artwork/FFGSW_logo.webp"
+      "thumbnail": "modules/ffg-star-wars-alternative-ui/artwork/FFGSW_logo.webp",
+      "loop": false,
+      "flags": {}
     }
   ],
   "url": "https://github.com/TeddyBears/StarWarsFFG-alternative-UI",
