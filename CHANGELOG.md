@@ -1,4 +1,5 @@
 # Changelog
+
 `12.6.1.1_905`
 
 * Features:
@@ -7,6 +8,8 @@
   * Journal link for some modules [#2](https://github.com/TeddyBears/StarWarsFFG-alternative-UI/issues/2)
   * __Drag here__ buttons are not cut with break line
   * Skill purchase for system 1.905
+  * Replace select by selectOptions to remove deprecated warning in ffg-block
+  * Add translation for characteristic 'none' option
 
 `12.6.0.1_903`
 

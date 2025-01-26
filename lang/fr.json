@@ -82,6 +82,7 @@
     "SWFFG": {
         "DragNotes": "Glisser ici",
         "SkillsSocial": "Compétences Social",
-        "SkillsKnowledge":"Comp. de Connaissance"
+        "SkillsKnowledge":"Comp. de Connaissance",
+        "CharacteristicNone": "Aucune"
     }
 }
