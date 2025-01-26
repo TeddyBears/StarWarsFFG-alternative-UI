@@ -10,6 +10,9 @@
   * Skill purchase for system 1.905
   * Replace select by selectOptions to remove deprecated warning in ffg-block
   * Add translation for characteristic 'none' option
+  * Improve HTML structure for Obligations tab. Remove some div
+  * Add default height on __Obligations__ and __Duties__ blocks
+  * Add __Morality__ and __Conflict__ block into Oliglations tab
 
 `12.6.0.1_903`
 
@@ -40,7 +43,7 @@
 `12.4.0.1_903`
 
 * Features:
-  * Add theme in module settings : 
+  * Add theme in module settings :
     * `Light` : Keep the colors of the systeme for sheets
     * `Main` : All sheets use the same colors
     * `Datapad` : Actor, Item and Journal sheets use a datapad background

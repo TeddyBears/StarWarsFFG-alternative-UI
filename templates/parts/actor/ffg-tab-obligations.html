@@ -37,8 +37,7 @@ actor.flags.starwarsffg.config.enableObligation true) )}}
 {{/if}}
 {{#if (or (eq actor.flags.starwarsffg.config.enableDuty undefined) (eq
 actor.flags.starwarsffg.config.enableDuty true) )}}
-<div class="gap">
-    <div class="resource full duties">
+    <div class="resource full duties gap">
         <div class="attribute flex-group-center">
             <div class="block-background">
                 <div class="block-title header-title grid grid-3col">
@@ -61,23 +60,33 @@ actor.flags.starwarsffg.config.enableDuty true) )}}
             </div>
         </div>
     </div>
-</div>
 {{/if}}
 
 {{#if (or (eq actor.flags.starwarsffg.config.enableMorality undefined) (eq
 actor.flags.starwarsffg.config.enableMorality true) )}}
-<div class="block-editor gap">
-    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="full"
+
+    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object cssClass="gap" blocktype="single" 
+    title="SWFFG.DescriptionMorality" type="Number" name="data.morality.value" value=data.morality.value 
+    headerlink=true headerclass="alt-tab" headerattributes="data-tab='obligation'" )}}
+    
+    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object cssClass="gap" blocktype="full"
     title="SWFFG.EmotionalStrength" type="PopoutEditor" name="data.morality.strength"
     value=data.morality.strength)}}
-</div>
-<div class="block-editor gap">
-    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="full"
+
+
+    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object cssClass="gap" blocktype="full"
     title="SWFFG.EmotionalWeakness" type="PopoutEditor" name="data.morality.weakness"
     value=data.morality.weakness)}}
-</div>
+
 {{/if}}
-<div class="gap">
+
+{{!-- Conflict Box --}}
+{{#if (or (eq actor.flags.starwarsffg.config.enableConflict undefined) (eq actor.flags.starwarsffg.config.enableConflict true) )}}
+    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object cssClass="gap" blocktype="single" 
+    title="SWFFG.DescriptionConflict" type="Number" name="data.conflict.value" value=data.conflict.value 
+    headerlink=true headerclass="alt-tab" headerattributes="data-tab='obligation'" )}}
+{{/if}}
+
     <div class="resource full motivations gap">
         {{#if (eq this.FFG.theme "starwars")}}
         <div class="attribute flex-group-center">
@@ -135,10 +144,9 @@ actor.flags.starwarsffg.config.enableMorality true) )}}
                 </div>
             </div>
         </div>
-    </div>
+
     {{else}}
-    <div class="gap">
-        <div class="grid grid-2col genesys">
+        <div class="grid grid-2col genesys gap">
             {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
             title="SWFFG.Strength" type="PopoutEditor" name="data.motivation.strength" value=data.motivation.strength)}}
             {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="single"
@@ -150,7 +158,6 @@ actor.flags.starwarsffg.config.enableMorality true) )}}
             title="SWFFG.Fear"
             type="PopoutEditor" name="data.motivation.fear" value=data.motivation.fear)}}
         </div>
-    </div>
 
     {{/if}}
 </div>
