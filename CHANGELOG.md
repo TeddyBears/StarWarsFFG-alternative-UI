@@ -2,10 +2,11 @@
 `12.6.1.1_905`
 
 * Features:
-
+  * test system 1.905 compatibility
 * Fixes:
-  * Fix journal link for some modules [#2](https://github.com/TeddyBears/StarWarsFFG-alternative-UI/issues/2)
+  * Journal link for some modules [#2](https://github.com/TeddyBears/StarWarsFFG-alternative-UI/issues/2)
   * __Drag here__ buttons are not cut with break line
+  * Skill purchase for system 1.905
 
 `12.6.0.1_903`
 
