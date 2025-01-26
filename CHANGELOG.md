@@ -1,6 +1,11 @@
 # Changelog
+`12.6.1.1_905`
 
-    text-wrap: nowrap;
+* Features:
+
+* Fixes:
+  * Fix journal link for some modules [#2](https://github.com/TeddyBears/StarWarsFFG-alternative-UI/issues/2)
+  * __Drag here__ buttons are not cut with break line
 
 `12.6.0.1_903`
 
