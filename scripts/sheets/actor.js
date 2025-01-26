@@ -67,7 +67,7 @@ export class FFGAlternateActorSheet extends ActorSheetFFGV2 {
             const uuid = event.currentTarget.dataset["id"];
             const journal = await game.packs.get(game.settings.get(MODULE_ID, 'skill-description-compendium')).getDocument(uuid)
             const journalsheet = journal.sheet
-            journalsheet._render(true)
+            journalsheet.render(true)
           });
           elem.appendChild(container)
         }

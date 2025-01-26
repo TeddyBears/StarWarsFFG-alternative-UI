@@ -1,5 +1,7 @@
 # Changelog
 
+    text-wrap: nowrap;
+
 `12.6.0.1_903`
 
 * Features:
