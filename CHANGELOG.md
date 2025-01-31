@@ -12,7 +12,7 @@
   * Add translation for characteristic 'none' option
   * Improve HTML structure for Obligations tab. Remove some div
   * Add default height on __Obligations__ and __Duties__ blocks
-  * Add __Morality__ and __Conflict__ block into Oliglations tab
+  * Add __Morality__ and __Conflict__ blocks into Obliglations tab
 
 `12.6.0.1_903`
 
