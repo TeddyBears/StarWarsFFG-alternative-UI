@@ -1,6 +1,6 @@
 # Changelog
 
-`12.6.0.1_903`
+`12.6.0.1_905`
 
 * Features:
   * Display encumbrance value for gear items in the material tab
