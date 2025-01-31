@@ -67,6 +67,23 @@ actor.flags.starwarsffg.config.enableDuty true) )}}
 {{#if (or (eq actor.flags.starwarsffg.config.enableMorality undefined) (eq
 actor.flags.starwarsffg.config.enableMorality true) )}}
 <div class="block-editor gap">
+    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object
+    blocktype="single" title="SWFFG.DescriptionMorality" type="String" name="data.morality.value"
+    value=data.morality.value)}}
+</div>
+{{/if}}
+{{#if (or (eq actor.flags.starwarsffg.config.enableConflict undefined) (eq
+actor.flags.starwarsffg.config.enableConflict true) )}}
+<div class="block-editor gap">
+    {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object
+    blocktype="single" title="SWFFG.DescriptionConflict" type="String" name="data.conflict.value"
+    value=data.conflict.value)}}
+</div>
+{{/if}}
+
+{{#if (or (eq actor.flags.starwarsffg.config.enableMorality undefined) (eq
+actor.flags.starwarsffg.config.enableMorality true) )}}
+<div class="block-editor gap">
     {{> "modules/ffg-star-wars-alternative-ui/templates/parts/shared/ffg-block.html" (object blocktype="full"
     title="SWFFG.EmotionalStrength" type="PopoutEditor" name="data.morality.strength"
     value=data.morality.strength)}}
