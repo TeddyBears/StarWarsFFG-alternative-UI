@@ -4,7 +4,7 @@
       <div class="characteristic">
         <div class="characteristic-value {{#if isRestricted }}restricted{{/if}}">
           {{#if (eq item.type "damage")}}
-            <input type="text" name="[{{name}}]" value="{{#if (and (or 
+            <input type="text" name="{{name}}" value="{{#if (and (or 
               (contains skill " Brawl")
               (contains skill "Melee" ) 
               (contains skill "Lightsaber" )) 

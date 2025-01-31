@@ -1,5 +1,11 @@
 # Changelog
 
+`12.6.2.1_905`
+
+* Fixes:
+  * weapon damage can be updated now
+
+
 `12.6.1.1_905`
 
 * Features:
