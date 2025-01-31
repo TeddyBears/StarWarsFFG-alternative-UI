@@ -5,7 +5,6 @@
 * Fixes:
   * weapon damage can be updated now
 
-
 `12.6.1.1_905`
 
 * Features:
