@@ -1,0 +1,12 @@
+.starwarsffg.sheet {
+    &.ffg-alternative {
+        .sheet-header {
+            .header-fields {
+                .drag-note {
+                    text-wrap: nowrap;
+                }
+            }
+
+        }
+    }
+}
